@@ -1,15 +1,21 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
-const port = 5050;
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
 
-app.listen(port, () => console.log(`App is listening at port ${port}`));
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
