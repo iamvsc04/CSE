@@ -81,21 +81,21 @@ const Home = () => {
                           </div>
                           <div className="carousel-item">
                             <img
-                              src=".."
+                              src="/images/oldcsedept.jpg"
                               className="d-block w-100 img-fluid"
                               alt="Old CSE Building"
                             />
                           </div>
                           <div className="carousel-item">
                             <img
-                              src="../images/applelab.jpg"
+                              src="/images/applelab.jpg"
                               className="d-block w-100  img-fluid"
                               alt="Apple Laboratory"
                             />
                           </div>
                           <div className="carousel-item">
                             <img
-                              src="../images/laboratories/Projects Lab 1.JPG"
+                              src="/images/laboratories/Projects Lab 1.JPG"
                               className="d-block w-100 img-fluid"
                               alt="Apple Laboratory"
                             />
@@ -184,7 +184,7 @@ const Home = () => {
                 data-aos-duration="1000"
               >
                 <img
-                  src="../images/hod.jpg"
+                  src="/images/hod.jpg"
                   className="img-fluid rounded"
                   alt=""
                   style={{ border: "3px solid #203476" }}
@@ -217,24 +217,24 @@ const Home = () => {
             data-aos-duration="3000"
           >
             <div className="recogItem">
-              <img src="../images/UGC.png" className="img-fluid" alt="UGC" />
+              <img src="/images/UGC.png" className="img-fluid" alt="UGC" />
             </div>
             <div className="recogItem">
               <img
-                src="../images/aicte.png"
+                src="/images/aicte.png"
                 className="img-fluid"
                 alt="AICTE"
               />
             </div>
             <div className="recogItem">
-              <img src="../images/NBA.png" className="img-fluid" alt="NBA" />
+              <img src="/images/NBA.png" className="img-fluid" alt="NBA" />
             </div>
             <div className="recogItem">
-              <img src="../images/Naac.png" className="img-fluid" alt="NAAC" />
+              <img src="/images/Naac.png" className="img-fluid" alt="NAAC" />
             </div>
             <div className="recogItem">
               <img
-                src="../images/JNTUH.png"
+                src="/images/JNTUH.png"
                 className="img-fluid"
                 alt="JNTUH"
               />
@@ -293,7 +293,7 @@ const Home = () => {
                   data-aos-duration="1500"
                 >
                   <img
-                    src="../images/Faculty5.jpg"
+                    src="/images/Faculty5.jpg"
                     alt="Faculty"
                     className="img-fluid"
                   />
@@ -311,7 +311,7 @@ const Home = () => {
                   data-aos-duration="1500"
                 >
                   <img
-                    src="../images/Faculty6.jpg"
+                    src="/images/Faculty6.jpg"
                     alt="Faculty"
                     className="img-fluid"
                   />
@@ -329,7 +329,7 @@ const Home = () => {
                   data-aos-duration="1500"
                 >
                   <img
-                    src="../images/Faculty7.jpg"
+                    src="/images/Faculty7.jpg"
                     alt="Faculty"
                     className="img-fluid"
                   />

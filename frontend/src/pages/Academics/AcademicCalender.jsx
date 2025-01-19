@@ -43,7 +43,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -62,7 +62,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -81,7 +81,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -100,7 +100,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -119,7 +119,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -138,7 +138,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -157,7 +157,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
@@ -176,7 +176,7 @@ const AcademicCalender = () => {
                       <div className="icon text-center">
                         <h3>
                           <img
-                            src="images/CVR Logo.png"
+                            src="/images/CVR Logo.png"
                             className="img-fluid"
                             alt="CVR Logo"
                           />{" "}
