@@ -7,6 +7,7 @@ import { AcademicCalender,Objectives,SyllabusBooks,TimeTable } from "./Academics
 const Home = () => {
   return (
     <>
+      <Header />
 
       <main>
         <section className="carouselSection">
@@ -39,16 +40,16 @@ const Home = () => {
                         </div>
                         <div className="carousel-inner">
                           <div className="carousel-item active">
-                            <img src="images/CSE Dept Group Pic Latest.jpeg" className="d-block w-100 img-fluid" alt="Old Group PIc" />
+                            <img src="../images/CSE Dept Group Pic Latest.jpeg" className="d-block w-100 img-fluid" alt="Old Group PIc" />
                           </div>
                           <div className="carousel-item">
-                            <img src="images/newcsedept.jpg" className="d-block w-100 img-fluid" alt="Old CSE Building" />
+                            <img src="../images/newcsedept.jpg" className="d-block w-100 img-fluid" alt="Old CSE Building" />
                           </div>
                           <div className="carousel-item">
-                            <img src="images/applelab.jpg" className="d-block w-100  img-fluid" alt="Apple Laboratory" />
+                            <img src="../images/applelab.jpg" className="d-block w-100  img-fluid" alt="Apple Laboratory" />
                           </div>
                           <div className="carousel-item">
-                            <img src="images/laboratories/Projects Lab 1.JPG" className="d-block w-100 img-fluid" alt="Apple Laboratory" />
+                            <img src="../images/laboratories/Projects Lab 1.JPG" className="d-block w-100 img-fluid" alt="Apple Laboratory" />
                           </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselA" data-bs-slide="prev">
@@ -94,7 +95,7 @@ const Home = () => {
 
             <div className="row">
               <div className="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                <img src="images/hod.jpg" className="img-fluid rounded" alt="" style={{ border: "3px solid #203476" }} />
+                <img src="../images/hod.jpg" className="img-fluid rounded" alt="" style={{ border: "3px solid #203476" }} />
               </div>
               <div className="col-md-6">
                 <div className="msghoddiv" data-aos="fade-left" data-aos-duration="1000">
@@ -111,19 +112,19 @@ const Home = () => {
         <section className="recogSection">
           <div className="recogContainer" data-aos="zoom-in" data-aos-duration="3000">
             <div className="recogItem">
-              <img src="images/UGC.png" className="img-fluid" alt="UGC" />
+              <img src="../images/UGC.png" className="img-fluid" alt="UGC" />
             </div>
             <div className="recogItem">
-              <img src="images/aicte.png" className="img-fluid" alt="AICTE" />
+              <img src="../images/aicte.png" className="img-fluid" alt="AICTE" />
             </div>
             <div className="recogItem">
-              <img src="images/NBA.png" className="img-fluid" alt="NBA" />
+              <img src="../images/NBA.png" className="img-fluid" alt="NBA" />
             </div>
             <div className="recogItem">
-              <img src="images/Naac.png" className="img-fluid" alt="NAAC" />
+              <img src="../images/Naac.png" className="img-fluid" alt="NAAC" />
             </div>
             <div className="recogItem">
-              <img src="images/JNTUH.png" className="img-fluid" alt="JNTUH" />
+              <img src="../images/JNTUH.png" className="img-fluid" alt="JNTUH" />
             </div>
           </div>
         </section>
@@ -172,7 +173,7 @@ const Home = () => {
             <div className="container">
               <div className="facultyCardContainer">
                 <div className="facultyCard" data-aos="fade-up" data-aos-duration="1500">
-                  <img src="images/Faculty5.jpg" alt="Faculty" className="img-fluid" />
+                  <img src="../images/Faculty5.jpg" alt="Faculty" className="img-fluid" />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
                     <p className="facultyCardPosition">Professor, CSE</p>
@@ -180,7 +181,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="facultyCard" data-aos="fade-up" data-aos-duration="1500">
-                  <img src="images/Faculty6.jpg" alt="Faculty" className="img-fluid" />
+                  <img src="../images/Faculty6.jpg" alt="Faculty" className="img-fluid" />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
                     <p className="facultyCardPosition">Professor, CSE</p>
@@ -188,7 +189,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="facultyCard" data-aos="fade-up" data-aos-duration="1500">
-                  <img src="images/Faculty7.jpg" alt="Faculty" className="img-fluid" />
+                  <img src="../images/Faculty7.jpg" alt="Faculty" className="img-fluid" />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
                     <p className="facultyCardPosition">Professor, CSE</p>

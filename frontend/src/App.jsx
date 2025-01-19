@@ -29,14 +29,13 @@ import {
 const App = () => {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/academics/objectives" element={<Objectives />} />
         <Route
-          path="/academics/academic-calendar"
+          path="/academics/academic-calender"
           element={<AcademicCalender />}
         />
         <Route path="/academics/syllabus-books" element={<SyllabusBooks />} />
@@ -63,7 +62,6 @@ const App = () => {
         <Route path="/faculty/teaching" element={<Teaching />} />
         <Route path="/faculty/technicalstaff" element={<TechnicalStaff />} />
       </Routes>
-      <Footer />
     </Router>
   );
 };
