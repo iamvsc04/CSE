@@ -3,10 +3,13 @@ import cors from "cors";
 
 const app = express();
 
-const port = process.env.port || 2000;
+const port = 5050;
 
-app.use(cors());
-
-app.listen(port, () =>
-  console.log(`${process.env.PORT} App is listening at port ${port}`)
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
 );
+
+app.listen(port, () => console.log(`App is listening at port ${port}`));
