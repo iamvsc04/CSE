@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img
-              src="../src/images/logo.png"
+              src="../images/logo.png"
               className="img-fluid"
               alt="CVR LOGO"
               style={{ width: "100%", height: "60px" }}
@@ -57,7 +57,10 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/academics/syllabus-books">
+                    <Link
+                      className="dropdown-item"
+                      to="/academics/syllabus-books"
+                    >
                       Syllabus Books
                     </Link>
                   </li>
@@ -80,22 +83,34 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/infrastructure/laboratories">
+                    <Link
+                      className="dropdown-item"
+                      to="/infrastructure/laboratories"
+                    >
                       Laboratories
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/infrastructure/classrooms">
+                    <Link
+                      className="dropdown-item"
+                      to="/infrastructure/classrooms"
+                    >
                       Classrooms
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/infrastructure/seminar-hall">
+                    <Link
+                      className="dropdown-item"
+                      to="/infrastructure/seminar-hall"
+                    >
                       Seminar Hall
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/infrastructure/library">
+                    <Link
+                      className="dropdown-item"
+                      to="/infrastructure/library"
+                    >
                       Library
                     </Link>
                   </li>
@@ -128,7 +143,10 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/faculty/technicalstaff">
+                    <Link
+                      className="dropdown-item"
+                      to="/faculty/technicalstaff"
+                    >
                       Technical Staff
                     </Link>
                   </li>
@@ -146,12 +164,18 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/studentcorner/e-resources">
+                    <Link
+                      className="dropdown-item"
+                      to="/studentcorner/e-resources"
+                    >
                       E-Resources
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/studentcorner/student-work">
+                    <Link
+                      className="dropdown-item"
+                      to="/studentcorner/student-work"
+                    >
                       Student Work
                     </Link>
                   </li>
