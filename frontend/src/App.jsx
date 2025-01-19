@@ -1,21 +1,70 @@
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Academics from './components/Academics';
-import Infrastructure from './components/Infrastructure';
-import Contact from './components/Contact';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
+import {
+  AcademicCalender,
+  Objectives,
+  SyllabusBooks,
+  TimeTable,
+} from "./pages/Academics";
+import { Admin, NonTeaching, Teaching, TechnicalStaff } from "./pages/Faculty";
+import {
+  Classrooms,
+  Laboratories,
+  SeminarHall,
+  Library,
+} from "./pages/Infrastructure";
+import { EResources, Gallery, StudentWork } from "./pages/StudentCorner";
+import {
+  Conferences,
+  ConsultancyProjects,
+  ResearchProjects,
+  Workshops,
+} from "./pages/Research";
 const App = () => {
   return (
-    <div>
-      <Navbar />
+    <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/infrastructure" element={<Infrastructure />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/academics/objectives" element={<Objectives />} />
+        <Route
+          path="/academics/academic-calendar"
+          element={<AcademicCalender />}
+        />
+        <Route path="/academics/syllabus-books" element={<SyllabusBooks />} />
+        <Route path="/academics/time-tables" element={<TimeTable />} />
+        <Route path="/infrastructure/laboratories" element={<Laboratories />} />
+        <Route path="/infrastructure/classrooms" element={<Classrooms />} />
+        <Route path="/infrastructure/seminar-hall" element={<SeminarHall />} />
+        <Route path="/infrastructure/library" element={<Library />} />
+        <Route path="/studentcorner/e-resources" element={<EResources />} />
+        <Route path="/studentcorner/gallery" element={<Gallery />} />
+        <Route path="/studentcorner/student-work" element={<StudentWork />} />
+        <Route path="/research/conferences" element={<Conferences />} />
+        <Route
+          path="/research/consultancy-projects"
+          element={<ConsultancyProjects />}
+        />
+        <Route
+          path="/research/researchprojects"
+          element={<ResearchProjects />}
+        />
+        <Route path="/research/workshops" element={<Workshops />} />
+        <Route path="/faculty/admin" element={<Admin />} />
+        <Route path="/faculty/non-teaching" element={<NonTeaching />} />
+        <Route path="/faculty/teaching" element={<Teaching />} />
+        <Route path="/faculty/technicalstaff" element={<TechnicalStaff />} />
       </Routes>
-    </div>
+      <Footer />
+    </Router>
   );
 };
 
