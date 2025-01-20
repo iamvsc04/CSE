@@ -346,7 +346,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-      <Footer /> {/* Include the Footer component at the bottom of the page */}
+      <Footer /> 
     </>
   );
 };

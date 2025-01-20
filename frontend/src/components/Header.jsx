@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles.css";
 
 const Navbar = () => {
   return (
     <div className="sticky-top">
+      {/* Navbar Section */}
       <nav className="navbar navbar-expand-xl navbar-dark bg-blue">
         <div className="container-fluid">
+          {/* Logo Section */}
           <Link className="navbar-brand" to="/">
             <img
               src="../images/logo.png"
@@ -14,6 +17,7 @@ const Navbar = () => {
               style={{ width: "100%", height: "60px" }}
             />
           </Link>
+          {/* Navbar Toggler */}
           <button
             className="navbar-toggler"
             type="button"
@@ -25,6 +29,7 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          {/* Navbar Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item marlin">
@@ -32,6 +37,7 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
+              {/* Academics Dropdown */}
               <li className="nav-item dropdown marlin">
                 <a
                   className="nav-link dropdown-toggle"
@@ -71,6 +77,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* Infrastructure Dropdown */}
               <li className="nav-item dropdown marlin">
                 <a
                   className="nav-link dropdown-toggle"
@@ -116,6 +123,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* Faculty Dropdown */}
               <li className="nav-item dropdown marlin">
                 <a
                   className="nav-link dropdown-toggle"
@@ -152,6 +160,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* Student Corner Dropdown */}
               <li className="nav-item dropdown marlin">
                 <a
                   className="nav-link dropdown-toggle"
@@ -186,6 +195,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* About & Contact Links */}
               <li className="nav-item marlin">
                 <Link className="nav-link" to="/about">
                   About
@@ -200,6 +210,38 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Header Section */}
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12  headerStyle">
+            <p>Department of Computer Science and Engineering</p>
+            {/* Marquee Section */}
+            <div className="container-fluid marqueeStyle">
+              <marquee
+                className="marformat"
+                scrollamount="15"
+                onMouseOver={(e) => e.target.stop()}
+                onMouseOut={(e) => e.target.start()}
+              >
+                <span>
+                  <label style={{ marginRight: "20px" }}>Notifications:</label>
+                  <span className="blink">Flash</span>
+                  <a className="text-white mr-4" href="#">
+                    Department is organizing a 10-day Skill Development Course
+                    on Web Technologies starting from 14.06.2023 to 24.06.2023.
+                  </a>
+                  <span className="blink">Flash</span>
+                  <a className="text-white mr-4" href="#">
+                    Department is organizing a 10-day Skill Development Course
+                    on Web Technologies starting from 14.06.2023 to 24.06.2023.
+                  </a>
+                </span>
+              </marquee>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
