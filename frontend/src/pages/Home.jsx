@@ -2,13 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles.css";
-import {
-  AcademicCalender,
-  Objectives,
-  SyllabusBooks,
-  TimeTable,
-} from "./Academics";
-
+import HoverCard from "../components/HoverCard";
 const Home = () => {
   return (
     <>
@@ -220,11 +214,7 @@ const Home = () => {
               <img src="/images/UGC.png" className="img-fluid" alt="UGC" />
             </div>
             <div className="recogItem">
-              <img
-                src="/images/aicte.png"
-                className="img-fluid"
-                alt="AICTE"
-              />
+              <img src="/images/aicte.png" className="img-fluid" alt="AICTE" />
             </div>
             <div className="recogItem">
               <img src="/images/NBA.png" className="img-fluid" alt="NBA" />
@@ -233,11 +223,7 @@ const Home = () => {
               <img src="/images/Naac.png" className="img-fluid" alt="NAAC" />
             </div>
             <div className="recogItem">
-              <img
-                src="/images/JNTUH.png"
-                className="img-fluid"
-                alt="JNTUH"
-              />
+              <img src="/images/JNTUH.png" className="img-fluid" alt="JNTUH" />
             </div>
           </div>
         </section>
@@ -293,9 +279,11 @@ const Home = () => {
                   data-aos-duration="1500"
                 >
                   <img
-                    src="/images/Faculty5.jpg"
+                    src="/images/Afroz 1.jpeg"
+                    width={150}
+                    height={150}
                     alt="Faculty"
-                    className="img-fluid"
+                    className="img"
                   />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
@@ -311,9 +299,11 @@ const Home = () => {
                   data-aos-duration="1500"
                 >
                   <img
-                    src="/images/Faculty6.jpg"
+                    src="/images/Afroz 2.jpeg"
+                    width={150}
+                    height={150}
                     alt="Faculty"
-                    className="img-fluid"
+                    className="img"
                   />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
@@ -328,10 +318,14 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-duration="1500"
                 >
-                  <img
-                    src="/images/Faculty7.jpg"
-                    alt="Faculty"
-                    className="img-fluid"
+                  <HoverCard
+                    imagePath="/images/Afroz 3.jpeg"
+                    text="Virtuso Educator"
+                    description={
+                      "Professor CSE Department of Computer Science and Engineering"
+                    }
+                    className="custom-card-style"
+                    overlayClassName="custom-overlay-style"
                   />
                   <div className="facultyCardInfo">
                     <h3 className="facultyCardTitle">Prof. Name</h3>
@@ -346,7 +340,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-      <Footer /> 
+      <Footer />
     </>
   );
 };
