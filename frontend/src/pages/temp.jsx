@@ -287,7 +287,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="deptStrengthItem">
-                <span className="Dtps">
+                <span className="Dtp's">
                   <NumberLoader number={3} shouldLoad={shouldLoadNumbers} />
                   <p>DTP's</p>
                 </span>
@@ -295,7 +295,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="facStrength">
           <div className="container mt-5">
             <div className="row">
