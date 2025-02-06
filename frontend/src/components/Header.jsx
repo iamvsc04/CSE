@@ -189,6 +189,51 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              <li className="nav-item dropdown marlin">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Research
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/research/conferences"
+                    >
+                      Conferences
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/research/workshops"
+                    >
+                      Workshops
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/research/researchprojects"
+                    >
+                      Research Projects
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/research/consultancy-projects"
+                    >
+                      Consultancy Projects
+                    </Link>
+                  </li>
+                </ul>
+              </li>
               <li className="nav-item marlin">
                 <Link className="nav-link" to="/about">
                   About
