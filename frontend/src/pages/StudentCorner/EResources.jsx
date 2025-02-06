@@ -95,8 +95,6 @@ const EResources = () => {
         <section className="eResourcesSection">
           <div className="container mt-5">
             <h2 className="text-center mb-5">E-Resources</h2>
-
-            {/* Loop through each academic year and semester */}
             {programOutcomes.map((yearData, yearIndex) => (
               <section key={yearIndex} className="card-area">
                 <h3 className="mb-4">{yearData.year}</h3>
@@ -105,13 +103,11 @@ const EResources = () => {
                     <div className="card" key={subjectIndex} style={{ marginTop: "5px" }}>
                       <div className="flip-card">
                         <div className="flip-card__container">
-                          {/* Card Front */}
                           <div className="card-front">
                             <div className="card-front__tp1 card-front__tp--city1">
                               <h3 className="card-front__heading1">{subject.name}</h3>
                             </div>
                           </div>
-                          {/* Card Back - Display content directly on the same page after flipping */}
                           <div className="card-back">
                             <div className="notebook-style">
                               <h4 className="notebook-heading">{subject.name}</h4>
