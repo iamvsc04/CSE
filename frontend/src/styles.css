@@ -1196,3 +1196,18 @@ footer {
     width: 100%;
   }
 }
+
+.headerStyle {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}

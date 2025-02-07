@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Navbar = () => {
+  const [showMarquee, setShowMarquee] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowMarquee(false);
+      } else {
+        setShowMarquee(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <div className="sticky-top">
       <nav className="navbar navbar-expand-xl navbar-dark bg-blue">
@@ -241,9 +261,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Marquee Section */}
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12  headerStyle">
+          <div
+            className={`col-sm-12 headerStyle ${showMarquee ? "show" : "hide"}`}
+          >
             <p>Department of Computer Science and Engineering</p>
             <div className="container-fluid marqueeStyle">
               <marquee

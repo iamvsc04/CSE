@@ -2,57 +2,72 @@ import React, { useEffect } from "react";
 import { Home, Mail, Phone } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-const Contact = () => {
+const ContactUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <Header />
-      <div className="bg-gradient-to-r h-screen from-indigo-100 from-10% via-sky-200 via-30% to-emerald-100">
-        <h1 className="text-3xl text-center  text-blue-600 font-semibold">
-          Contact Us
-        </h1>
-        <div className="flex justify-center items-center gap-x-40 w-full h-96 mt-20">
-          <div className="flex justify-center items-center shadow-2xl">
+      <div className="bg-light min-vh-100 d-flex flex-column align-items-center">
+        <h1 className="text-center text-primary mt-4">Contact Us</h1>
+        <div className="container d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">
+          {/* Map Section */}
+          <div className="shadow-lg p-3 mb-5 bg-white rounded">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.4661085104526!2d78.59465581078462!3d17.196163183590578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba659868b4727%3A0xf39a771705e23170!2sCVR%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1738898607085!5m2!1sen!2sin"
               width="600"
               height="450"
+              className="border-0"
               loading="lazy"
             ></iframe>
           </div>
-          <div className="mr-10 leading-6 drop-shadow-lg">
-            <div className="flex justify-center items-center gap-20">
-              <Home color="#00b3ff" />
-              <p>
-                CVR College of Engineering<br></br>
-                Vastunagar,Ibrahimpatnam<br></br>
-                Hyderabad,Telangana,501510.
+
+          {/* Contact Details Section */}
+          <div className="ms-lg-5 p-4 shadow-lg bg-white rounded">
+            <div className="d-flex align-items-center mb-4">
+              <Home color="#00b3ff" className="me-3" />
+              <p className="mb-0">
+                <strong>CVR College of Engineering</strong>
+                <br />
+                Vastunagar, Ibrahimpatnam
+                <br />
+                Hyderabad, Telangana, 501510.
               </p>
             </div>
-            <hr className="bg-slate-400 h-[1px] mt-4" />
-            <div className="flex justify-start items-center gap-20 mt-10">
-              <Phone color="#00b3ff" />
+            <hr className="border-bottom border-secondary" />
+
+            <div className="d-flex align-items-center mt-4 mb-4">
+              <Phone color="#00b3ff" className="me-3" />
               <div>
-                Call us<br></br>
-                <p className="underline underline-offset-1 cursor-pointer hover:text-blue-600">
+                <strong>Call us</strong>
+                <br />
+                <a
+                  href="tel:+918367661141"
+                  className="text-decoration-underline text-dark"
+                >
                   +91 8367661141
-                </p>
+                </a>
               </div>
             </div>
-            <hr className="bg-slate-400 h-[1px] mt-4" />
-            <div className="flex justify-center items-center gap-20 mt-10">
-              <Mail color="#00b3ff" />
+            <hr className="border-bottom border-secondary" />
+
+            <div className="d-flex align-items-center mt-4">
+              <Mail color="#00b3ff" className="me-3" />
               <div>
-                For any further related queries<br></br>
-                Email us at<br></br>
-                <p className="underline underline-offset-1 cursor-pointer hover:text-blue-600">
-                  cvrcollegeofengineering@gmail.com
-                </p>
+                <strong>For any further queries</strong>
+                <br />
+                Email us at
+                <br />
+                <a
+                  href="mailto:cvrcollegeofengineering  @gmail.com"
+                  className="text-decoration-underline text-dark"
+                >
+                  cvrcollegeofengineering @gmail.com
+                </a>
               </div>
             </div>
-            <hr className="bg-slate-400 h-[1px] mt-4" />
+            <hr className="border-bottom border-secondary" />
           </div>
         </div>
       </div>
@@ -61,4 +76,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;
