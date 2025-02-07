@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-
 const Navbar = () => {
   return (
     <div className="sticky-top">
@@ -201,18 +200,12 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/research/conferences"
-                    >
+                    <Link className="dropdown-item" to="/research/conferences">
                       Conferences
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/research/workshops"
-                    >
+                    <Link className="dropdown-item" to="/research/workshops">
                       Workshops
                     </Link>
                   </li>

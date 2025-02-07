@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const ConsultancyProjects=()=>{
-
-}
+const ConsultancyProjects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+};
 
 export default ConsultancyProjects;
