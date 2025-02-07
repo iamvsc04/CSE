@@ -6,46 +6,39 @@ import Footer from "../../components/Footer";
 const Workshops = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
-    const [years, setYears] = useState([]);
-    const [selectedYear, setSelectedYear] = useState("");
+    const [selectedYear, setSelectedYear] = useState("2023-2024"); // Default to 2023-2024
 
-    useEffect(() => {
-        // Load the Excel file from public folder
-        fetch("/Data/workshops/2023-2024.xlsx") 
-            .then(response => response.arrayBuffer())
-            .then(buffer => {
-                const workbook = XLSX.read(buffer, { type: "array" });
-                const sheet = workbook.Sheets[workbook.SheetNames[0]];
-                const jsonData = XLSX.utils.sheet_to_json(sheet);
+    // Function to load data based on selected year
+    const fetchExcelData = async (year) => {
+        try {
+            const response = await fetch(`/Data/workshops/${year}.xlsx`);
+            const arrayBuffer = await response.arrayBuffer();
+            const workbook = XLSX.read(arrayBuffer, { type: "array" });
+            const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            const jsonData = XLSX.utils.sheet_to_json(sheet);
 
-                setData(jsonData);
-
-                // Extract unique academic years
-                const uniqueYears = [...new Set(jsonData.map(item => item["Year"]))];
-                setYears(uniqueYears);
-            });
-    }, []);
-
-    useEffect(() => {
-        if (selectedYear) {
-            setFilteredData(data.filter(item => item["Year"] === selectedYear));
-        } else {
-            setFilteredData(data);
+            setData(jsonData);
+            setFilteredData(jsonData); // Load full dataset initially
+        } catch (error) {
+            console.error("Error loading Excel file:", error);
         }
-    }, [selectedYear, data]);
+    };
+
+    // Load data when component mounts or when the year changes
+    useEffect(() => {
+        fetchExcelData(selectedYear);
+    }, [selectedYear]);
 
     return (
         <div>
             <Header />
             <h2>Workshop List</h2>
 
-            {/* Dropdown to filter by academic year */}
+            {/* Dropdown to select which academic year's dataset to load */}
             <label>Select Academic Year: </label>
-            <select onChange={(e) => setSelectedYear(e.target.value)}>
-                <option value="">All</option>
-                {years.map((year, index) => (
-                    <option key={index} value={year}>{year}</option>
-                ))}
+            <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
+                <option value="2023-2024">2023-2024</option>
+                <option value="2022-2023">2022-2023</option>
             </select>
 
             {/* Workshop Data Table */}
@@ -75,6 +68,7 @@ const Workshops = () => {
                     ))}
                 </tbody>
             </table>
+
             <Footer />
         </div>
     );
