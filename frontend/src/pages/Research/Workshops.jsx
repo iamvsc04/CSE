@@ -47,6 +47,7 @@ const Workshops = () => {
                     <tr>
                         <th>S. No</th>
                         <th>Year</th>
+                        <th>Name of Resource Person</th>
                         <th>Date</th>
                         <th>Title</th>
                         <th>From</th>
@@ -58,7 +59,7 @@ const Workshops = () => {
                         <tr key={index}>
                             <td>{workshop["S. No"]}</td>
                             <td>{workshop["Year"]}</td>
-                            <td>{workshop["Name of"]}</td>
+                            <td>{workshop["Name of Resource Person"]}</td>
                             <td>{workshop["Date"]}</td>
                             <td>{workshop["Title"]}</td>
                             <td>{workshop["From"]}</td>
