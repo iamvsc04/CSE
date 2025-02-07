@@ -214,7 +214,7 @@ const Navbar = () => {
                       className="dropdown-item"
                       to="/research/researchprojects"
                     >
-                      Research Projects
+                      FDP's
                     </Link>
                   </li>
                   <li>
@@ -222,7 +222,7 @@ const Navbar = () => {
                       className="dropdown-item"
                       to="/research/consultancy-projects"
                     >
-                      Consultancy Projects
+                      Patents
                     </Link>
                   </li>
                 </ul>
