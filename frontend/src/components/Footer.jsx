@@ -30,9 +30,6 @@ const Footer = () => {
             <h4>Academics</h4>
             <ul>
               <li>
-                <Link to="/academics/vision-mission">Vision Mission</Link>
-              </li>
-              <li>
                 <Link to="/academics/objectives">Objectives</Link>
               </li>
               <li>
