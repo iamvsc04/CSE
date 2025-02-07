@@ -1,13 +1,20 @@
-import React from 'react';
-import "../../styles.css"; 
+import React, { useEffect } from "react";
+import "../../styles.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const SyllabusBooks = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-    <Header />
-      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} id="myBtn" title="Go to top">
+      <Header />
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        id="myBtn"
+        title="Go to top"
+      >
         <i className="fa fa-angle-double-up" aria-hidden="true"></i>
       </button>
       {/* Main Content Begin */}
@@ -21,13 +28,22 @@ const SyllabusBooks = () => {
                 </div>
               </div>
             </div>
-            <section className="calenderItems mt-3" data-aos="zoom-in" data-aos-duration="1000">
+            <section
+              className="calenderItems mt-3"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               <div className="container">
                 <div className="itemsContainer p-3">
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
-                        <img src="/images/CVR Logo.png" className="img-fluid" alt="CVR Logo" /> B.Tech CSE
+                        <img
+                          src="/images/CVR Logo.png"
+                          className="img-fluid"
+                          alt="CVR Logo"
+                        />{" "}
+                        B.Tech CSE
                       </h3>
                     </div>
                     <h4>
@@ -40,13 +56,22 @@ const SyllabusBooks = () => {
                 </div>
               </div>
             </section>
-            <section className="calenderItems mt-3" data-aos="zoom-in" data-aos-duration="2000">
+            <section
+              className="calenderItems mt-3"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
               <div className="container">
                 <div className="itemsContainer p-3">
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
-                        <img src="/images/CVR Logo.png" className="img-fluid" alt="CVR Logo" /> M.Tech AI
+                        <img
+                          src="/images/CVR Logo.png"
+                          className="img-fluid"
+                          alt="CVR Logo"
+                        />{" "}
+                        M.Tech AI
                       </h3>
                     </div>
                     <h4>
@@ -68,7 +93,7 @@ const SyllabusBooks = () => {
         </section>
       </main>
       {/* Main Content End */}
-      <Footer/>
+      <Footer />
     </>
   );
 };

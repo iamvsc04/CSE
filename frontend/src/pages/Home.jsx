@@ -5,6 +5,9 @@ import NumberLoader from "../components/NumberLoader";
 import "../styles.css";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [shouldLoadNumbers, setShouldLoadNumbers] = useState(false);
   const deptStrengthRef = useRef(null);
 
