@@ -10,7 +10,6 @@ export default function NothingFoundBackground() {
 
   return (
     <>
-      <Header />
       <Container ta="center" className={classes.root}>
         <div className={classes.inner}>
           <Illustration className={classes.image} />
@@ -32,7 +31,6 @@ export default function NothingFoundBackground() {
           </div>
         </div>
       </Container>
-      <Footer />
     </>
   );
 }
