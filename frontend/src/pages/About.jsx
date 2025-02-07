@@ -18,156 +18,169 @@ const About = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      <div className="min-vh-100 bg-light">
         {/* Hero Section */}
-        <div className="relative h-64 bg-blue-600 overflow-hidden">
-          <div
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80')",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              opacity: "0.2",
-            }}
-          />
-          <div className="relative z-10 h-full flex items-center justify-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white text-center px-4">
-              About the CSE Department
-            </h1>
+        <div className="hero-section py-5">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-8 text-center">
+                <h1 className="display-4 fw-bold">About the CSE Department</h1>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center mb-6">
-                <BookOpen className="w-8 h-8 text-blue-600 mr-4" />
-                <h2 className="text-2xl font-bold text-gray-800">Our Story</h2>
+        <div className="container py-5">
+          {/* Story and Why Choose Us */}
+          <div className="row g-4 mb-5">
+            <div className="col-md-6">
+              <div className="card h-100 shadow">
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <BookOpen size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Our Story</h2>
+                  </div>
+                  <p className="text-muted">
+                    The Computer Science and Engineering Department at
+                    <span className="fw-semibold text-primary">
+                      {" "}
+                      CVR College of Engineering
+                    </span>
+                    is dedicated to academic excellence and innovation. Our
+                    mission is to equip students with cutting-edge knowledge and
+                    industry-relevant skills.
+                  </p>
+                </div>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                The Computer Science and Engineering Department at
-                <span className="font-semibold text-blue-600">
-                  {" "}
-                  CVR College of Engineering
-                </span>
-                is dedicated to academic excellence and innovation. Our mission
-                is to equip students with cutting-edge knowledge and
-                industry-relevant skills.
-              </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center mb-6">
-                <Target className="w-8 h-8 text-blue-600 mr-4" />
-                <h2 className="text-2xl font-bold text-gray-800">
-                  Why Choose Us?
-                </h2>
+            <div className="col-md-6">
+              <div className="card h-100 shadow">
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <Target size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Why Choose Us?</h2>
+                  </div>
+                  <ul className="list-unstyled text-muted">
+                    {[
+                      "Highly qualified faculty with diverse expertise",
+                      "State-of-the-art laboratories",
+                      "Strong industry collaborations",
+                      "Excellent placement records",
+                    ].map((item, index) => (
+                      <li
+                        key={index}
+                        className="mb-2 d-flex align-items-center"
+                      >
+                        <span className="bullet-point"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Highly qualified faculty with diverse expertise
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  State-of-the-art laboratories
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Strong industry collaborations
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Excellent placement records
-                </li>
-              </ul>
             </div>
           </div>
 
           {/* Vision & Mission */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <div className="flex items-center mb-6">
-                  <GraduationCap className="w-8 h-8 text-blue-600 mr-4" />
-                  <h2 className="text-2xl font-bold text-gray-800">
-                    Our Vision
-                  </h2>
+          <div className="card shadow mb-5">
+            <div className="card-body">
+              <div className="row g-4">
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <GraduationCap size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Our Vision</h2>
+                  </div>
+                  <p className="text-muted">
+                    To be a center of excellence in Computer Science and
+                    Engineering education, fostering innovation, research, and
+                    leadership to address global challenges.
+                  </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
-                  To be a center of excellence in Computer Science and
-                  Engineering education, fostering innovation, research, and
-                  leadership to address global challenges.
-                </p>
-              </div>
-              <div>
-                <div className="flex items-center mb-6">
-                  <Target className="w-8 h-8 text-blue-600 mr-4" />
-                  <h2 className="text-2xl font-bold text-gray-800">
-                    Our Mission
-                  </h2>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <Target size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Our Mission</h2>
+                  </div>
+                  <ul className="list-unstyled text-muted">
+                    {[
+                      "Provide high-quality technical education",
+                      "Promote research and innovation",
+                      "Encourage industry-academia collaboration",
+                    ].map((item, index) => (
+                      <li key={index} className="mb-2 d-flex align-items-start">
+                        <span className="bullet-point mt-2"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2"></span>
-                    Provide high-quality technical education
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2"></span>
-                    Promote research and innovation
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2"></span>
-                    Encourage industry-academia collaboration
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
 
           {/* Placements & Contact */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <Building2 className="w-8 h-8 text-blue-600 mr-4" />
-                <h2 className="text-2xl font-bold text-gray-800">Placements</h2>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Our students are placed in top companies like Google, Microsoft,
-                Amazon, and Infosys, with competitive salary packages.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Google", "Microsoft", "Amazon", "Infosys"].map((company) => (
-                  <span
-                    key={company}
-                    className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
-                  >
-                    {company}
-                  </span>
-                ))}
+          <div className="row g-4">
+            <div className="col-md-6">
+              <div className="card h-100 shadow">
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <Building2 size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Placements</h2>
+                  </div>
+                  <p className="text-muted mb-4">
+                    Our students are placed in top companies like Google,
+                    Microsoft, Amazon, and Infosys, with competitive salary
+                    packages.
+                  </p>
+                  <div>
+                    {["Google", "Microsoft", "Amazon", "Infosys"].map(
+                      (company) => (
+                        <span key={company} className="company-badge me-2 mb-2">
+                          {company}
+                        </span>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <Phone className="w-8 h-8 text-blue-600 mr-4" />
-                <h2 className="text-2xl font-bold text-gray-800">Contact Us</h2>
-              </div>
-              <div className="space-y-4 text-gray-600">
-                <p className="flex items-center">
-                  <span className="w-6 text-blue-600">📍</span>
-                  CVR College of Engineering, Hyderabad
-                </p>
-                <p className="flex items-center">
-                  <span className="w-6 text-blue-600">📧</span>
-                  cse@cvr.ac.in
-                </p>
-                <p className="flex items-center">
-                  <span className="w-6 text-blue-600">📞</span>
-                  +91-XXXXXXXXXX
-                </p>
+            <div className="col-md-6">
+              <div className="card h-100 shadow">
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4">
+                    <div className="icon-wrapper me-3">
+                      <Phone size={32} />
+                    </div>
+                    <h2 className="h3 mb-0">Contact Us</h2>
+                  </div>
+                  <div className="text-muted">
+                    <p className="d-flex align-items-center mb-3">
+                      <span className="me-2">📍</span>
+                      CVR College of Engineering, Hyderabad
+                    </p>
+                    <p className="d-flex align-items-center mb-3">
+                      <span className="me-2">📧</span>
+                      cse@cvr.ac.in
+                    </p>
+                    <p className="d-flex align-items-center mb-0">
+                      <span className="me-2">📞</span>
+                      +91-XXXXXXXXXX
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

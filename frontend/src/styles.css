@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-/* 
-rgb(157, 176, 147);      #1A2238     #9DAAF2     #FF6A3D     #F4DB7D     #203764    #9fd5f9b7(background)
-#FFCF0A     #61CE70     #363636     #00AAA6     #ECF0F1     #2981BA         #036059     #caf0f8
-*/
 html {
   scroll-behavior: smooth;
 }
@@ -28,33 +23,15 @@ html {
 }
 
 body {
-  /* background-color: #FFCF0A; */
   background-color: #caf0f8;
-  /* background-color: rgba(255, 206, 10, 0.562); */
   font-family: Poppins, sans-serif;
   overflow-y: scroll;
-  /* Show scrollbars */
 }
 
-/* Navbar Background Color */
 .bg-blue {
   background-color: #203764;
 }
 
-/* #navbarNav {
-
-    // Regular state
-    .nav-item a {
-        color: rgb(132, 132, 191);
-    }
-
-    // Active state
-    .nav-item.active a {
-        color: red;
-    }
-} */
-
-/* Goto Top Button Styling Begin */
 #myBtn {
   display: none;
   position: fixed;
@@ -73,85 +50,9 @@ body {
 }
 
 #myBtn:hover {
-  /* background-color: rgb(213, 70, 235); */
   background: linear-gradient(#7a2020, #987886, #121927, #2981ba, #162ca9);
 }
 
-/* Goto Top Button Styling End */
-
-/* blinking marquee and its animation begin */
-/* blink {
-    -webkit-animation: 2s linear infinite kedip;
-    animation: .3s linear infinite kedip;
-
-}
-
-blink:hover,
-marquee:hover {
-    -webkit-animation: 2s linear infinite kedip;
-    animation: .3s linear infinite stdip;
-
-}
-
-@-webkit-keyframes stdip {
-    0% {
-        visibility: visible;
-    }
-
-    50% {
-        visibility: visible;
-    }
-
-    100% {
-        visibility: visible;
-    }
-}
-
-@keyframes stdip {
-    0% {
-        visibility: visible;
-    }
-
-    50% {
-        visibility: visible;
-    }
-
-    100% {
-        visibility: visible;
-    }
-}
-
-@-webkit-keyframes kedip {
-    0% {
-        visibility: hidden;
-    }
-
-    50% {
-        visibility: hidden;
-    }
-
-    100% {
-        visibility: visible;
-    }
-}
-
-@keyframes kedip {
-    0% {
-        visibility: hidden;
-    }
-
-    50% {
-        visibility: hidden;
-    }
-
-    100% {
-        visibility: visible;
-    }
-} */
-
-/* blinking marquee and its animation end */
-
-/* Header - Dept Name Styling */
 .headerStyle {
   background-color: #0077b6;
   text-align: center;
@@ -178,8 +79,6 @@ marquee:hover {
   color: #fff;
   letter-spacing: 1px;
 }
-
-/* Flash Blinking */
 .blink {
   border: 1px solid rgb(239, 232, 232);
   background-color: rgba(167, 167, 23, 0.258);
@@ -209,10 +108,6 @@ marquee:hover {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Header Styling End */
-
-/* Main Styling Begin */
 .ecaDiv {
   border: 2px solid #203764;
   padding: 15px;
@@ -243,7 +138,6 @@ marquee:hover {
   color: #203764;
   text-decoration: none;
   font-weight: 600;
-  /* padding-top: 15px; */
 }
 
 .ecaDiv .announceDiv {
@@ -275,8 +169,6 @@ marquee:hover {
 .ecaDiv .announceDiv .announceMarquee ul li a {
   color: #fd3407;
   text-decoration: none;
-  /* font-size: 1rem; */
-  /* padding-top: 15px; */
 }
 
 .ecaDiv .carouselDiv {
@@ -294,7 +186,6 @@ marquee:hover {
 
 .headMessageSection {
   border: 1px solid #203764;
-  /* background-color: #d6c47ecf; */
   background-color: rgba(167, 196, 225, 0.284);
   padding-bottom: 30px;
 }
@@ -307,7 +198,6 @@ marquee:hover {
 .msghoddiv .msghodp {
   color: #203764;
   letter-spacing: 1px;
-  /* color: #fff; */
   text-align: justify;
   font-weight: 500;
 }
@@ -325,11 +215,7 @@ marquee:hover {
 }
 
 .recogSection .recogContainer .recogItem img {
-  /* border: 5px solid #203764; */
   padding: 5px;
-  /* opacity: 0.8; */
-  /* border-radius: 10%; */
-  /* box-shadow: 1px 1px 1px 1px red; */
 }
 
 .deptStrengthSection {
@@ -375,7 +261,6 @@ marquee:hover {
   border-radius: 10px;
   margin-right: 5px;
   margin-top: 5px;
-  /* transition: all .3s ease; */
   animation-name: rotate;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -388,10 +273,6 @@ marquee:hover {
     animation-timing-function: ease-in;
     background-color: rgb(151, 179, 216);
     color: #eb1818;
-    /* box-shadow:
-            0 0 0 hsl(0, 0%, 80%),
-            0.1rem 0 0 hsl(0, 0%, 100%),
-            -0.2rem 0 0.75rem 0 hsla(0, 0%, 0%, 0.3); */
     transform: rotateY(-10deg);
   }
 
@@ -400,10 +281,6 @@ marquee:hover {
     background-color: rgb(212, 185, 134);
     animation-timing-function: ease-out;
     color: #4b5cc0;
-    /* box-shadow:
-            0 0 0 hsl(0, 0%, 80%),
-            0 0 0 hsl(0, 0%, 100%),
-            -0.25rem -0.05rem 1rem 0.15rem hsla(0, 0%, 0%, 0.3); */
     transform: rotateY(0deg);
   }
 
@@ -411,10 +288,6 @@ marquee:hover {
     animation-timing-function: ease-in;
     background-color: rgb(212, 160, 160);
     color: #fff;
-    /* box-shadow:
-            -0.1rem 0 0 hsl(0, 0%, 80%),
-            0 0 0 hsl(0, 0%, 100%),
-            -0.3rem -0.1rem 1.5rem 0.3rem hsla(0, 0%, 0%, 0.3); */
     transform: rotateY(10deg);
   }
 }
@@ -425,7 +298,6 @@ marquee:hover {
   .deptStrengthItem:hover {
   box-shadow: 0px 1px 1px 0px red;
   transform: translate(3px);
-  /* cursor: pointer; */
 }
 
 .deptStrengthSection
@@ -435,7 +307,6 @@ marquee:hover {
   span {
   font-weight: 600;
   font-size: 2rem;
-  /* color: rgb(123, 12, 226); */
 }
 
 .deptStrengthSection
@@ -445,16 +316,12 @@ marquee:hover {
   p {
   font-size: 1.2rem;
   font-weight: 600;
-  /* text-shadow: 1px 1px 1px 1px red; */
-  /* color: rgb(57, 58, 153); */
 }
 
 .contactSection {
   border: 1px solid #203764;
   padding: 25px;
-  /* background-color: rgba(91, 161, 207, 0.999); */
   background-color: rgba(255, 255, 255, 0.778);
-  /* border-bottom: 1px solid #dde2ec; */
   color: #203764;
 }
 
@@ -471,7 +338,6 @@ marquee:hover {
   justify-content: center;
   border-left: 5px solid #203764;
   padding: 10px;
-  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12); */
   border-radius: 20px;
 }
 
@@ -521,11 +387,8 @@ marquee:hover {
 }
 
 .facStrength .facultyCardContainer .facultyCard:hover {
-  /* transform: skew(0deg, -2deg); */
   border: 2px solid #e41111;
   box-shadow: 0 2px 3px 5px green;
-  /* transform: scale(1.25); */
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06); */
 }
 
 .facStrength .facultyCardContainer .facultyCard img {
@@ -548,13 +411,10 @@ marquee:hover {
   background-color: #363636;
   border: 1px solid rgb(217, 126, 126);
 }
-
-/* Faculty - Teaching Styles */
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
   background-color: #f7f5ec;
-  /* background-color: rgba(10, 149, 255, 0.302); */
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -652,10 +512,6 @@ marquee:hover {
   color: #1369ce;
   background-color: #f7f5ec;
 }
-
-/* Faculty - Teaching Styles End */
-
-/* Vision-Mission Styles Begin*/
 .visionMissionSection {
   border: 1px solid #203764;
   padding-bottom: 30px;
@@ -681,7 +537,6 @@ marquee:hover {
 .visionMissionSection .visionSection p {
   letter-spacing: 1px;
   padding-left: 50px;
-  /* font-weight: 600; */
   font-size: 1.1rem;
 }
 
@@ -703,16 +558,10 @@ marquee:hover {
 
 .visionMissionSection .missionSection ul li {
   letter-spacing: 1px;
-  /* padding-left: 50px; */
-  /* font-weight: 600; */
   font-size: 1.1rem;
   list-style: none;
   padding-left: 10px;
 }
-
-/* Vision-Mission Styles End */
-
-/* Objectives Styles Begin */
 .objectivesSection {
   border: 1px solid #203764;
   padding-bottom: 30px;
@@ -754,20 +603,14 @@ marquee:hover {
   background-color: rgba(235, 212, 180, 0.497);
   color: rgba(2, 12, 69, 0.949);
 }
-
-/* Online Code for Objectives */
 .card-front__heading {
   font-size: 1.5rem;
   margin-top: 0.25rem;
 }
-
-/* Main heading for inside page */
 .inside-page__heading {
   padding-bottom: 1rem;
   width: 100%;
 }
-
-/* For both inside page's main heading and 'view me' text on card front cover */
 .card-front__text-view {
   font-size: 1.3rem;
   font-weight: 800;
@@ -779,26 +622,17 @@ marquee:hover {
   color: #ff62b2;
 }
 
-/* Front cover */
-
 .card-front__tp {
   color: #fafbfa;
 }
-
-/* For pricing text on card front cover */
 .card-front__text-price {
   font-size: 1.2rem;
   margin-top: -0.2rem;
 }
-
-/* For inside page's body text */
 .inside-page__text {
   color: #333;
   font-size: 1rem;
 }
-
-/* Icons ===========================================*/
-
 .card-front__icon {
   fill: #fafbfa;
   font-size: 3vw;
@@ -807,7 +641,6 @@ marquee:hover {
   width: 3.25rem;
 }
 
-/* Container to hold all cards in one place */
 .card-area {
   align-items: center;
   display: flex;
@@ -817,9 +650,6 @@ marquee:hover {
   padding: 1rem;
 }
 
-/* Card ============================================*/
-
-/* Area to hold an individual card */
 .card-section {
   align-items: center;
   display: flex;
@@ -829,7 +659,6 @@ marquee:hover {
   width: 100%;
 }
 
-/* A container to hold the flip card and the inside page */
 .card {
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.5);
@@ -839,7 +668,6 @@ marquee:hover {
   width: 15rem;
 }
 
-/* An outer container to hold the flip card. This excludes the inside page */
 .flip-card {
   height: 15rem;
   perspective: 100rem;
@@ -851,13 +679,10 @@ marquee:hover {
   z-index: 100;
 }
 
-/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
-/* This is done so content in the inside page can be selected */
 .flip-card > * {
   visibility: visible;
 }
 
-/* An inner container to hold the flip card. This excludes the inside page */
 .flip-card__container {
   height: 100%;
   position: absolute;
@@ -878,16 +703,12 @@ marquee:hover {
   width: 100%;
 }
 
-/* Styling for the front side of the flip card */
-
-/* container for the front side */
 .card-front {
   background-color: #fafbfa;
   height: 15rem;
   width: 15rem;
 }
 
-/* Front side's top section */
 .card-front__tp {
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
@@ -899,9 +720,6 @@ marquee:hover {
 }
 
 .card-front__tp--city {
-  /* background: linear-gradient(to bottom,
-            #a3cf97,
-            #0ce43b); */
   background: linear-gradient(to bottom, #ff73b9, #ff40a1);
 }
 
@@ -922,9 +740,6 @@ marquee:hover {
 }
 
 .card-front__tp--city1 {
-  /* background: linear-gradient(to bottom,
-            #a3cf97,
-            #0ce43b); */
   background: linear-gradient(to bottom, #4da004, #44983a);
 }
 
@@ -967,9 +782,6 @@ marquee:hover {
 }
 
 .card-front__tp--city2 {
-  /* background: linear-gradient(to bottom,
-            #a3cf97,
-            #0ce43b); */
   background: linear-gradient(to bottom, #b21212, #490b0b);
 }
 
@@ -995,21 +807,15 @@ marquee:hover {
   font-weight: 500;
 }
 
-/* Front card's bottom section */
 .card-front__bt {
   align-items: center;
   display: flex;
   justify-content: center;
 }
-
-/* Styling for the back side of the flip card */
-
 .card-back {
   background-color: #fafbfa;
   transform: rotateY(180deg);
 }
-
-/* Inside page */
 
 .inside-page {
   background-color: #fafbfa;
@@ -1032,27 +838,18 @@ marquee:hover {
   width: 100%;
 }
 
-/* Functionality ====================================*/
-
-/* This is to keep the card centered (within its container) when opened */
 .card:hover {
   box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
   width: 30rem;
 }
 
-/* When the card is hovered, the flip card container will rotate */
 .card:hover .flip-card__container {
   transform: rotateY(-180deg);
 }
 
-/* When the card is hovered, the shadow on the inside page will shrink to the left */
 .card:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
 }
-
-/* Objectives Styles End */
-
-/* Academic Calendar Styles Begin */
 
 .academicSection {
   border: 1px solid #203764;
@@ -1065,7 +862,6 @@ marquee:hover {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  /* padding: 5px; */
 }
 
 .academicSection .itemsContainer .item {
@@ -1079,9 +875,6 @@ marquee:hover {
     rgb(40, 49, 97),
     rgb(109, 119, 176)
   );
-  /* background: linear-gradient(to bottom,
-            rgb(55, 62, 62),
-            rgb(141, 3, 139)); */
   display: flex;
   flex-direction: column;
   margin-top: 5px;
@@ -1090,7 +883,6 @@ marquee:hover {
 .academicSection .itemsContainer .item:hover {
   transform: scale(1.1);
   box-shadow: 0px 1px 1px 2px rgba(209, 46, 46, 0.76);
-  /* background: linear-gradient(to bottom, rgb(219, 228, 188), rgb(233, 234, 243), rgb(179, 181, 193)); */
 }
 
 .academicSection .itemsContainer .item h3 {
@@ -1109,12 +901,8 @@ marquee:hover {
   width: 50px;
   height: 50px;
   margin-right: 5px;
-  /* background-color: #FFF; */
 }
 
-/* Academic Calendar Styles End */
-
-/* Laboratories Style Begin */
 .labsSection {
   border: 1px solid #203764;
   padding-bottom: 30px;
@@ -1123,8 +911,6 @@ marquee:hover {
 
 .labsSection .labCardContainer {
   width: 100%;
-  /* height: 100vh; */
-  /* background-color: rgba(10, 149, 255, 0.302); */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1136,10 +922,8 @@ marquee:hover {
   height: 320px;
   border-radius: 20px;
   overflow: hidden;
-  /* margin-top: 5px; */
   border: 8px solid #fff;
   position: relative;
-  /* margin-right: 10px; */
 }
 
 .labName {
@@ -1180,7 +964,6 @@ marquee:hover {
 }
 
 .labCardInfo {
-  /* font-size: 0.9rem; */
   text-align: center;
   font-weight: 600;
   line-height: 30px;
@@ -1204,10 +987,6 @@ marquee:hover {
   margin-top: 10px;
 }
 
-/* Laboratories Style End */
-
-/* Class Rooms Style Begin */
-
 .classSection {
   border: 1px solid #203764;
   padding-bottom: 30px;
@@ -1224,7 +1003,6 @@ marquee:hover {
 .classSection .classDiv .imgDiv {
   padding: 5px;
   border: 5px solid #9d7878;
-  /* width: 50%; */
   height: 350px;
   overflow: hidden;
   border-radius: 10px;
@@ -1233,7 +1011,6 @@ marquee:hover {
 
 .classSection .classDiv .imgDiv img {
   border-radius: 10px;
-  /* object-fit: cover; */
   width: 100%;
   height: 100%;
   position: relative;
@@ -1261,14 +1038,10 @@ marquee:hover {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  /* font-size: .9rem; */
   font-weight: 600;
   text-align: justify;
 }
 
-/* Class Rooms Style End */
-
-/* Footer Formating */
 footer {
   background-color: #24262b;
   padding: 70px 0;
@@ -1411,7 +1184,6 @@ footer {
   margin-right: 8px;
 }
 
-/*responsive*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
