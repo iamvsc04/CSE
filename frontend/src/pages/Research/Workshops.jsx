@@ -47,7 +47,6 @@ const Workshops = () => {
                     <tr>
                         <th>S. No</th>
                         <th>Year</th>
-                        <th>Name</th>
                         <th>Date</th>
                         <th>Title</th>
                         <th>From</th>
