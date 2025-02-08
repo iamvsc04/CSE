@@ -60,7 +60,6 @@ const ResearchProjects = () => {
                 <th>Date</th>
                 <th>Title</th>
                 <th>From</th>
-                <th>Count</th>
               </tr>
             </thead>
             <tbody>
@@ -72,7 +71,6 @@ const ResearchProjects = () => {
                   <td>{workshop["Date"]}</td>
                   <td>{workshop["Title"]}</td>
                   <td>{workshop["From"]}</td>
-                  <td>{workshop["Count"]}</td>
                 </tr>
               ))}
             </tbody>
