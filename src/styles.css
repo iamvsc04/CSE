@@ -89,6 +89,12 @@ body {
   margin-left: 3px;
 }
 
+.carousel-item:hover .carousel-caption {
+  display: block !important;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
 @keyframes blink {
   0% {
     opacity: 1;

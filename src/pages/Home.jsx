@@ -97,27 +97,43 @@ const Home = () => {
                               className="d-block w-100 img-fluid"
                               alt="Old Group PIc"
                             />
+                           <div className="carousel-caption d-none">
+        <h5>Title for Slide 1</h5>
+        <p>Description for Slide 1.</p>
+      </div>
                           </div>
-                          <div className="carousel-item">
+                          <div className="carousel-item" data-bs-ride="carousel">
                             <img
                               src="/images/oldcsedept.jpg"
                               className="d-block w-100 img-fluid"
                               alt="Old CSE Building"
                             />
+                            <div className="carousel-caption d-none ">
+                             <h5>Title for Slide 1</h5>
+                             <p>Description for Slide 1.</p>
+                             </div>
                           </div>
-                          <div className="carousel-item">
+                          <div className="carousel-item" data-bs-ride="carousel">
                             <img
                               src="/images/applelab.jpg"
                               className="d-block w-100  img-fluid"
                               alt="Apple Laboratory"
                             />
+                            <div className="carousel-caption d-none ">
+                               <h5>Title for Slide 1</h5>
+                               <p>Description for Slide 1.</p>
+                               </div>
                           </div>
-                          <div className="carousel-item">
+                          <div className="carousel-item" data-bs-ride="carousel">
                             <img
                               src="/images/laboratories/Projects Lab 1.JPG"
                               className="d-block w-100 img-fluid"
                               alt="Apple Laboratory"
                             />
+                            <div className="carousel-caption d-none">
+                              <h5>Title for Slide 1</h5>
+                              <p>Description for Slide 1.</p>
+                              </div>
                           </div>
                         </div>
                         <button
