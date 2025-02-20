@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NumberLoader from "../components/NumberLoader";
 import "../styles.css";
+import FacultyCard from "../components/FacultyCard";
 
 const Home = () => {
   useEffect(() => {
@@ -11,15 +12,20 @@ const Home = () => {
   const [shouldLoadNumbers, setShouldLoadNumbers] = useState(false);
   const deptStrengthRef = useRef(null);
 
+  let fc1 = {
+    name: "VSC",
+    dept: "cse",
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setShouldLoadNumbers(true);
-          observer.disconnect(); // Stop observing after numbers load
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } // 30% of the section must be visible
+      { threshold: 0.3 }
     );
 
     if (deptStrengthRef.current) {
@@ -33,91 +39,110 @@ const Home = () => {
     <>
       <Header />
       <main>
-      <section className="carouselSection py-4">
-  <div className="container-fluid">
-    <div className="row align-items-center ecaDiv px-4">
-      {/* Events Section */}
-      <div className="col-lg-2 eventsDiv bg-light shadow-sm rounded p-3">
-        <h5 className="fw-bold text-center text-primary">Events@CSE</h5>
-        <div className="announceMarquee">
-          <ul className="list-unstyled text-dark">
-            {Array(6).fill("MIWAI to start on 20th July, 2023").map((event, index) => (
-              <li key={index} className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  {event}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      
-      {/* Carousel Section */}
-      <div className="col-lg-8">
-        <div id="carouselA" className="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
-          <div className="carousel-indicators">
-            {[0, 1, 2, 3].map((index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#carouselA"
-                data-bs-slide-to={index}
-                className={index === 0 ? "active" : ""}
-                aria-current={index === 0 ? "true" : "false"}
-                aria-label={`Slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
-          <div className="carousel-inner">
-            {[
-              { src: "../images/CSE Dept Group Pic Latest.jpeg", alt: "Old Group Pic" },
-              { src: "/images/oldcsedept.jpg", alt: "Old CSE Building" },
-              { src: "/images/applelab.jpg", alt: "Apple Laboratory" },
-              { src: "/images/laboratories/Projects Lab 1.JPG", alt: "Project Lab" }
-            ].map((image, index) => (
-              <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                <img src={image.src} className="d-block w-100 img-fluid" alt={image.alt} />
-                <div className="carousel-caption bg-dark bg-opacity-50 text-light rounded p-2 d-none">
-                  <h5>Title for Slide {index + 1}</h5>
-                  <p>Description for Slide {index + 1}.</p>
+        <div className="container-fluid p-0 ">
+          <section
+            className="carouselSection"
+            style={{ height: "85vh", width: "100vw" }}
+          >
+            <div
+              className="container-fluid"
+              style={{
+                height: "85vh",
+                width: "100vw",
+                margin: "-12px",
+              }}
+            >
+              <div
+                id="carouselA"
+                className="carousel slide shadow-lg rounded"
+                data-bs-ride="carousel"
+                style={{ height: "85vh", width: "100vw" }}
+              >
+                <div className="carousel-indicators">
+                  {[0, 1, 2, 3].map((index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      data-bs-target="#carouselA"
+                      data-bs-slide-to={index}
+                      className={index === 0 ? "active" : ""}
+                      aria-current={index === 0 ? "true" : "false"}
+                      aria-label={`Slide ${index + 1}`}
+                    ></button>
+                  ))}
                 </div>
+                <div
+                  className="carousel-inner"
+                  style={{ height: "85vh", width: "100vw" }}
+                >
+                  {[
+                    {
+                      src: "../images/CSE Dept Group Pic Latest.jpeg",
+                      alt: "Old Group Pic",
+                    },
+                    {
+                      src: "/images/oldcsedept.jpg",
+                      alt: "Old CSE Building",
+                    },
+                    { src: "/images/applelab.jpg", alt: "Apple Laboratory" },
+                    {
+                      src: "/images/laboratories/Projects Lab 1.JPG",
+                      alt: "Project Lab",
+                    },
+                  ].map((image, index) => (
+                    <div
+                      key={index}
+                      className={`carousel-item ${index === 0 ? "active" : ""}`}
+                      style={{ height: "85vh", width: "100vw" }}
+                    >
+                      <img
+                        src={image.src}
+                        className="d-block w-100"
+                        alt={image.alt}
+                        style={{
+                          height: "85vh",
+                          width: "100vw",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
+                      <div className="carousel-caption bg-dark bg-opacity-50 text-light rounded p-2 d-none">
+                        <h5>Title for Slide {index + 1}</h5>
+                        <p>Description for Slide {index + 1}.</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselA"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselA"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
               </div>
-            ))}
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselA" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselA" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+            </div>
+          </section>
         </div>
-      </div>
-      
-      {/* Announcements Section */}
-      <div className="col-lg-2 announceDiv bg-light shadow-sm rounded p-3">
-        <h5 className="fw-bold text-center text-danger">Announce@CSE</h5>
-        <div className="announceMarquee">
-          <marquee direction="up" scrollamount="3" onMouseEnter={(e) => e.target.stop()} onMouseLeave={(e) => e.target.start()}>
-            <ul className="list-unstyled text-danger">
-              {Array(6).fill("MIWAI to start on 20th July, 2023").map((announcement, index) => (
-                <li key={index} className="mb-2">
-                  <a href="#" className="text-decoration-none text-danger">
-                    {announcement}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </marquee>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
         <section className="headMessageSection">
-          <div className="container mt-5">
+          <div className="container mt-3">
             <div className="row">
               <div className="col-md-12 p-5">
                 <h2 className="text-center text-uppercase">
@@ -139,7 +164,7 @@ const Home = () => {
                   style={{ border: "3px solid #203476" }}
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 hodmsg">
                 <div
                   className="msghoddiv"
                   data-aos="fade-left"
@@ -240,6 +265,7 @@ const Home = () => {
             </div>
             <div className="container">
               <div className="facultyCardContainer">
+                {/* <FacultyCard data={fc1} /> */}
                 <div
                   className="facultyCard"
                   data-aos="fade-up"

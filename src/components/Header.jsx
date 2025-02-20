@@ -263,7 +263,7 @@ const Navbar = () => {
       </nav>
 
       {/* Marquee Section */}
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div className="row">
           <div
             className={`col-sm-12 headerStyle ${showMarquee ? "show" : "hide"}`}
@@ -293,7 +293,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

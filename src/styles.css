@@ -25,6 +25,7 @@ html {
 body {
   background-color: #caf0f8;
   font-family: Poppins, sans-serif;
+  overflow: hidden;
   overflow-y: scroll;
 }
 
@@ -116,7 +117,7 @@ body {
 }
 .ecaDiv {
   border: 2px solid #203764;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .ecaDiv .eventsDiv {
@@ -203,6 +204,7 @@ body {
 
 .msghoddiv .msghodp {
   color: #203764;
+
   letter-spacing: 1px;
   text-align: justify;
   font-weight: 500;
@@ -266,11 +268,6 @@ body {
   border: 2px solid #203476;
   border-radius: 10px;
   margin-right: 5px;
-  margin-top: 5px;
-  animation-name: rotate;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
 @keyframes rotate {
@@ -1050,7 +1047,7 @@ body {
 
 footer {
   background-color: #24262b;
-  padding: 70px 0;
+  padding: 40px 0;
 }
 
 .footer-col {
@@ -1216,4 +1213,8 @@ footer {
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
