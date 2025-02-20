@@ -33,174 +33,88 @@ const Home = () => {
     <>
       <Header />
       <main>
-        <section className="carouselSection">
-          <div className="container-fluid">
-            <div className="row ecaDiv p-5">
-              <div className="col-lg-2 eventsDiv mt-2">
-                <p>Events@CSE</p>
-                <div className="announceMarquee">
-                  <ul>
-                    <li>
-                      <a href="#">MIWAI - 2023</a>
-                    </li>
-                    <li>
-                      <a href="#">MIWAI to start on 20th July, 2023</a>
-                    </li>
-                    <li>
-                      <a href="#">MIWAI to start on 20th July, 2023</a>
-                    </li>
-                    <li>
-                      <a href="#">MIWAI to start on 20th July, 2023</a>
-                    </li>
-                    <li>
-                      <a href="#">MIWAI to start on 20th July, 2023</a>
-                    </li>
-                    <li>
-                      <a href="#">MIWAI to start on 20th July, 2023</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="col-lg-8 mt-2">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-12">
-                      <div
-                        id="carouselA"
-                        className="carousel slide carouselBoth"
-                        data-bs-ride="carousel"
-                      >
-                        <div className="carousel-indicators">
-                          <li
-                            data-bs-target="#carouselA"
-                            data-bs-slide-to="0"
-                            className="active"
-                          ></li>
-                          <li
-                            data-bs-target="#carouselA"
-                            data-bs-slide-to="1"
-                          ></li>
-                          <li
-                            data-bs-target="#carouselA"
-                            data-bs-slide-to="2"
-                          ></li>
-                          <li
-                            data-bs-target="#carouselA"
-                            data-bs-slide-to="3"
-                          ></li>
-                        </div>
-                        <div className="carousel-inner">
-                          <div className="carousel-item active">
-                            <img
-                              src="../images/CSE Dept Group Pic Latest.jpeg"
-                              className="d-block w-100 img-fluid"
-                              alt="Old Group PIc"
-                            />
-                           <div className="carousel-caption d-none">
-        <h5>Title for Slide 1</h5>
-        <p>Description for Slide 1.</p>
+      <section className="carouselSection py-4">
+  <div className="container-fluid">
+    <div className="row align-items-center ecaDiv px-4">
+      {/* Events Section */}
+      <div className="col-lg-2 eventsDiv bg-light shadow-sm rounded p-3">
+        <h5 className="fw-bold text-center text-primary">Events@CSE</h5>
+        <div className="announceMarquee">
+          <ul className="list-unstyled text-dark">
+            {Array(6).fill("MIWAI to start on 20th July, 2023").map((event, index) => (
+              <li key={index} className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  {event}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-                          </div>
-                          <div className="carousel-item" data-bs-ride="carousel">
-                            <img
-                              src="/images/oldcsedept.jpg"
-                              className="d-block w-100 img-fluid"
-                              alt="Old CSE Building"
-                            />
-                            <div className="carousel-caption d-none ">
-                             <h5>Title for Slide 1</h5>
-                             <p>Description for Slide 1.</p>
-                             </div>
-                          </div>
-                          <div className="carousel-item" data-bs-ride="carousel">
-                            <img
-                              src="/images/applelab.jpg"
-                              className="d-block w-100  img-fluid"
-                              alt="Apple Laboratory"
-                            />
-                            <div className="carousel-caption d-none ">
-                               <h5>Title for Slide 1</h5>
-                               <p>Description for Slide 1.</p>
-                               </div>
-                          </div>
-                          <div className="carousel-item" data-bs-ride="carousel">
-                            <img
-                              src="/images/laboratories/Projects Lab 1.JPG"
-                              className="d-block w-100 img-fluid"
-                              alt="Apple Laboratory"
-                            />
-                            <div className="carousel-caption d-none">
-                              <h5>Title for Slide 1</h5>
-                              <p>Description for Slide 1.</p>
-                              </div>
-                          </div>
-                        </div>
-                        <button
-                          className="carousel-control-prev"
-                          type="button"
-                          data-bs-target="#carouselA"
-                          data-bs-slide="prev"
-                        >
-                          <span
-                            className="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button
-                          className="carousel-control-next"
-                          type="button"
-                          data-bs-target="#carouselA"
-                          data-bs-slide="next"
-                        >
-                          <span
-                            className="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span className="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2 announceDiv mt-2">
-                <p>Announce@CSE</p>
-                <div className="announceMarquee">
-                  <marquee
-                    direction="up"
-                    scrollamount="5"
-                    onMouseEnter={(e) => e.target.stop()}
-                    onMouseLeave={(e) => e.target.start()}
-                  >
-                    <ul>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                      <li>
-                        <a href="#">MIWAI to start on 20th July, 2023</a>
-                      </li>
-                    </ul>
-                  </marquee>
-                </div>
-              </div>
-            </div>
+      
+      {/* Carousel Section */}
+      <div className="col-lg-8">
+        <div id="carouselA" className="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
+          <div className="carousel-indicators">
+            {[0, 1, 2, 3].map((index) => (
+              <button
+                key={index}
+                type="button"
+                data-bs-target="#carouselA"
+                data-bs-slide-to={index}
+                className={index === 0 ? "active" : ""}
+                aria-current={index === 0 ? "true" : "false"}
+                aria-label={`Slide ${index + 1}`}
+              ></button>
+            ))}
           </div>
-        </section>
+          <div className="carousel-inner">
+            {[
+              { src: "../images/CSE Dept Group Pic Latest.jpeg", alt: "Old Group Pic" },
+              { src: "/images/oldcsedept.jpg", alt: "Old CSE Building" },
+              { src: "/images/applelab.jpg", alt: "Apple Laboratory" },
+              { src: "/images/laboratories/Projects Lab 1.JPG", alt: "Project Lab" }
+            ].map((image, index) => (
+              <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                <img src={image.src} className="d-block w-100 img-fluid" alt={image.alt} />
+                <div className="carousel-caption bg-dark bg-opacity-50 text-light rounded p-2 d-none">
+                  <h5>Title for Slide {index + 1}</h5>
+                  <p>Description for Slide {index + 1}.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselA" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselA" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+      {/* Announcements Section */}
+      <div className="col-lg-2 announceDiv bg-light shadow-sm rounded p-3">
+        <h5 className="fw-bold text-center text-danger">Announce@CSE</h5>
+        <div className="announceMarquee">
+          <marquee direction="up" scrollamount="3" onMouseEnter={(e) => e.target.stop()} onMouseLeave={(e) => e.target.start()}>
+            <ul className="list-unstyled text-danger">
+              {Array(6).fill("MIWAI to start on 20th July, 2023").map((announcement, index) => (
+                <li key={index} className="mb-2">
+                  <a href="#" className="text-decoration-none text-danger">
+                    {announcement}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="headMessageSection">
           <div className="container mt-5">
