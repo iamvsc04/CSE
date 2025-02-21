@@ -79,15 +79,25 @@ const Home = () => {
                     {
                       src: "../images/CSE Dept Group Pic Latest.jpeg",
                       alt: "Old Group Pic",
+                      title:"Department Strength",
+                      caption:"This is the Strength of the Department"
                     },
                     {
                       src: "/images/oldcsedept.jpg",
                       alt: "Old CSE Building",
+                      title:"Old CSE Building",
+                      caption:"CSE Block with well furnished Laboratories and Classroom"
                     },
-                    { src: "/images/applelab.jpg", alt: "Apple Laboratory" },
+                    { src: "/images/applelab.jpg",
+                      alt: "Apple Laboratory",
+                      title:"Apple Laboratory",
+                      caption:"Apple Laboratory where research and project develpment happens. Students can explore iOS Development here."
+                     },
                     {
                       src: "/images/laboratories/Projects Lab 1.JPG",
                       alt: "Project Lab",
+                      title:"projects lab",
+                      caption:"Projects Laboratory where students will do their Mini and Major Projects Demonstrations."
                     },
                   ].map((image, index) => (
                     <div
@@ -107,8 +117,8 @@ const Home = () => {
                         }}
                       />
                       <div className="carousel-caption bg-dark bg-opacity-50 text-light rounded p-2 d-none">
-                        <h5>Title for Slide {index + 1}</h5>
-                        <p>Description for Slide {index + 1}.</p>
+                        <h5>{image.title}</h5>
+                        <p>{image.caption} </p>
                       </div>
                     </div>
                   ))}
@@ -272,16 +282,16 @@ const Home = () => {
           { img: "/images/Afroz 1.jpeg" },
           { img: "/images/Afroz 2.jpeg" },
           { img: "/images/Afroz 3.jpeg" },
-          { img: "/images/Afroz 4.jpeg" },
-          { img: "/images/Afroz 5.jpeg" },
-          { img: "/images/Afroz 6.jpeg" },
-          { img: "/images/Afroz 7.jpeg" },
-          { img: "/images/Afroz 8.jpeg" },
-          { img: "/images/Afroz 9.jpeg" },
-          { img: "/images/Afroz 10.jpeg" },
-          { img: "/images/Afroz 11.jpeg" },
-          { img: "/images/Afroz 12.jpeg" },
-          { img: "/images/Afroz 13.jpeg" },
+          { img: "/images/Afroz 1.jpeg" },
+          { img: "/images/Afroz 2.jpeg" },
+          { img: "/images/Afroz 3.jpeg" },
+          { img: "/images/Afroz 1.jpeg" },
+          { img: "/images/Afroz 2.jpeg" },
+          { img: "/images/Afroz 3.jpeg" },
+          { img: "/images/Afroz 1.jpeg" },
+          { img: "/images/Afroz 2.jpeg" },
+          { img: "/images/Afroz 3.jpeg" },
+          { img: "/images/Afroz 3.jpeg" },
         ]
           .reduce((acc, item, index) => {
             if (index % 3 === 0) acc.push([]);
