@@ -50,6 +50,8 @@ body {
   transition: all 3s ease;
 }
 
+
+
 #myBtn:hover {
   background: linear-gradient(#7a2020, #987886, #121927, #2981ba, #162ca9);
 }
@@ -89,6 +91,72 @@ body {
   padding: 5px 10px;
   margin-left: 3px;
 }
+
+/* Container for the faculty cards */
+.facultyCardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Maintain spacing */
+  flex-wrap: wrap;
+}
+
+/* Styling for each faculty card */
+.facultyCard {
+  background: white;
+  border-radius: 15px; /* Keep consistent with standalone design */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center;
+  padding: 20px;
+  width: 300px; /* Set fixed width to prevent stretching */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ensure the image is rounded */
+.facultyCard img {
+  border-radius: 50%; /* Circular image */
+  width: 150px; /* Adjust size */
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Info text inside the card */
+.facultyCardInfo {
+  padding: 10px;
+}
+
+.facultyCardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.facultyCardPosition,
+.facultyCardDept {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover effect */
+.facultyCard:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure layout inside carousel is correct */
+.carousel-inner .facultyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix row alignment inside the carousel */
+.carousel-item .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .carousel-item:hover .carousel-caption {
   display: block !important; 
