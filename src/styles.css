@@ -91,11 +91,41 @@ body {
 }
 
 .carousel-item:hover .carousel-caption {
-  display: block !important;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
+  display: block !important; 
+  background: rgba(0, 0, 0, 0.9); 
+  height: 50%; 
+  width: 100%; 
+  bottom: 0; 
+  position: absolute; 
+  left: 0;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  transition: all 0.3s ease-in-out; 
 }
+
+/* Hover Effect: Blur Image */
+.carousel-item:hover img {
+  filter: blur(3px) brightness(0.4); /* Blur and darken */
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Increase Text Focus on Hover */
+.carousel-caption h5,
+.carousel-caption p {
+  font-size: 2.5rem; /* Larger text */
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/*
+.carousel-item:hover .carousel-caption h5,
+.carousel-item:hover .carousel-caption p {
+  transform: scale(1.2);
+  text-shadow: 5px 5px 15px rgba(255, 255, 255, 1); 
+}*/
 @keyframes blink {
   0% {
     opacity: 1;
