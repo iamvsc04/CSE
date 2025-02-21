@@ -104,19 +104,18 @@ body {
   transition: all 0.3s ease-in-out; 
 }
 
-/* Hover Effect: Blur Image */
 .carousel-item:hover img {
-  filter: blur(3px) brightness(0.4); /* Blur and darken */
+  filter: blur(3px) brightness(0.4); 
   transition: filter 0.3s ease-in-out;
 }
 
-/* Increase Text Focus on Hover */
+
 .carousel-caption h5,
 .carousel-caption p {
-  font-size: 2.5rem; /* Larger text */
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
-  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); 
   transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
