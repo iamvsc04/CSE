@@ -33,6 +33,28 @@ body {
   background-color: #203764;
 }
 
+<<<<<<< HEAD
+=======
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid #9daaf2;
+  outline: none;
+  background-color: #203764;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 30%;
+  transition: all 3s ease;
+}
+
+
+
+>>>>>>> 6ab3a9e63c00c60d2dc6cc15ebf95a1cc6e179f0
 #myBtn:hover {
   background: linear-gradient(#7a2020, #987886, #121927, #2981ba, #162ca9);
 }
@@ -65,12 +87,107 @@ body {
   margin-left: 3px;
 }
 
-.carousel-item:hover .carousel-caption {
-  display: block !important;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
+/* Container for the faculty cards */
+.facultyCardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Maintain spacing */
+  flex-wrap: wrap;
 }
+
+/* Styling for each faculty card */
+.facultyCard {
+  background: white;
+  border-radius: 15px; /* Keep consistent with standalone design */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center;
+  padding: 20px;
+  width: 300px; /* Set fixed width to prevent stretching */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ensure the image is rounded */
+.facultyCard img {
+  border-radius: 50%; /* Circular image */
+  width: 150px; /* Adjust size */
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Info text inside the card */
+.facultyCardInfo {
+  padding: 10px;
+}
+
+.facultyCardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.facultyCardPosition,
+.facultyCardDept {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover effect */
+.facultyCard:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure layout inside carousel is correct */
+.carousel-inner .facultyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix row alignment inside the carousel */
+.carousel-item .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.carousel-item:hover .carousel-caption {
+  display: block !important; 
+  background: rgba(0, 0, 0, 0.9); 
+  height: 50%; 
+  width: 100%; 
+  bottom: 0; 
+  position: absolute; 
+  left: 0;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  transition: all 0.3s ease-in-out; 
+}
+
+.carousel-item:hover img {
+  filter: blur(3px) brightness(0.4); 
+  transition: filter 0.3s ease-in-out;
+}
+
+
+.carousel-caption h5,
+.carousel-caption p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); 
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/*
+.carousel-item:hover .carousel-caption h5,
+.carousel-item:hover .carousel-caption p {
+  transform: scale(1.2);
+  text-shadow: 5px 5px 15px rgba(255, 255, 255, 1); 
+}*/
 @keyframes blink {
   0% {
     opacity: 1;

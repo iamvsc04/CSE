@@ -113,16 +113,16 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <a href="#">
+              <a href="https://www.facebook.com/p/CVR-College-of-EngineeringJNT-University-100071184711492/">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="https://x.com/cvrcoenews">
                 <i className="fab fa-twitter"></i>
               </a>
               <a href="#">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/school/cvrcoe/posts/?feedView=all">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
