@@ -194,21 +194,38 @@ const EResources = () => {
                                 {subject.name}
                               </h3>
                             </div>
-                          </div>
-                          <div className="card-back">
-                            <div className="notebook-style">
-                              <h4 className="notebook-heading">
-                                {subject.name}
-                              </h4>
-                              <ul>
-                                {subject.links.map((link, index) => (
-                                  <li key={index}>
-                                    <a href="#">{link}</a>
-                                  </li>
-                                ))}
-                              </ul>
+                            <div className="card-front__bt">
+                              <p className="card-front__text-view2 card-front__text-view--city2">
+                                View me
+                              </p>
                             </div>
                           </div>
+                        
+                      <div
+                        className="card-back"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          flexDirection: "column",
+                          textAlign: "center",
+                        }}
+                      >
+                        <h4 className="card-back__heading1 inside-page__heading--city1">
+                          {subject.name}
+                        </h4>
+                      </div>
+                      </div>
+                      </div>
+                      <div className="inside-page">
+                        <div className="inside-page__container">
+                          <ul>
+                            {subject.links.map((link, index) => (
+                              <li key={index}>
+                                <a href="#">{link}</a>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -223,5 +240,6 @@ const EResources = () => {
     </>
   );
 };
+
 
 export default EResources;
