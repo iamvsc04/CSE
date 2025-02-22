@@ -33,35 +33,10 @@ body {
   background-color: #203764;
 }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  font-size: 18px;
-  border: 1px solid #9daaf2;
-  outline: none;
-  background-color: #203764;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 30%;
-  transition: all 3s ease;
-}
-
 #myBtn:hover {
   background: linear-gradient(#7a2020, #987886, #121927, #2981ba, #162ca9);
 }
 
-.headerStyle {
-  background-color: #0077b6;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .headerStyle p {
   padding: 15px;
@@ -685,7 +660,6 @@ body {
 .flip-card > * {
   visibility: visible;
 }
-
 .flip-card__container {
   height: 100%;
   position: absolute;
@@ -699,6 +673,7 @@ body {
 .card-front,
 .card-back {
   backface-visibility: hidden;
+  background-color: none;
   height: 100%;
   left: 0;
   position: absolute;
@@ -835,7 +810,6 @@ body {
 .inside-page__container {
   align-items: center;
   display: flex;
-  flex-direction: column;
   height: 100%;
   text-align: center;
   width: 100%;
@@ -843,11 +817,13 @@ body {
 
 .card:hover {
   box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
-  width: 30rem;
+  position: relative;
+  width: 40rem;
 }
 
 .card:hover .flip-card__container {
   transform: rotateY(-180deg);
+  transition: all 1s ease;
 }
 
 .card:hover .inside-page {

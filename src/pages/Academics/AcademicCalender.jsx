@@ -10,7 +10,6 @@ const AcademicCalender = () => {
   }, []);
   return (
     <div>
-      {/* Scroll Up (GoTo Top Button) */}
       <button
         onClick={() => window.scrollTo(0, 0)}
         id="myBtn"
@@ -19,10 +18,8 @@ const AcademicCalender = () => {
         <i className="fa fa-angle-double-up" aria-hidden="true"></i>
       </button>
 
-      {/* Use the existing Header component */}
       <Header />
 
-      {/* Main Content Begin */}
       <main>
         <section className="academicSection">
           <section className="academicContainer mt-4">
@@ -41,7 +38,6 @@ const AcademicCalender = () => {
             >
               <div className="container">
                 <div className="itemsContainer p-3">
-                  {/* B.Tech CSE Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -60,7 +56,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* B.Tech IT Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -79,7 +74,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* B.Tech ECE Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -98,7 +92,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* B.Tech EEE Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -117,7 +110,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* M.Tech CSE Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -136,7 +128,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* M.Tech VLSI Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -155,7 +146,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* M.Tech Power Systems Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -174,7 +164,6 @@ const AcademicCalender = () => {
                     </h4>
                   </div>
 
-                  {/* M.Tech Machine Learning Items */}
                   <div className="item">
                     <div className="icon text-center">
                       <h3>
@@ -198,9 +187,7 @@ const AcademicCalender = () => {
           </section>
         </section>
       </main>
-      {/* Main Content End */}
 
-      {/* Use the existing Footer component */}
       <Footer />
     </div>
   );
