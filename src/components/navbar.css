@@ -1,9 +1,8 @@
-/* Offcanvas Sidebar */
 .offcanvas-menu {
   position: fixed;
   top: 0;
-  right: -25vw;
-  width: 25vw;
+  right: -15vw;
+  width: 15vw;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
@@ -17,7 +16,6 @@
   right: 0;
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -28,7 +26,6 @@
   z-index: 1040;
 }
 
-/* Dropdown Button */
 .dropdown-btn {
   background: none;
   border: none;
@@ -36,7 +33,6 @@
   transition: background 0.2s ease-in-out;
 }
 
-/* Dropdown Animation */
 .dropdown-container {
   max-height: 0;
   overflow: hidden;
@@ -45,13 +41,12 @@
   padding-left: 15px;
 }
 
-/* Expanded Dropdown */
 .dropdown-container.expanded {
-  max-height: 300px; /* Adjust as needed */
+  max-height: 300px;
+
   opacity: 1;
 }
 
-/* Dropdown List Styling */
 .dropdown-container ul {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -64,9 +59,13 @@
 }
 
 .vertical-line {
-  width: 2px; /* Thickness of the line */
-  height: 50px; /* Adjust height */
-  background-color: white; /* Line color */
-  margin: 0 20px; /* Space around the separator */
+  width: 2px;
+
+  height: 50px;
+
+  background-color: white;
+
+  margin: 0 20px;
+
   margin-top: 15px;
 }

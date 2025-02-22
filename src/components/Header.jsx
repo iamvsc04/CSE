@@ -14,15 +14,15 @@ const Navbar = () => {
   useEffect(() => {
     const sequence = async () => {
       await controls.start({
-        x: "-24vw",
+        x: "-20vw",
         opacity: 0,
-        transition: { delay: 0.6 },
+        transition: { delay: 0.3 },
       });
       setTextVisible(true);
       await controls.start({
-        x: "-16vw",
+        x: "-15vw",
         opacity: 1,
-        transition: { duration: 2, ease: "easeInOut" },
+        transition: { duration: 1.6, ease: "easeInOut" },
       });
     };
     sequence();
