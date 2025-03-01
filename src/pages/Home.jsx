@@ -144,7 +144,10 @@ const Home = () => {
                 {/* Carousel Images */}
                 <div
                   className="carousel-inner"
-                  style={{ height: "85vh", width: "100vw" }}
+                  style={{
+                    height: "85vh",
+                    width: "100vw",
+                  }}
                 >
                   {images.map((image, index) => (
                     <div
