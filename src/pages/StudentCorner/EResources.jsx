@@ -235,7 +235,6 @@ const EResources = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

@@ -85,7 +85,6 @@ const SyllabusBooks = () => {
         </section>
       </main>
       {/* Main Content End */}
-      <Footer />
     </>
   );
 };

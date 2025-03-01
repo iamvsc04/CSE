@@ -102,7 +102,6 @@ const TechnicalStaff = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

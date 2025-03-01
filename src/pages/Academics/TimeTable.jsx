@@ -151,7 +151,6 @@ const TimeTable = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

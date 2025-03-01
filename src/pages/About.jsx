@@ -51,7 +51,6 @@ const About = () => {
           ))}
         </motion.div>
       </div>
-      <Footer />
     </>
   );
 };

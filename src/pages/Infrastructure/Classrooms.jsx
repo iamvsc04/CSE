@@ -47,7 +47,6 @@ const Classrooms = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

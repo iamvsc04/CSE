@@ -44,7 +44,6 @@ const SeminarHall = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

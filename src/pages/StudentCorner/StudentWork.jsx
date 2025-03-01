@@ -24,7 +24,6 @@ const StudentWork = () => {
         quality of life Provide opportunity to citizens to provide innovative
         solutions to India's daunting problems
       </p>
-      <Footer />
     </div>
   );
 };

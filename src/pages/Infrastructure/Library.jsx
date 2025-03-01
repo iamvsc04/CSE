@@ -49,7 +49,6 @@ const Library = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

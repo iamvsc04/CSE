@@ -76,7 +76,6 @@ const ResearchProjects = () => {
           </table>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

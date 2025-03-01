@@ -1,7 +1,8 @@
+import Home from "./pages/Home";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NothingFoundPage from "./pages/NothingFoundPage";
@@ -67,6 +68,7 @@ const App = () => {
         {/* 404 Route */}
         <Route path="*" element={<NothingFoundPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

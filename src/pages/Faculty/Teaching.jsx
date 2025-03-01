@@ -204,7 +204,6 @@ const Teaching = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

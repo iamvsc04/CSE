@@ -78,7 +78,6 @@ const Workshops = () => {
           </table>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

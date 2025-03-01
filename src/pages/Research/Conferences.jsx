@@ -77,7 +77,6 @@ const Conferences = () => {
           </table>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

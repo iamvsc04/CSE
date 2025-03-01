@@ -102,7 +102,6 @@ const NonTeaching = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

@@ -318,7 +318,6 @@ const Objectives = () => {
           </section>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -177,8 +177,6 @@ const AcademicCalender = () => {
           </section>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

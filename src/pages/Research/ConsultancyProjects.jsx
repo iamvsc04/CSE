@@ -124,7 +124,6 @@ const ConsultancyProjects = () => {
           </table>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
