@@ -37,33 +37,6 @@ body {
   background: linear-gradient(#7a2020, #987886, #121927, #2981ba, #162ca9);
 }
 
-.headerStyle p {
-  padding: 15px;
-  width: 80%;
-  background-color: #203764;
-  font-size: 2rem;
-  letter-spacing: 2px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 500;
-}
-
-.marqueeStyle {
-  color: #fff;
-  letter-spacing: 1px;
-}
-.blink {
-  border: 1px solid rgb(239, 232, 232);
-  background-color: rgba(167, 167, 23, 0.258);
-  animation: blink 0.3s infinite;
-  color: #ddc8c8;
-  border-radius: 30%;
-  padding: 5px 10px;
-  margin-left: 3px;
-}
-
 .facultyCardContainer {
   display: flex;
   justify-content: center;
@@ -158,8 +131,8 @@ body {
 }
 
 .carousel-item:hover img {
-  opacity: 0.2;
-  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
@@ -169,100 +142,7 @@ body {
   }
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.marqueeStyle a {
-  margin-left: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-.ecaDiv {
-  border: 2px solid #203764;
-}
-
-.ecaDiv .eventsDiv {
-  border: 2px solid #203764;
-  border-radius: 10px;
-}
-
-.ecaDiv .eventsDiv p {
-  text-align: center;
-  font-weight: 600;
-}
-
-.ecaDiv .eventsDiv .announceMarquee {
-  height: 300px;
-  overflow: hidden;
-  font-size: 0.8rem;
-  padding: 2px;
-}
-
-.ecaDiv .eventsDiv .announceMarquee ul li {
-  margin-bottom: 5px;
-}
-
-.ecaDiv .eventsDiv .announceMarquee ul li a {
-  color: #203764;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.ecaDiv .announceDiv {
-  border: 2px solid #203764;
-  border-radius: 10px;
-}
-
-.ecaDiv .announceDiv p {
-  text-align: center;
-  font-weight: 600;
-}
-
-.ecaDiv .announceDiv .announceMarquee {
-  height: 300px;
-  overflow: hidden;
-  font-size: 0.8rem;
-  padding: 2px;
-}
-
-.ecaDiv .announceDiv .announceMarquee ul {
-  list-style: none;
-}
-
-.ecaDiv .announceDiv .announceMarquee ul li {
-  margin-left: -30px;
-  margin-bottom: 5px;
-}
-
-.ecaDiv .announceDiv .announceMarquee ul li a {
-  color: #fd3407;
-  text-decoration: none;
-}
-
-.ecaDiv .carouselDiv {
-  border: 2px solid #203764;
-  border-radius: 10px;
-  padding: 0px;
-}
-
-.ecaDiv img {
-  width: 100%;
-  height: 350px;
-  border: 2px solid #203764;
-  border-radius: 10px;
-}
-
+/*HOD Message section*/
 .headMessageSection {
   border: 1px solid #203764;
   background-color: rgba(167, 196, 225, 0.284);
@@ -276,7 +156,6 @@ body {
 
 .msghoddiv .msghodp {
   color: #203764;
-
   letter-spacing: 1px;
   text-align: justify;
   font-weight: 500;
@@ -298,6 +177,8 @@ body {
   padding: 5px;
 }
 
+/* dept strength styling */
+
 .deptStrengthSection {
   border: 1px solid #203764;
   padding: 25px;
@@ -305,32 +186,31 @@ body {
   border-bottom: 1px solid #dde2ec;
 }
 
-.deptStrengthSection .deptStrengthSectionDivs {
+.deptStrengthSectionDivs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
-.deptStrengthSection .deptStrengthSectionDivs .sHeading {
+.sHeading {
   color: #27127c;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: underline;
+  text-align: center;
 }
 
-.deptStrengthSection .deptStrengthSectionDivs .deptStrengthContainer {
+.deptStrengthContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.deptStrengthSection
-  .deptStrengthSectionDivs
-  .deptStrengthContainer
-  .deptStrengthItem {
+.deptStrengthItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -339,101 +219,26 @@ body {
   padding: 15px;
   border: 2px solid #203476;
   border-radius: 10px;
-  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes rotate {
-  from,
-  to {
-    animation-timing-function: ease-in;
-    background-color: rgb(151, 179, 216);
-    color: #eb1818;
-    transform: rotateY(-10deg);
-  }
-
-  25%,
-  75% {
-    background-color: rgb(212, 185, 134);
-    animation-timing-function: ease-out;
-    color: #4b5cc0;
-    transform: rotateY(0deg);
-  }
-
-  50% {
-    animation-timing-function: ease-in;
-    background-color: rgb(212, 160, 160);
-    color: #fff;
-    transform: rotateY(10deg);
-  }
+.deptStrengthItem:hover {
+  box-shadow: 0px 3px 5px red;
+  transform: scale(1.05);
 }
 
-.deptStrengthSection
-  .deptStrengthSectionDivs
-  .deptStrengthContainer
-  .deptStrengthItem:hover {
-  box-shadow: 0px 1px 1px 0px red;
-  transform: translate(3px);
-}
-
-.deptStrengthSection
-  .deptStrengthSectionDivs
-  .deptStrengthContainer
-  .deptStrengthItem
-  span {
+.deptStrengthItem span {
   font-weight: 600;
   font-size: 2rem;
 }
 
-.deptStrengthSection
-  .deptStrengthSectionDivs
-  .deptStrengthContainer
-  .deptStrengthItem
-  p {
+.deptStrengthItem p {
   font-size: 1.2rem;
   font-weight: 600;
 }
+/*done with home page*/
 
-.contactSection {
-  border: 1px solid #203764;
-  padding: 25px;
-  background-color: rgba(255, 255, 255, 0.778);
-  color: #203764;
-}
-
-.contactSection .contactContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.contactSection .contactContainer .infoDiv,
-.contactSection .contactContainer .formDiv {
-  display: flex;
-  justify-content: center;
-  border-left: 5px solid #203764;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.contactSection .contactTitle p {
-  text-align: center;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.mapSection {
-  border: 1px solid #203764;
-  padding: 5px;
-}
-
-.mapSection .map {
-  border-radius: 20px;
-}
-
+/*faculty related images styling*/
 .facStrength {
   border: 1px solid #203764;
   padding-bottom: 30px;
@@ -587,97 +392,45 @@ body {
   color: #1369ce;
   background-color: #f7f5ec;
 }
-.visionMissionSection {
-  border: 1px solid #203764;
-  padding-bottom: 30px;
-  background-color: rgba(10, 149, 255, 0.302);
-}
 
-.visionMissionSection .visionSection {
-  color: #fff;
-  background-color: rgba(72, 143, 143, 0.8);
-  margin-top: 10px;
-  border: 3px solid rgba(44, 102, 195, 0.555);
-  padding: 20px;
-  border-radius: 25px;
-  transition: all 0.5s ease;
-  margin-bottom: 10px;
-}
+/* objective section style */
 
-.visionMissionSection .visionSection:hover {
-  background-color: rgba(235, 212, 180, 0.497);
-  color: rgba(2, 12, 69, 0.949);
-}
-
-.visionMissionSection .visionSection p {
-  letter-spacing: 1px;
-  padding-left: 50px;
-  font-size: 1.1rem;
-}
-
-.visionMissionSection .missionSection {
-  color: #fff;
-  background-color: rgba(72, 143, 143, 0.8);
-  margin-top: 10px;
-  border: 3px solid rgba(44, 102, 195, 0.555);
-  padding: 20px;
-  border-radius: 25px;
-  transition: all 0.5s ease;
-  margin-bottom: 10px;
-}
-
-.visionMissionSection .missionSection:hover {
-  background-color: rgba(235, 212, 180, 0.497);
-  color: rgba(2, 12, 69, 0.949);
-}
-
-.visionMissionSection .missionSection ul li {
-  letter-spacing: 1px;
-  font-size: 1.1rem;
-  list-style: none;
-  padding-left: 10px;
-}
 .objectivesSection {
   border: 1px solid #203764;
   padding-bottom: 30px;
   background-color: rgba(10, 149, 255, 0.302);
 }
 
-.objectivesSection .peos {
-  color: #fff;
-  background-color: rgba(72, 143, 143, 0.8);
-  margin-top: 10px;
-  border: 3px solid rgba(44, 102, 195, 0.555);
-  padding: 20px;
-  border-radius: 25px;
-  transition: all 0.5s ease;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.objectivesSection .peos:hover {
-  background-color: rgba(235, 212, 180, 0.497);
-  color: rgba(2, 12, 69, 0.949);
-}
-
+.objectivesSection .peos,
 .objectivesSection .pos {
   color: #fff;
   background-color: rgba(72, 143, 143, 0.8);
-  margin-top: 10px;
+  margin: 10px 0;
   border: 3px solid rgba(44, 102, 195, 0.555);
   padding: 20px;
   border-radius: 25px;
-  transition: all 0.5s ease;
-  margin-bottom: 10px;
   font-size: 1.2rem;
   letter-spacing: 1px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effects */
+.objectivesSection .peos:hover,
 .objectivesSection .pos:hover {
   background-color: rgba(235, 212, 180, 0.497);
   color: rgba(2, 12, 69, 0.949);
+  transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+  .objectivesSection .peos,
+  .objectivesSection .pos {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+/*objectives page styles ends here*/
+
 .card-front__heading {
   font-size: 1.5rem;
   margin-top: 0.25rem;

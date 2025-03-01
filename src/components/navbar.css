@@ -1,8 +1,8 @@
 .offcanvas-menu {
   position: fixed;
   top: 0;
-  right: -15vw;
-  width: 15vw;
+  right: -17vw;
+  width: 17vw;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);

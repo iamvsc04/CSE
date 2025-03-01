@@ -38,11 +38,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           {["Innovation", "Research", "Excellence"].map((value, index) => (
-            <motion.div
-              key={index}
-              className="col-md-4 mb-4"
-              whileHover={{ scale: 0.8 }}
-            >
+            <motion.div key={index} className="col-md-4 mb-4">
               <div className="card shadow-lg border-0 h-100">
                 <div className="card-body text-center">
                   <h3 className="card-title fw-semibold">{value}</h3>

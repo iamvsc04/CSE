@@ -96,7 +96,7 @@ const Navbar = () => {
                   { name: "Objectives", path: "/academics/objectives" },
                   {
                     name: "Academic Calendar",
-                    path: "/academics/academic-calendar",
+                    path: "/academics/academic-calender",
                   },
                   { name: "Syllabus Books", path: "/academics/syllabus-books" },
                   { name: "Time Tables", path: "/academics/time-tables" },

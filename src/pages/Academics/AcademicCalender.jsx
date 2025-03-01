@@ -10,14 +10,6 @@ const AcademicCalender = () => {
   }, []);
   return (
     <div>
-      <button
-        onClick={() => window.scrollTo(0, 0)}
-        id="myBtn"
-        title="Go to top"
-      >
-        <i className="fa fa-angle-double-up" aria-hidden="true"></i>
-      </button>
-
       <Header />
 
       <main>
