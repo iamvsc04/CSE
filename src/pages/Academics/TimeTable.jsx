@@ -9,7 +9,6 @@ const TimeTable = () => {
   }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="academicSection">
           <section className="academicContainer mt-4">

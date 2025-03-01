@@ -9,7 +9,6 @@ const SeminarHall = () => {
   }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="classSection">
           <div className="container mt-4">

@@ -7,14 +7,13 @@ const Gallery = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return(
+  return (
     <>
-    <div>
-      <Header />
-      <Footer /> 
-    </div>     
+      <div>
+        <Footer />
+      </div>
     </>
-  )
+  );
 };
 
 export default Gallery;

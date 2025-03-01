@@ -142,7 +142,6 @@ const Objectives = () => {
 
   return (
     <div>
-      <Header />
       <main>
         <section className="objectivesSection">
           <div className="row mt-4">

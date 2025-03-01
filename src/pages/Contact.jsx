@@ -8,7 +8,6 @@ const ContactUs = () => {
   }, []);
   return (
     <>
-      <Header />
       <div className="bg-light min-vh-100 d-flex flex-column align-items-center">
         <h1 className="text-center text-primary mt-4">Contact Us</h1>
         <div className="container d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">

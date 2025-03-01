@@ -8,7 +8,6 @@ const Classrooms = () => {
   }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="classSection">
           <div className="container mt-4">

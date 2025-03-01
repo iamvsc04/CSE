@@ -167,7 +167,6 @@ const EResources = () => {
 
   return (
     <>
-      <Header />
       <main>
         <section className="eResourcesSection">
           <div className="container mt-5">
@@ -179,19 +178,30 @@ const EResources = () => {
                 <h3 className="mb-4 text-center">{yearData.year}</h3>
 
                 {/* 🔹 Cards Below (3 per row) */}
-                <div className="card-section row" data-aos="fade-up" data-aos-duration="1000">
+                <div
+                  className="card-section row"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   {yearData.subjects.map((subject, subjectIndex) => (
-                    <div className="col-md-4 d-flex justify-content-center mb-4" key={subjectIndex}>
+                    <div
+                      className="col-md-4 d-flex justify-content-center mb-4"
+                      key={subjectIndex}
+                    >
                       <div className="card">
                         <div className="flip-card">
                           <div className="flip-card__container">
                             {/* 🔹 Front Page (Displays Subject Name) */}
                             <div className="card-front">
                               <div className="card-front__tp1 card-front__tp--city1">
-                                <h3 className="card-front__heading1">{subject.name}</h3>
+                                <h3 className="card-front__heading1">
+                                  {subject.name}
+                                </h3>
                               </div>
                               <div className="card-front__bt">
-                                <p className="card-front__text-view2">View me</p>
+                                <p className="card-front__text-view2">
+                                  View me
+                                </p>
                               </div>
                             </div>
 

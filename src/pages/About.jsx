@@ -8,7 +8,6 @@ const About = () => {
   }, []);
   return (
     <>
-      <Header />
       <div className="container min-vh-100 d-flex flex-column align-items-center text-dark bg-light py-5">
         <motion.h1
           className="display-4 fw-bold text-center mb-4"

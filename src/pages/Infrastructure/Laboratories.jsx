@@ -9,7 +9,6 @@ const Laboratories = () => {
   }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="labsSection">
           <div className="row mt-4">

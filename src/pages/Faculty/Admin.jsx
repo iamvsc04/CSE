@@ -8,7 +8,6 @@ const Admin = () => {
   }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="facStrength">
           <div className="container mt-4">

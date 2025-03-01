@@ -9,14 +9,6 @@ const SyllabusBooks = () => {
   }, []);
   return (
     <>
-      <Header />
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        id="myBtn"
-        title="Go to top"
-      >
-        <i className="fa fa-angle-double-up" aria-hidden="true"></i>
-      </button>
       {/* Main Content Begin */}
       <main>
         <section className="academicSection">

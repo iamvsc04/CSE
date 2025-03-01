@@ -17,37 +17,42 @@ const Home = () => {
     const fetchExcelData = async () => {
       try {
         const response = await fetch("/Data/faculty.xlsx");
-        
+
         if (!response.ok) {
-          throw new Error(`Failed to load faculty.xlsx: HTTP ${response.status}`);
+          throw new Error(
+            `Failed to load faculty.xlsx: HTTP ${response.status}`
+          );
         }
-    
+
         const data = await response.arrayBuffer();
         const workbook = XLSX.read(data, { type: "array", cellDates: true });
-    
-        if (!workbook.SheetNames.length) throw new Error("No sheets found in Excel file.");
-    
+
+        if (!workbook.SheetNames.length)
+          throw new Error("No sheets found in Excel file.");
+
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
-    
+
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
         if (!jsonData.length) throw new Error("Excel sheet is empty.");
-    
+
         const formattedData = jsonData.slice(1, 16).map((row) => ({
           empId: row[1] || "N/A",
           name: row[2] || "Unknown",
           designation: row[3] || "Unknown",
           email: row[4] || "N/A",
-          doj: row[5] instanceof Date ? row[5].toLocaleDateString("en-GB") : row[5] || "N/A",
+          doj:
+            row[5] instanceof Date
+              ? row[5].toLocaleDateString("en-GB")
+              : row[5] || "N/A",
         }));
-    
+
         console.log("Excel Data Loaded:", formattedData);
         setFacultyData(formattedData);
       } catch (error) {
         console.error("Error loading Excel file:", error.message);
       }
     };
-    
 
     fetchExcelData();
   }, []);
@@ -104,12 +109,8 @@ const Home = () => {
     },
   ];
 
-  
-
-
   return (
     <>
-      <Header />
       <main>
         <div className="container-fluid p-0 ">
           <section
@@ -319,11 +320,18 @@ const Home = () => {
           <div className="container mt-5">
             <div className="row">
               <div className="col-sm-12">
-                <h2 className="text-center text-uppercase">Department Virtuoso</h2>
+                <h2 className="text-center text-uppercase">
+                  Department Virtuoso
+                </h2>
               </div>
             </div>
 
-            <div id="facultyCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div
+              id="facultyCarousel"
+              className="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
               <div className="carousel-inner">
                 {facultyData
                   .reduce((acc, item, index) => {
@@ -332,23 +340,36 @@ const Home = () => {
                     return acc;
                   }, [])
                   .map((group, i) => (
-                    <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={i}>
+                    <div
+                      className={`carousel-item ${i === 0 ? "active" : ""}`}
+                      key={i}
+                    >
                       <div className="container">
                         <div className="row">
                           {group.map((faculty, j) => (
                             <div className="col-md-4" key={j}>
-                              <div className="facultyCard" data-aos="fade-up" data-aos-duration="1500">
+                              <div
+                                className="facultyCard"
+                                data-aos="fade-up"
+                                data-aos-duration="1500"
+                              >
                                 <img
-                                  src={`/images/faculty/${faculty.empId}.jpg`} 
+                                  src={`/images/faculty/${faculty.empId}.jpg`}
                                   width={120}
                                   height={120}
                                   alt={faculty.name}
                                   className="img"
                                 />
                                 <div className="facultyCardInfo">
-                                  <h3 className="facultyCardTitle">{faculty.name}</h3>
-                                  <p className="facultyCardPosition">{faculty.designation}</p>
-                                  <p className="facultyCardDoj">DOJ: {faculty.doj}</p>
+                                  <h3 className="facultyCardTitle">
+                                    {faculty.name}
+                                  </h3>
+                                  <p className="facultyCardPosition">
+                                    {faculty.designation}
+                                  </p>
+                                  <p className="facultyCardDoj">
+                                    DOJ: {faculty.doj}
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -360,10 +381,20 @@ const Home = () => {
               </div>
 
               {/* Carousel Controls */}
-              <button className="carousel-control-prev" type="button" data-bs-target="#facultyCarousel" data-bs-slide="prev">
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#facultyCarousel"
+                data-bs-slide="prev"
+              >
                 <span className="carousel-control-prev-icon"></span>
               </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#facultyCarousel" data-bs-slide="next">
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#facultyCarousel"
+                data-bs-slide="next"
+              >
                 <span className="carousel-control-next-icon"></span>
               </button>
             </div>
@@ -374,6 +405,5 @@ const Home = () => {
     </>
   );
 };
-
 
 export default Home;
