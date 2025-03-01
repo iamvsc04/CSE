@@ -348,7 +348,6 @@ const Home = () => {
                                 <div className="facultyCardInfo">
                                   <h3 className="facultyCardTitle">{faculty.name}</h3>
                                   <p className="facultyCardPosition">{faculty.designation}</p>
-                                  <p className="facultyCardDept">{faculty.email}</p>
                                   <p className="facultyCardDoj">DOJ: {faculty.doj}</p>
                                 </div>
                               </div>
