@@ -36,7 +36,7 @@ const Home = () => {
 
   const images = [
     {
-      src: "../images/CSE Dept Group Pic Latest.jpeg",
+      src: "../images/NEW Group Pic.jpg",
       alt: "Old Group Pic",
       title: "Department Strength",
       caption: "This is the Strength of the Department",
@@ -99,7 +99,10 @@ const Home = () => {
                 {/* Carousel Images */}
                 <div
                   className="carousel-inner"
-                  style={{ height: "85vh", width: "100vw" }}
+                  style={{
+                    height: "85vh",
+                    width: "100vw",
+                  }}
                 >
                   {images.map((image, index) => (
                     <div
