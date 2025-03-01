@@ -172,65 +172,54 @@ const EResources = () => {
         <section className="eResourcesSection">
           <div className="container mt-5">
             <h2 className="text-center mb-5">E-Resources</h2>
+
             {programOutcomes.map((yearData, yearIndex) => (
-              <section key={yearIndex} className="card-area">
-                <h3 className="mb-4">{yearData.year}</h3>
-                <section
-                  className="card-section"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
+              <section key={yearIndex} className="mb-5">
+                {/* 🔹 Heading Above */}
+                <h3 className="mb-4 text-center">{yearData.year}</h3>
+
+                {/* 🔹 Cards Below (3 per row) */}
+                <div className="card-section row" data-aos="fade-up" data-aos-duration="1000">
                   {yearData.subjects.map((subject, subjectIndex) => (
-                    <div
-                      className="card"
-                      key={subjectIndex}
-                      style={{ marginTop: "5px" }}
-                    >
-                      <div className="flip-card">
-                        <div className="flip-card__container">
-                          <div className="card-front">
-                            <div className="card-front__tp1 card-front__tp--city1">
-                              <h3 className="card-front__heading1">
-                                {subject.name}
-                              </h3>
+                    <div className="col-md-4 d-flex justify-content-center mb-4" key={subjectIndex}>
+                      <div className="card">
+                        <div className="flip-card">
+                          <div className="flip-card__container">
+                            {/* 🔹 Front Page (Displays Subject Name) */}
+                            <div className="card-front">
+                              <div className="card-front__tp1 card-front__tp--city1">
+                                <h3 className="card-front__heading1">{subject.name}</h3>
+                              </div>
+                              <div className="card-front__bt">
+                                <p className="card-front__text-view2">View me</p>
+                              </div>
                             </div>
-                            <div className="card-front__bt">
-                              <p className="card-front__text-view2 card-front__text-view--city2">
-                                View me
-                              </p>
+
+                            {/* 🔹 Back Page (Displays Subject Name Again) */}
+                            <div className="card-back">
+                              <h4 className="card-back__heading1 inside-page__heading--city1">
+                                {subject.name}
+                              </h4>
                             </div>
                           </div>
-                        
-                      <div
-                        className="card-back"
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          flexDirection: "column",
-                          textAlign: "center",
-                        }}
-                      >
-                        <h4 className="card-back__heading1 inside-page__heading--city1">
-                          {subject.name}
-                        </h4>
-                      </div>
-                      </div>
-                      </div>
-                      <div className="inside-page">
-                        <div className="inside-page__container">
-                          <ul>
-                            {subject.links.map((link, index) => (
-                              <li key={index}>
-                                <a href="#">{link}</a>
-                              </li>
-                            ))}
-                          </ul>
+                        </div>
+
+                        {/* 🔹 Next Page (Links Appears Here) */}
+                        <div className="inside-page">
+                          <div className="inside-page__container">
+                            <ul>
+                              {subject.links.map((link, index) => (
+                                <li key={index}>
+                                  <a href="#">{link}</a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                   ))}
-                </section>
+                </div>
               </section>
             ))}
           </div>
@@ -240,6 +229,5 @@ const EResources = () => {
     </>
   );
 };
-
 
 export default EResources;
