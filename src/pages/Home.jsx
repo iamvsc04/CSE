@@ -339,7 +339,7 @@ const Home = () => {
                             <div className="col-md-4" key={j}>
                               <div className="facultyCard" data-aos="fade-up" data-aos-duration="1500">
                                 <img
-                                  src={`/images/faculty/${faculty.empId}.jpg`} // Assuming image filenames match EMP ID
+                                  src={`/images/faculty/${faculty.empId}.jpg`} 
                                   width={120}
                                   height={120}
                                   alt={faculty.name}

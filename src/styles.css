@@ -752,6 +752,7 @@ body {
   visibility: hidden;
   width: 15rem;
   z-index: 100;
+  perspective: 1000px;
 }
 
 .flip-card > * {
@@ -763,7 +764,7 @@ body {
   right: 0;
   transform-origin: left;
   transform-style: preserve-3d;
-  transition: all 1s ease;
+  transition: transform 0.6s ease-in-out;
   width: 100%;
 }
 
