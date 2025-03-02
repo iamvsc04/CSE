@@ -169,11 +169,9 @@ const Objectives = () => {
                           <h2 className="card-front__heading2">PSO {pso.id}</h2>
                           <p className="card-front__text-price2">{pso.title}</p>
                         </div>
-                        <div className="card-front__bt">
                           <p className="card-front__text-view2 card-front__text-view--city2">
                             View me
                           </p>
-                        </div>
                       </div>
                       <div
                         className="card-back"

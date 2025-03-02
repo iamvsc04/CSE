@@ -206,7 +206,12 @@ const EResources = () => {
                             </div>
 
                             {/* 🔹 Back Page (Displays Subject Name Again) */}
-                            <div className="card-back">
+                            <div className="card-back"
+                             style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                             }}>
                               <h4 className="card-back__heading1 inside-page__heading--city1">
                                 {subject.name}
                               </h4>
