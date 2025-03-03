@@ -10,9 +10,95 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   const [shouldLoadNumbers, setShouldLoadNumbers] = useState(false);
-  const [facultyData, setFacultyData] = useState([]);
-
   const deptStrengthRef = useRef(null);
+  const [facultyData, setFacultyData] = useState([]);
+  const [counts, setCounts] = useState({
+    ProfCount: 0,
+    AssistantProfCount: 0,
+    SrAsstProfCount: 0,
+    AssociateProfCount: 0,
+  });
+  useEffect(() => {
+    const fetchAndProcessExcelData = async () => {
+      try {
+        const response = await fetch("/Data/faculty.xlsx");
+        if (!response.ok) {
+          throw new Error(`Failed to load Excel file: HTTP ${response.status}`);
+        }
+
+        const data = await response.arrayBuffer();
+        const workbook = XLSX.read(data, { type: "array", cellDates: true });
+
+        if (!workbook.SheetNames.length) {
+          throw new Error("No sheets found in Excel file.");
+        }
+
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        if (!jsonData.length) throw new Error("Excel sheet is empty.");
+
+        const formattedData = jsonData.slice(1).map((row) => ({
+          empId: row[1] || "N/A",
+          name: row[2]?.trim() || "Unknown",
+          designation: row[3]?.trim() || "Unknown",
+          email: row[4] || "N/A",
+          doj:
+            row[5] instanceof Date
+              ? row[5].toLocaleDateString("en-GB")
+              : row[5] || "N/A",
+        }));
+
+        // console.log("Raw Faculty Data:", formattedData);
+
+        const normalizeDesignation = (designation) => {
+          return designation
+            .replace(/[^a-zA-Z. ]/g, "") // Remove unwanted symbols (&, ,)
+            .replace(/\s+/g, " ") // Normalize spaces
+            .trim()
+            .toLowerCase();
+        };
+
+        const countData = formattedData.reduce(
+          (acc, faculty) => {
+            let designation = normalizeDesignation(faculty.designation);
+            let name = faculty.name;
+            if (
+              designation.includes("professor") &&
+              !designation.includes("assoc")
+            ) {
+              acc.ProfCount += 1;
+            } else if (designation.includes("assoc.prof")) {
+              acc.AssociateProfCount += 1;
+            } else if (designation.includes("sr.asst.prof.")) {
+              acc.SrAsstProfCount += 1;
+            } else if (designation.includes("asst.prof.")) {
+              acc.AssistantProfCount += 1;
+            }
+
+            return acc;
+          },
+          {
+            ProfCount: 0,
+            ProfNames: [],
+            AssociateProfCount: 0,
+            AssociateProfNames: [],
+            SrAsstProfCount: 0,
+            SrAsstProfNames: [],
+            AssistantProfCount: 0,
+            AssistantProfNames: [],
+          }
+        );
+
+        setCounts(countData);
+      } catch (error) {
+        console.error("Error processing Excel data:", error.message);
+        return null;
+      }
+    };
+    fetchAndProcessExcelData();
+  }, []);
   useEffect(() => {
     const fetchExcelData = async () => {
       try {
@@ -47,7 +133,6 @@ const Home = () => {
               : row[5] || "N/A",
         }));
 
-        console.log("Excel Data Loaded:", formattedData);
         setFacultyData(formattedData);
       } catch (error) {
         console.error("Error loading Excel file:", error.message);
@@ -56,11 +141,6 @@ const Home = () => {
 
     fetchExcelData();
   }, []);
-
-  let fc1 = {
-    name: "VSC",
-    dept: "cse",
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -279,25 +359,37 @@ const Home = () => {
             <div className="deptStrengthContainer">
               <div className="deptStrengthItem">
                 <span>
-                  <NumberLoader number={30} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader
+                    number={counts.ProfCount}
+                    shouldLoad={shouldLoadNumbers}
+                  />
                   <p>Professors</p>
                 </span>
               </div>
               <div className="deptStrengthItem">
                 <span>
-                  <NumberLoader number={17} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader
+                    number={counts.AssociateProfCount}
+                    shouldLoad={shouldLoadNumbers}
+                  />
                   <p>Associate Professors</p>
                 </span>
               </div>
               <div className="deptStrengthItem">
                 <span>
-                  <NumberLoader number={16} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader
+                    number={counts.SrAsstProfCount}
+                    shouldLoad={shouldLoadNumbers}
+                  />
                   <p>Sr. Assistant Professors</p>
                 </span>
               </div>
               <div className="deptStrengthItem">
                 <span>
-                  <NumberLoader number={34} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader
+                    number={counts.AssistantProfCount}
+                    shouldLoad={shouldLoadNumbers}
+                  />
                   <p>Assistant Professors</p>
                 </span>
               </div>

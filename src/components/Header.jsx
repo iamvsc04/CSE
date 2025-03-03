@@ -59,7 +59,7 @@ const Navbar = () => {
             className="h4 text-white ms-4"
             style={{ opacity: textVisible ? 1 : 0 }}
           >
-            Computer Science & Engineering
+            Computer Science and Engineering
           </motion.div>
 
           <button
