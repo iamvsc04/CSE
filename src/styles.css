@@ -1058,3 +1058,127 @@ footer {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* faculty cards*/
+
+/* ---- Faculty Section ---- */
+.faculty-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ---- Faculty Card ---- */
+.faculty-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.6s ease-in-out;
+}
+
+/* Scale Up and Shadow Animation on Hover */
+.faculty-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+/* Glow Effect on Hover */
+.faculty-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.faculty-card:hover::before {
+  opacity: 1;
+}
+
+/* ---- Faculty Image ---- */
+.faculty-img img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.faculty-card:hover .faculty-img img {
+  transform: scale(1.1);
+  border-color: #0056b3;
+}
+
+/* ---- Faculty Info ---- */
+.faculty-info {
+  margin-top: 15px;
+}
+
+.faculty-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.faculty-designation {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.faculty-join {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---- Responsive Styling ---- */
+@media (max-width: 768px) {
+  .faculty-heading {
+    font-size: 1.8rem;
+  }
+  .faculty-card {
+    padding: 18px;
+  }
+  .faculty-img img {
+    width: 100px;
+    height: 100px;
+  }
+}
