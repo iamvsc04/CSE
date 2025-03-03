@@ -979,56 +979,13 @@ footer {
   padding: 20px;
 }
 
-.card-title {
+/* .card-title {
   font-size: 1.3rem;
   font-weight: bold;
   color: #343a40;
   margin-bottom: 15px;
-}
-
-.card-body ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.card-body ul li {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  color: #007bff;
-  transition: color 0.2s ease;
-}
-
-.card-body ul li:hover {
-  color: #0056b3;
-}
-
-.resourceYear h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #28a745;
-  margin-bottom: 20px;
-}
-
-.container .row {
-  margin-top: 10px;
-}
-
-.card-body {
-  text-align: left;
-}
-
-.card-title,
-.card-body ul li {
-  text-align: left;
-}
-
-.card-body ul li::before {
-  content: "•";
-  color: #007bff;
-  margin-right: 8px;
-}
-
+} */
+/* 
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -1039,8 +996,8 @@ footer {
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
-  }
-}
+  } */
+/* } */
 
 .headerStyle {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
