@@ -18,6 +18,9 @@ const Teaching = () => {
     const workbook = XLSX.read(arrayBuffer, { type: "array" });
     const sheetName = workbook.SheetNames[0];
     const jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+    //console.log("Faculty ID:", faculty.empId);
+    console.log("Raw Excel Data:", jsonData);
+
     setFaculty(jsonData);
   };
 
@@ -38,12 +41,12 @@ const Teaching = () => {
                     <div className="picture">
                       <img
                         className="img-fluid"
-                        src={`/images/faculty/${faculty.empId}.jpg`}
-                        alt={member["Name of the Staff Member"]}
+                        src={`/faculty/${member.empId}.jpg`}
+                        alt={member["Name of the Staff Member "]}
                       />
                     </div>
                     <div className="team-content">
-                      <h3 className="name">{member["Name of the Staff Member"]}</h3>
+                      <h3 className="name">{member["Name of the Staff Member "]}</h3>
                       <h4 className="title">{member.Designation}</h4>
                       <h4 className="title">Joined CVR: {member.DOJ}</h4>
                     </div>
