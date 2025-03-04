@@ -99,7 +99,10 @@ const Navbar = () => {
 
   // Render desktop navbar
   const renderDesktopNavbar = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-blue py-2">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-blue py-2"
+      style={{ height: "110px" }}
+    >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img
@@ -117,7 +120,7 @@ const Navbar = () => {
                 className={`nav-item ${
                   menu.type === "dropdown" ? "dropdown" : ""
                 } marlin`}
-                style={{ fontSize: "0.9rem" }} // Reduced font size
+                style={{ fontSize: "1.1rem" }} // Reduced font size
               >
                 {menu.type === "link" ? (
                   <Link className="nav-link" to={menu.path}>
@@ -134,10 +137,7 @@ const Navbar = () => {
                     >
                       {menu.label}
                     </a>
-                    <ul
-                      className="dropdown-menu"
-                      style={{ fontSize: "0.85rem" }}
-                    >
+                    <ul className="dropdown-menu" style={{ fontSize: "1rem" }}>
                       {menu.items.map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <Link className="dropdown-item" to={item.path}>

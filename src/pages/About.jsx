@@ -63,7 +63,7 @@ const About = () => {
   // Department data
   const stats = [
     {
-      figure: "25+",
+      figure: "100+",
       label: "Faculty Members",
       icon: "bi-person-badge",
       color: "#4361ee",
@@ -125,28 +125,28 @@ const About = () => {
       description:
         "State-of-the-art computing infrastructure with the latest hardware and software.",
       icon: "bi-cpu",
-      image: "/api/placeholder/600/400",
+      image: "/images/laboratories/IT Workshop.JPG",
     },
     {
       title: "Research Center",
       description:
         "Dedicated spaces for students and faculty to pursue innovative research projects.",
       icon: "bi-journal-richtext",
-      image: "/api/placeholder/600/400",
+      image: "/images/applelab.jpg",
     },
     {
       title: "Innovation Hub",
       description:
         "Collaborative workspace for interdisciplinary projects and startup incubation.",
       icon: "bi-gear-wide-connected",
-      image: "/api/placeholder/600/400",
+      image: "/images/laboratories/Computer Centre.JPG",
     },
     {
       title: "Digital Library",
       description:
         "Access to vast digital resources, research papers, and online learning platforms.",
       icon: "bi-book",
-      image: "/api/placeholder/600/400",
+      image: "/images/laboratories/ProjectsLab1.JPG",
     },
   ];
 
@@ -162,7 +162,7 @@ const About = () => {
   ];
 
   return (
-    <div className="about-page">
+    <div className="about-page bg-dark">
       {/* Hero Section with Animated Background */}
       <section className="hero-section position-relative overflow-hidden d-flex align-items-center">
         <div className="animated-bg"></div>
@@ -368,7 +368,7 @@ const About = () => {
                     <div className="col-lg-6">
                       <div className="position-relative rounded-lg overflow-hidden">
                         <img
-                          src="/api/placeholder/600/400"
+                          src="/images/CseDeptGroupPic.jpg"
                           alt="Department Overview"
                           className="img-fluid rounded-lg"
                         />
@@ -515,7 +515,7 @@ const About = () => {
                   world of technology."
                 </p>
                 <footer className="blockquote-footer">
-                  <cite>Dr. Rajesh Kumar, Head of Department</cite>
+                  <cite>Dr.A Vani Vatsala, Head of Department</cite>
                 </footer>
               </blockquote>
             </div>
