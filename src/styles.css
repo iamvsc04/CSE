@@ -979,26 +979,6 @@ footer {
   padding: 20px;
 }
 
-/* .card-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #343a40;
-  margin-bottom: 15px;
-} */
-/* 
-@media (max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  } */
-/* } */
-
 .headerStyle {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -1140,4 +1120,28 @@ footer {
     width: 100px;
     height: 100px;
   }
+}
+
+.side-menu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.side-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.side-menu a,
+.side-menu button {
+  transition: all 0.3s ease;
+}
+
+.side-menu a:hover,
+.side-menu button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

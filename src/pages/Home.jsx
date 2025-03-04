@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import * as XLSX from "xlsx";
 import NumberLoader from "../components/NumberLoader";
 import "../styles.css";
