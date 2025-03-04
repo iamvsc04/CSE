@@ -53,6 +53,7 @@ const Contact = () => {
   const [formStatus, setFormStatus] = useState(null);
   const [validationErrors, setValidationErrors] = useState({});
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
     // Scroll to top when component mounts
@@ -139,19 +140,19 @@ const Contact = () => {
       icon: "bi-geo-alt",
       title: "Our Location",
       content:
-        "123 University Campus, Academic Avenue, Hyderabad - 500032, India",
+        "CVR COLLEGE OF ENGINEERING, MANGAPALLE , VASTUNAGAR, IBRAHIMPATNAM",
       color: "#4361ee",
     },
     {
       icon: "bi-telephone",
       title: "Call Us",
-      content: "+91 40 2301 4567",
+      content: "+91 99598 34090",
       color: "#3a0ca3",
     },
     {
       icon: "bi-envelope",
       title: "Email Us",
-      content: "cse-department@college.edu",
+      content: "csedept@gmail.com",
       color: "#7209b7",
     },
     {
@@ -190,8 +191,12 @@ const Contact = () => {
     },
   ];
 
+  const toggleAccordion = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
-    <div className="contact-page">
+    <div className="contact-page bg-light">
       {/* Hero Section with Animated Particles */}
       <section className="contact-hero-section position-relative overflow-hidden d-flex align-items-center">
         <div className="particles-container">
@@ -203,7 +208,17 @@ const Contact = () => {
           <div className="particle p6"></div>
         </div>
 
-        <div className="container position-relative">
+        <div
+          className="container position-relative"
+          style={{
+            height: "85vh",
+            textAlign: "center",
+            display: "flex",
+            justifyItems: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <motion.div
             className="row justify-content-center text-center"
             initial="hidden"
@@ -251,25 +266,9 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
-
-        <svg
-          className="contact-wave"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-        >
-          <motion.path
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,186.7C672,213,768,235,864,224C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></motion.path>
-        </svg>
       </section>
-
       {/* Contact Info Cards */}
-      <section className="contact-info-section py-5">
+      <section className="contact-info-section py-5 mt-1 bg-dark">
         <div className="container">
           <motion.div
             className="row g-4"
@@ -282,7 +281,7 @@ const Contact = () => {
               <div key={index} className="col-md-6 col-lg-3">
                 <motion.div
                   variants={fadeIn}
-                  className="contact-card h-100 p-4 rounded-lg shadow-hover text-center"
+                  className="contact-card h-100 p-4 rounded-lg shadow-hover text-center bg-white"
                 >
                   <div
                     className="contact-icon-wrapper mx-auto mb-3"
@@ -293,7 +292,7 @@ const Contact = () => {
                       style={{ color: info.color }}
                     ></i>
                   </div>
-                  <h3 className="h5 mb-3">{info.title}</h3>
+                  <h3 className="h5 mb-3 text-dark">{info.title}</h3>
                   <p className="mb-0 text-muted">{info.content}</p>
                 </motion.div>
               </div>
@@ -301,9 +300,11 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Main Contact Section */}
-      <section className="main-contact-section py-5" id="contact-form">
+      <section
+        className="main-contact-section py-5 bg-dark mt-1"
+        id="contact-form"
+      >
         <div className="container">
           <motion.div
             className="row align-items-stretch g-5"
@@ -468,7 +469,6 @@ const Contact = () => {
                 </motion.div>
               </div>
             </div>
-
             {/* Map */}
             <div className="col-lg-6">
               <div className="map-container h-100 rounded-lg overflow-hidden shadow-sm">
@@ -508,7 +508,7 @@ const Contact = () => {
                         Visit us at our campus in Hyderabad
                       </p>
                       <a
-                        href="https://maps.google.com"
+                        href="https://maps.app.goo.gl/ETVS38Kj2cx2AyQ99"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-light btn-sm rounded-pill px-3"
@@ -524,9 +524,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <section className="faq-section py-5 my-5" id="faq-section">
+      <section className="faq-section py-5 bg-dark mt-1" id="faq-section">
         <div className="container">
           <motion.div
             className="row justify-content-center mb-5"
@@ -539,7 +537,7 @@ const Contact = () => {
               <h2 className="h3 text-gradient mb-3">
                 Frequently Asked Questions
               </h2>
-              <p className="text-muted">
+              <p className="text-light">
                 Find answers to common queries about our department
               </p>
             </div>
@@ -562,11 +560,12 @@ const Contact = () => {
                   >
                     <h2 className="accordion-header" id={`heading${index}`}>
                       <button
-                        className="accordion-button collapsed"
+                        className={`accordion-button ${
+                          openIndex === index ? "" : "collapsed"
+                        }`}
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse${index}`}
-                        aria-expanded="false"
+                        onClick={() => toggleAccordion(index)}
+                        aria-expanded={openIndex === index}
                         aria-controls={`collapse${index}`}
                       >
                         <i className="bi bi-question-circle me-2 text-primary"></i>
@@ -575,9 +574,10 @@ const Contact = () => {
                     </h2>
                     <div
                       id={`collapse${index}`}
-                      className="accordion-collapse collapse"
+                      className={`accordion-collapse collapse ${
+                        openIndex === index ? "show" : ""
+                      }`}
                       aria-labelledby={`heading${index}`}
-                      data-bs-parent="#faqAccordion"
                     >
                       <div className="accordion-body">
                         <p className="mb-0">{faq.answer}</p>
@@ -591,21 +591,19 @@ const Contact = () => {
                 variants={fadeIn}
                 className="more-questions text-center mt-5"
               >
-                <p className="mb-3">Still have questions?</p>
-                <a
+                <p className="mb-3 text-light">Still have questions?</p>
+                <animate
                   href="#contact-form"
                   className="btn btn-outline-primary rounded-pill px-4"
                 >
                   Contact Us Directly <i className="bi bi-chat-dots ms-2"></i>
-                </a>
+                </animate>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Connect With Us Section */}
-      <section className="connect-section py-5 bg-light">
+      <section className="connect-section py-5 bg-dark mt-1">
         <div className="container">
           <motion.div
             className="row justify-content-center"
@@ -615,44 +613,23 @@ const Contact = () => {
             variants={fadeIn}
           >
             <div className="col-lg-10">
-              <div className="connect-card rounded-lg p-4 p-lg-5 text-center">
+              <div className="connect-card rounded-lg p-4 p-lg-5 text-center bg-white shadow-sm">
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
                   <h2 className="h3 text-gradient mb-4">Connect With Us</h2>
-                  <p className="mb-4">
+                  <p className="text-muted mb-4">
                     Follow us on social media to stay updated with department
                     news and events
                   </p>
-
-                  <div className="social-links">
-                    {[
-                      "facebook",
-                      "twitter",
-                      "linkedin",
-                      "instagram",
-                      "youtube",
-                    ].map((platform, index) => (
-                      <motion.a
-                        key={platform}
-                        href="#"
-                        className={`social-link ${platform}`}
-                        whileHover={{ y: -5, scale: 1.1 }}
-                        transition={{ delay: index * 0.05 }}
-                      >
-                        <i className={`bi bi-${platform}`}></i>
-                      </motion.a>
-                    ))}
-                  </div>
                 </motion.div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
       <style jsx>{`
         .contact-page {
           --primary: #4361ee;
@@ -662,6 +639,7 @@ const Contact = () => {
           --dark: #212529;
           --transition: all 0.3s ease;
           overflow-x: hidden;
+          background-color: var(--light);
         }
 
         /* Hero Section */
@@ -760,16 +738,6 @@ const Contact = () => {
           100% {
             transform: translate(0, 0) rotate(360deg);
           }
-        }
-
-        /* Contact Wave SVG */
-        .contact-wave {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 70%;
-          width: 400%;
-          pointer-events: none;
         }
 
         /* Contact Info Cards */
@@ -878,51 +846,6 @@ const Contact = () => {
         .connect-card {
           background-color: white;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .social-links {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          margin-top: 20px;
-        }
-
-        .social-link {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background-color: #f8f9fa;
-          color: var(--dark);
-          font-size: 20px;
-          transition: var(--transition);
-          text-decoration: none;
-        }
-
-        .social-link:hover {
-          color: white;
-        }
-
-        .social-link.facebook:hover {
-          background-color: #3b5998;
-        }
-
-        .social-link.twitter:hover {
-          background-color: #1da1f2;
-        }
-
-        .social-link.linkedin:hover {
-          background-color: #0077b5;
-        }
-
-        .social-link.instagram:hover {
-          background-color: #e1306c;
-        }
-
-        .social-link.youtube:hover {
-          background-color: #ff0000;
         }
 
         /* Utility Classes */
