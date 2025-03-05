@@ -160,10 +160,29 @@ const About = () => {
       event: "Ranked Among Top 10 CSE Departments in the Region",
     },
   ];
+  const developers = [
+    {
+      name: "Sai Charan",
+      image: "/devs/dev1.jpg",
+      quote: "Turning ideas into innovative solutions",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/sai-charan-veerlapati/",
+        github: "https://github.com/iamvsc04",
+      },
+    },
+    {
+      name: "Kaushik",
+      image: "/images/team/kaushik.jpg",
+      quote: "Crafting code that makes a difference",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/kaushik-komaravolu/",
+        github: "https://github.com/Kaushik-2802",
+      },
+    },
+  ];
 
   return (
     <div className="about-page bg-dark">
-      {/* Hero Section with Animated Background */}
       <section className="hero-section position-relative overflow-hidden d-flex align-items-center">
         <div className="animated-bg"></div>
         <div className="container position-relative">
@@ -552,8 +571,91 @@ const About = () => {
             </div>
           </div>
         </motion.div>
-      </div>
 
+        <section className="developers-showcase py-5">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-12 text-center mb-5">
+                <motion.h2
+                  className="display-5 fw-bold text-white mb-3"
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                >
+                  Meet the Innovators
+                </motion.h2>
+                <motion.p
+                  className="lead text-white-50"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                >
+                  The creative minds driving technological excellence
+                </motion.p>
+              </div>
+
+              <div className="col-12">
+                <div className="row justify-content-center g-4">
+                  {developers.map((developer, index) => (
+                    <div key={index} className="col-md-5 col-lg-4">
+                      <motion.div
+                        className="developer-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        whileHover={{
+                          scale: 1.05,
+                          transition: { duration: 0.3 },
+                        }}
+                        transition={{
+                          duration: 0.6,
+                          delay: index * 0.2,
+                          type: "spring",
+                          stiffness: 100,
+                        }}
+                      >
+                        <div className="developer-card-inner">
+                          <div className="developer-image-wrapper">
+                            <div className="developer-image-border">
+                              <img
+                                src={developer.image}
+                                alt={developer.name}
+                                className="developer-image"
+                              />
+                            </div>
+                          </div>
+                          <div className="developer-content">
+                            <h3 className="developer-name">{developer.name}</h3>
+                            <p className="developer-quote">
+                              "{developer.quote}"
+                            </p>
+                            <div className="developer-socials">
+                              {Object.entries(developer.socials).map(
+                                ([platform, link]) => (
+                                  <motion.a
+                                    key={platform}
+                                    href={link}
+                                    className={`social-link ${platform}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.9 }}
+                                  >
+                                    <i className={`bi bi-${platform}`}></i>
+                                  </motion.a>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <style jsx>{`
         .about-page {
           --primary: #4361ee;
@@ -856,6 +958,171 @@ const About = () => {
           color: var(--primary);
           padding: 0.5rem 1rem;
           border-radius: 0.5rem;
+        }
+        .developers-showcase {
+          background: linear-gradient(135deg, #4361ee, #3a0ca3, #7209b7);
+          background-size: 400% 400%;
+          animation: gradientBG 15s ease infinite;
+          position: relative;
+          overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .developers-showcase::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: radial-gradient(
+              circle at top left,
+              rgba(255, 255, 255, 0.1) 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              circle at bottom right,
+              rgba(255, 255, 255, 0.1) 0%,
+              transparent 50%
+            );
+          pointer-events: none;
+        }
+
+        .developer-card {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.125);
+          overflow: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .developer-card-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 2rem;
+          text-align: center;
+        }
+
+        .developer-image-wrapper {
+          position: relative;
+          margin-bottom: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .developer-image-border {
+          position: relative;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: linear-gradient(
+            45deg,
+            #4361ee,
+            #3a0ca3,
+            #7209b7,
+            #f72585
+          );
+          padding: 6px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .developer-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid white;
+        }
+
+        .developer-content {
+          color: white;
+          width: 100%;
+        }
+
+        .developer-name {
+          font-size: 1.75rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(to right, #ffffff, #f0f0f0);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .developer-quote {
+          color: rgba(255, 255, 255, 0.7);
+          font-style: italic;
+          margin-bottom: 1.5rem;
+        }
+
+        .developer-socials {
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+        }
+
+        .social-link {
+          color: white;
+          font-size: 1.75rem;
+          transition: color 0.3s ease;
+          position: relative;
+          display: inline-block;
+        }
+
+        .social-link.linkedin:hover {
+          color: #0077b5;
+        }
+
+        .social-link.github:hover {
+          color: #f0f0f0;
+        }
+
+        .social-link::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: white;
+          transition: width 0.3s ease;
+        }
+
+        .social-link:hover::after {
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .developer-image-border {
+            width: 150px;
+            height: 150px;
+          }
+
+          .developer-name {
+            font-size: 1.5rem;
+          }
+
+          .developer-quote {
+            font-size: 0.9rem;
+          }
+
+          .developer-socials {
+            gap: 1rem;
+          }
         }
       `}</style>
     </div>
