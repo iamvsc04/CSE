@@ -101,9 +101,9 @@ const Navbar = () => {
   const renderDesktopNavbar = () => (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-blue py-2"
-      style={{ height: "110px" }}
+      style={{ height: "110px", display: "flex", alignItems: "center" }}
     >
-      <div className="container-fluid">
+      <div className="container-fluid d-flex justify-content-between align-items-center">
         <Link className="navbar-brand" to="/">
           <img
             src="../images/logo.png"
@@ -112,48 +112,65 @@ const Navbar = () => {
             style={{ maxWidth: "100%", height: "60px" }}
           />
         </Link>
-        <span className="navbar-text text-white ms-3" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-          Department of Computer Science and Engineering
-        </span>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav ms-auto">
-            {menuStructure.map((menu, index) => (
-              <li
-                key={index}
-                className={`nav-item ${
-                  menu.type === "dropdown" ? "dropdown" : ""
-                } marlin`}
-                style={{ fontSize: "1.1rem" }} // Reduced font size
-              >
-                {menu.type === "link" ? (
-                  <Link className="nav-link" to={menu.path}>
-                    {menu.label}
-                  </Link>
-                ) : (
-                  <>
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
+        <div className="d-flex flex-column align-items-end">
+          <span 
+            className="navbar-text text-white mb-3" 
+            style={{ 
+              fontSize: "2rem", 
+              fontWeight: "bold", 
+              textAlign: "center",
+              lineHeight: "1.0"
+            }}
+          >
+           Department of Computer Science and Engineering
+          </span>
+          <div className="collapse navbar-collapse">
+            <ul 
+              className="navbar-nav" 
+              style={{ 
+                display: 'flex', 
+                flexDirection: 'row', 
+                gap: '15px' 
+              }}
+            >
+              {menuStructure.map((menu, index) => (
+                <li
+                  key={index}
+                  className={`nav-item ${
+                    menu.type === "dropdown" ? "dropdown" : ""
+                  } marlin`}
+                  style={{ fontSize: "1rem" }}
+                >
+                  {menu.type === "link" ? (
+                    <Link className="nav-link" to={menu.path}>
                       {menu.label}
-                    </a>
-                    <ul className="dropdown-menu" style={{ fontSize: "1rem" }}>
-                      {menu.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <Link className="dropdown-item" to={item.path}>
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
+                    </Link>
+                  ) : (
+                    <>
+                      <a
+                        className="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        {menu.label}
+                      </a>
+                      <ul className="dropdown-menu" style={{ fontSize: "1rem" }}>
+                        {menu.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <Link className="dropdown-item" to={item.path}>
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -198,7 +215,7 @@ const Navbar = () => {
           transform: isSideMenuOpen ? "translateX(0)" : "translateX(100%)",
           zIndex: 1050,
           overflowY: "auto",
-          fontSize: "0.9rem", // Reduced font size
+          fontSize: "0.9rem", 
         }}
       >
         <div className="side-menu-content p-3">
