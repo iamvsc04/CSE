@@ -162,14 +162,14 @@ const Home = () => {
   const images = [
     {
       src: "/images/newgrouppic.jpg",
-      alt: "Old Group Pic",
+      alt: "Group Pic",
       title: "Department Strength",
       caption: "This is the Strength of the Department",
     },
     {
       src: "/images/newcsedept.jpg",
-      alt: "Old CSE Building",
-      title: "Old CSE Building",
+      alt: "CSE Building",
+      title: "CSE Building",
       caption: "CSE Block with well-furnished Laboratories and Classrooms",
     },
     {

@@ -23,52 +23,42 @@ const EResources = () => {
       subjects: [
         {
           name: "Object Oriented Programming Through Java",
-          links: ["JavaPoint Tutorials", "TutorialsPoint"],
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105224/"}],
         },
         {
-          name: "Discrete Structures and Graph Theory",
-          links: ["TutorialsPoint1", "NPTEL"],
+          name: "Discrete Mathematics",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/111/106/111106086/"}],
         },
         {
-          name: "Boolean Algebra and Circuit Design",
-          links: ["NESO ACADEMY Video Lectures"],
+          name: "Computer Oriented Statistical Methods",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/111/105/111105077/"}],
         },
-        { name: "Probability and Statistics", links: ["Video Tutorials"] },
+        { name: "Digital Electronics", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/108/105/108105132/"}] },
         {
-          name: "Unix and Shell Programming",
-          links: ["Notes", "TutorialsPoint", "NPTEL", "Unix and Shell"],
+          name: "Basic Electrical And Electronics Engineering",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/108/105/108105053/"}],
         },
-        { name: "Electronic Devices and Circuits", links: ["Video Lectures"] },
       ],
     },
     {
       year: "Second Year II-Semester",
       subjects: [
         {
-          name: "Principles of Programming Languages",
-          links: ["NOTES", "NPTEL"],
+          name: "Advanced  Data Structures Through Java",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105225/"}],
         },
         {
-          name: "Data Structures Through Java",
-          links: ["DSJ", "BeginnersBook", "Tutorials Point"],
+          name: "Computer Organization And Architecture",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105163/"}],
         },
         {
           name: "DataBase Management Systems",
-          links: ["NOTES", "NPTEL", "TutorialsPoint", "Online Notes"],
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105175/"}],
         },
-        { name: "Environmental Studies", links: [] },
+        { name: "Operating Systems", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105214/"}] },
         {
-          name: "Design And Analysis of Algorithms",
-          links: [
-            "NOTES",
-            "NPTEL",
-            "Youtube Lectures(Abul Bari)",
-            "TutorialsPoint",
-          ],
-        },
-        {
-          name: "Computer Organization",
-          links: ["NPTEL", "NESO ACADEMY Video Lectures"],
+          name: "Software Engineering",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105182/"}],
         },
       ],
     },
@@ -77,86 +67,92 @@ const EResources = () => {
       subjects: [
         {
           name: "Web Technologies",
-          links: ["JavaPoint Tutorials", "GeeksForGeeks", "W3Schools"],
+          links: [{name:"Nptel", url:"https://onlinecourses.swayam2.ac.in/nou24_cs09/preview"}],
         },
         {
-          name: "Managerial Economics And Financial Analysis",
-          links: ["Youtube Lectures"],
+          name: "Computer Networking",
+          links: [{name:"Nptel", url:"https://archive.nptel.ac.in/courses/106/105/106105183/"}],
         },
-        { name: "Operating Systems", links: ["NPTEL", "NPTEL 2"] },
         {
-          name: "Data Communication and Computer Networks",
-          links: ["NPTEL 1", "NPTEL Videos"],
+          name: "Algorithm Design and Analysis",
+          links: [{name:"Nptel", url:"https://archive.nptel.ac.in/courses/106/106/106106131/"}],
         },
+        {
+          name: "Data Science",
+          links: [{name:"Nptel", url:"https://onlinecourses.nptel.ac.in/noc21_cs69/preview"}],
+        },
+        {
+          name: "Computer Graphics(PE-I)",
+          links: [{name:"Nptel", url:"https://archive.nptel.ac.in/courses/106/103/106103224/"}],
+        },
+        {
+          name: "Distributed Databases (PE-I)",
+          links: [{name:"Nptel", url:"https://onlinecourses.nptel.ac.in/noc21_cs87/preview"}],
+        },
+        {
+          name: "Principles of Programming Languages (PE-I)",
+          links: [{name:"Nptel", url:"https://archive.nptel.ac.in/courses/106/102/106102067/"}],
+        },
+        {
+          name: "Digital Image Processing and Computer Vision (PE- I)",
+          links: [{name:"Nptel", url:"https://archive.nptel.ac.in/courses/117/105/117105135/"}],
+        }
       ],
     },
     {
       year: "Third Year II-Semester",
       subjects: [
-        { name: "Software Engineering", links: ["NPTEL", "NPTEL 2"] },
-        { name: "Microprocessor and Interfacing", links: [] },
-        { name: "Visual Programming using C# and .Net", links: ["Videos"] },
         {
-          name: "Object Oriented Analysis And Design",
-          links: ["NOTES", "Text Book"],
+          name: "Artificial Intelligence and Machine Learning",
+          links: [{name:"Nptel", url:"https://onlinecourses.nptel.ac.in/noc22_cs56/preview"}],
         },
-        { name: "Introduction To Analytics", links: ["NOTES", "NPTEL"] },
+        { name: "Full Stack Development", 
+          links: [{name:"Nptel",url:"https://nptel.ac.in/courses/128108025"}] 
+        },
+        { name: "Cloud Computing and Devops", 
+          links: [{name:"Nptel",url:"https://onlinecourses.nptel.ac.in/noc19_cs64/preview"}] },
         {
-          name: "Web Engineering",
-          links: [
-            "CSS 3",
-            "HTML 5",
-            "Node JS",
-            "Express JS",
-            "Type Script",
-            "Angular 2",
-          ],
+          name: "Automata Theory and Compiler Design",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/106/106106049/"}],
+        },
+        { name: "Crytography and Essentials of Network Security(PE-II)", 
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105162/"}] 
         },
         {
-          name: "MVC Through Scripting Languages",
-          links: ["Quick Guide", "Tutorials Point"],
+          name: "Internet of Things(PE-II)",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105166/"}],
         },
-        { name: "Linux Programming", links: [] },
+        {
+          name: "Distributed Systems(PE-II)",
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/106/106106168/"}],
+        },
+        { name: "Artificial Neural Networks and Graphical Models (PE-II)", 
+          links: [{name:"Nptel",url:"https://nptel.ac.in/courses/117105084"}] },
       ],
     },
     {
       year: "Fourth Year I-Semester",
       subjects: [
-        {
-          name: "Automata & Complier Design",
-          links: ["Tutorials Point", "NPTEL"],
-        },
-        { name: "Linux Programming", links: ["NPTEL", "javatpoint"] },
+        { name: "Linux Programming", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/117/106/117106113/"}] },
         {
           name: "Data Warehousing and Data Mining",
-          links: ["NOTES", "Weka Manual", "Slides"],
+          links: [{name:"Nptel",url:"https://onlinecourses.nptel.ac.in/noc21_cs06/preview"}],
         },
-        { name: "Big Data Analytics", links: ["NPTEL"] },
-        { name: "Soft Computing", links: ["NOTES", "NPTEL"] },
-        { name: "Design Patterns", links: ["NPTEL"] },
+        { name: "DEEP LEARNING (DL) (PROFESSIONAL ELECTIVE II)", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/106/106106184/"}] },
+        { name: "VIRTUAL REALITY (VR) (PROFESSIONAL ELECTIVE II)", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/121/106/121106013/"}] },
+        { name: "VISUAL PROGRAMMING (PROFESSIONAL ELECTIVE II)", links: [{name:"Youtube",url:"https://www.youtube.com/watch?v=Y8c1IHZs5qc&list=PLTd6ceoshpremSFQxYM4L0p4Q6hR-4e4J"}] },
         {
           name: "Web services and Cloud Computing",
-          links: ["NPTEL", "NPTEL 2"],
+          links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105167/"}],
         },
-        { name: "Internet Of Things", links: ["NOTES", "NPTEL", "NPTEL 2"] },
-        {
-          name: "Software Testing Methodologies",
-          links: ["NOTES", "Text Book"],
-        },
-        { name: "Network Security", links: ["NOTES", "Text Book"] },
       ],
     },
     {
       year: "Fourth Year II-Semester",
       subjects: [
-        { name: "Management Science", links: ["Text Book"] },
-        { name: "Adhoc and Sensor Networks", links: ["NPTEL", "NPTEL 2"] },
-        { name: "Machine Learning", links: ["NPTEL", "Videos"] },
-        {
-          name: "Image Processing and Pattern Recognition",
-          links: ["Videos", "NPTEL"],
-        },
-        { name: "Predictive Analytics", links: ["NPTEL"] },
+        { name: "ETHICAL HACKING - EH (PROFESSIONAL ELECTIVE IV)", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105217/"}] },
+        { name: "BLOCK CHAIN TECHNOLOGIES - BCT (PROFESSIONAL ELECTIVE V)", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/105/106105235/"}] },
+        { name: "HUMAN COMPUTER INTERACTION - HCI", links: [{name:"Nptel",url:"https://archive.nptel.ac.in/courses/106/106/106106177/"}] },
       ],
     },
   ];
@@ -230,12 +226,12 @@ const EResources = () => {
                               {subject.links.map((link, linkIndex) => (
                                 <li key={linkIndex}>
                                   <a
-                                    href="#"
+                                    href={link.url}
                                     className="resource-link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                   >
-                                    {link}
+                                    {link.name}
                                   </a>
                                 </li>
                               ))}
