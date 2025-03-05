@@ -3,6 +3,7 @@ import * as XLSX from "xlsx";
 import NumberLoader from "../components/NumberLoader";
 import "../styles.css";
 
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -166,7 +167,7 @@ const Home = () => {
       caption: "This is the Strength of the Department",
     },
     {
-      src: "/images/oldcsedept.jpg",
+      src: "/images/newcsedept.jpg",
       alt: "Old CSE Building",
       title: "Old CSE Building",
       caption: "CSE Block with well-furnished Laboratories and Classrooms",

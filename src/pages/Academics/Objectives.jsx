@@ -13,7 +13,7 @@ const Objectives = () => {
       shortcut: "PSO",
       title: "Software Development Skills",
       description:
-        "Analyze a problem, design an algorithm, define the computing requirements and implement it through logical and programming skills.",
+        "Successfully design and implement algorithmic paradigms by using efficient programming language constructs, formal tools and frameworks.",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Objectives = () => {
 
       title: "Professional Skills",
       description:
-        "Architect, evolve and integrate a working model, leading to secure software product development to meet the evolving needs of the industry and open source environments.",
+        "Develop scalable and reliable distributed applications and data analytics pipelines by employing industry agnostic technologies and secure software engineering models",
     },
     {
       id: 3,
