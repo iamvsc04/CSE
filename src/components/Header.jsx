@@ -101,7 +101,7 @@ const Navbar = () => {
   const renderDesktopNavbar = () => (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-blue py-2"
-      style={{ height: "110px", display: "flex", alignItems: "center" }}
+      style={{ height: "120px", display: "flex", alignItems: "center" }}
     >
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <Link className="navbar-brand" to="/">
@@ -109,28 +109,30 @@ const Navbar = () => {
             src="../images/logo.png"
             className="img-fluid"
             alt="CVR LOGO"
-            style={{ maxWidth: "100%", height: "60px" }}
+            style={{ maxWidth: "100%", height: "70px" }}
           />
         </Link>
         <div className="d-flex flex-column align-items-end">
-          <span 
-            className="navbar-text text-white mb-3" 
-            style={{ 
-              fontSize: "2rem", 
-              fontWeight: "bold", 
+          <span
+            className="navbar-text text-white mb-1 "
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
               textAlign: "center",
-              lineHeight: "1.0"
+              lineHeight: "1.0",
+              marginRight: "3rem",
+              paddingTop: "1rem",
             }}
           >
-           Department of Computer Science and Engineering
+            Department of Computer Science and Engineering
           </span>
           <div className="collapse navbar-collapse">
-            <ul 
-              className="navbar-nav" 
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                gap: '15px' 
+            <ul
+              className="navbar-nav"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "15px",
               }}
             >
               {menuStructure.map((menu, index) => (
@@ -139,7 +141,7 @@ const Navbar = () => {
                   className={`nav-item ${
                     menu.type === "dropdown" ? "dropdown" : ""
                   } marlin`}
-                  style={{ fontSize: "1rem" }}
+                  style={{ fontSize: "1.15rem", marginBottom: ".5rem" }}
                 >
                   {menu.type === "link" ? (
                     <Link className="nav-link" to={menu.path}>
@@ -156,7 +158,10 @@ const Navbar = () => {
                       >
                         {menu.label}
                       </a>
-                      <ul className="dropdown-menu" style={{ fontSize: "1rem" }}>
+                      <ul
+                        className="dropdown-menu"
+                        style={{ fontSize: "1rem" }}
+                      >
                         {menu.items.map((item, itemIndex) => (
                           <li key={itemIndex}>
                             <Link className="dropdown-item" to={item.path}>
@@ -215,7 +220,7 @@ const Navbar = () => {
           transform: isSideMenuOpen ? "translateX(0)" : "translateX(100%)",
           zIndex: 1050,
           overflowY: "auto",
-          fontSize: "0.9rem", 
+          fontSize: "0.9rem",
         }}
       >
         <div className="side-menu-content p-3">

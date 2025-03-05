@@ -172,7 +172,7 @@ const About = () => {
     },
     {
       name: "Kaushik",
-      image: "/images/team/kaushik.jpg",
+      image: "/devs/dev2.jpg",
       quote: "Crafting code that makes a difference",
       socials: {
         linkedin: "https://www.linkedin.com/in/kaushik-komaravolu/",
