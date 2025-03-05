@@ -112,6 +112,9 @@ const Navbar = () => {
             style={{ maxWidth: "100%", height: "60px" }}
           />
         </Link>
+        <span className="navbar-text text-white ms-3" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+          Department of Computer Science and Engineering
+        </span>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             {menuStructure.map((menu, index) => (

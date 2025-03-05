@@ -10,25 +10,19 @@ const Objectives = () => {
       id: 1,
       title: "Software Development Skills",
       description:
-        "Analyze a problem, design an algorithm, define the computing requirements and implement it through logical and programming skills.",
+        "Successfully design and implement algorithmic paradigms by using efficient programming language constructs, formal tools and frameworks.",
     },
     {
       id: 2,
       title: "Professional Skills",
       description:
-        "Architect, evolve and integrate a working model, leading to secure software product development to meet the evolving needs of the industry and open source environments.",
+        "Develop scalable and reliable distributed applications and data analytics pipelines by employing industry agnostic technologies and secure software engineering models",
     },
     {
       id: 3,
-      title: "Interdisciplinary Skills",
+      title: "Smart & Sustainable Solutions with Cloud and AI",
       description:
-        "Understand software engineering practices and hardware integration for developing solutions to real world problems over multi-disciplinary domains.",
-    },
-    {
-      id: 4,
-      title: "Industry Readiness",
-      description:
-        "Use theoretical and practical concepts of various domains to realize new ideas and innovations for pursuing research, entrepreneurship, employment and higher studies.",
+        "Adapt cloud computing ecosystems and machine learning algorithms to develop  smart and sustainable solutions complying the ethics of society and eventually emerge as entrepreneurs.",
     },
   ];
 
