@@ -34,7 +34,7 @@ const Laboratories = () => {
                 },
                 {
                   name: "Web Engineering Laboratory",
-                  image: "/images/laboratories/Projects Lab 1.JPG",
+                  image: "/images/laboratories/ProjectsLab1.JPG",
                   title: "Library II Floor",
                   info: "68 - i5 systems with 8GB RAM, where students will be exercising the Web Technologies and Fullstack implementation Technologies like Angular, React and NodeJS. Projects Lab where IV year students are allotted the systems to do their Mini and Major Projects.",
                 },

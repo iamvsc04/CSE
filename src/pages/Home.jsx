@@ -179,7 +179,7 @@ const Home = () => {
         "Apple Laboratory where research and project development happens.",
     },
     {
-      src: "/images/laboratories/Projects Lab 1.JPG",
+      src: "/images/laboratories/ProjectsLab1.JPG",
       alt: "Project Lab",
       title: "Projects Lab",
       caption:

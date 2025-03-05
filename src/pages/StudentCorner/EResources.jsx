@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-
-import "../../styles.css";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./EResources.css";
 
 const EResources = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [activeYear, setActiveYear] = useState(null);
   const programOutcomes = [
     {
       year: "First Year I-Semester",
@@ -165,82 +161,99 @@ const EResources = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <>
-      <main>
-        <section className="eResourcesSection">
-          <div className="container mt-5">
-            <h2 className="text-center mb-5">E-Resources</h2>
+    <div className="e-resources-wrapper">
+      {/* Hero Section with Animated Background */}
+      <div className="e-resources-hero text-white text-center position-relative">
+        <div className="hero-overlay"></div>
+        <div className="container position-relative z-3">
+          <h1 className="display-4 mb-4 hero-title">E-Resources Hub</h1>
+          <p className="lead hero-subtitle">
+            Comprehensive Learning Resources for Every Academic Journey
+          </p>
+        </div>
+      </div>
 
-            {programOutcomes.map((yearData, yearIndex) => (
-              <section key={yearIndex} className="mb-5">
-                {/* 🔹 Heading Above */}
-                <h3 className="mb-4 text-center">{yearData.year}</h3>
+      {/* Navigation with Enhanced Interactivity */}
+      <div className="container my-5">
+        <div className="year-navigation d-flex flex-wrap justify-content-center gap-3 mb-5">
+          {[...new Set(programOutcomes.map((outcome) => outcome.year))].map(
+            (year, index) => (
+              <button
+                key={index}
+                className={`btn year-btn ${
+                  activeYear === year ? "btn-primary" : "btn-outline-primary"
+                }`}
+                onClick={() => setActiveYear(activeYear === year ? null : year)}
+              >
+                {year}
+              </button>
+            )
+          )}
+        </div>
+      </div>
 
-                {/* 🔹 Cards Below (3 per row) */}
-                <div
-                  className="card-section row"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                >
-                  {yearData.subjects.map((subject, subjectIndex) => (
-                    <div
-                      className="col-md-4 d-flex justify-content-center mb-4"
-                      key={subjectIndex}
-                    >
-                      <div className="card">
-                        <div className="flip-card">
-                          <div className="flip-card__container">
-                            {/* 🔹 Front Page (Displays Subject Name) */}
-                            <div className="card-front">
-                              <div className="card-front__tp1 card-front__tp--city1">
-                                <h3 className="card-front__heading1">
-                                  {subject.name}
-                                </h3>
-                              </div>
-                              <div className="card-front__bt">
-                                <p className="card-front__text-view2">
-                                  View me
-                                </p>
-                              </div>
-                            </div>
+      {/* Resources Grid with Enhanced Animations */}
+      <div className="container">
+        {programOutcomes.map((yearData, yearIndex) => (
+          <div
+            key={yearIndex}
+            className={`year-section mb-5 ${
+              activeYear && activeYear !== yearData.year ? "d-none" : ""
+            }`}
+          >
+            <h2 className="text-center mb-4 section-title">{yearData.year}</h2>
 
-                            {/* 🔹 Back Page (Displays Subject Name Again) */}
-                            <div className="card-back"
-                             style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                             }}>
-                              <h4 className="card-back__heading1 inside-page__heading--city1">
-                                {subject.name}
-                              </h4>
-                            </div>
-                          </div>
+            <div className="row g-4">
+              {yearData.subjects.map((subject, subjectIndex) => (
+                <div key={subjectIndex} className="col-12 col-md-4 col-lg-3">
+                  <div className="resource-card">
+                    <div className="resource-card-inner">
+                      <div className="resource-card-front">
+                        <h3 className="resource-title">{subject.name}</h3>
+                        <div className="resource-overlay">
+                          <span className="explore-text">
+                            Explore Resources
+                          </span>
                         </div>
+                      </div>
 
-                        {/* 🔹 Next Page (Links Appears Here) */}
-                        <div className="inside-page">
-                          <div className="inside-page__container">
-                            <ul>
-                              {subject.links.map((link, index) => (
-                                <li key={index}>
-                                  <a href="#">{link}</a>
+                      <div className="resource-card-back">
+                        <div className="resource-links">
+                          <h4 className="mb-3">Available Resources</h4>
+                          {subject.links.length > 0 ? (
+                            <ul className="list-unstyled">
+                              {subject.links.map((link, linkIndex) => (
+                                <li key={linkIndex}>
+                                  <a
+                                    href="#"
+                                    className="resource-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    {link}
+                                  </a>
                                 </li>
                               ))}
                             </ul>
-                          </div>
+                          ) : (
+                            <p className="text-muted">No resources available</p>
+                          )}
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </section>
-            ))}
+              ))}
+            </div>
           </div>
-        </section>
-      </main>
-    </>
+        ))}
+      </div>
+    </div>
   );
 };
 
