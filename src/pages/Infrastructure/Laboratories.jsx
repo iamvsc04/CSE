@@ -12,24 +12,54 @@ const Laboratories = () => {
 
   const laboratories = [
     {
-      name: "Apple Laboratory",
-      image: "/images/applelab.jpg",
-      title: "Innovative Computing Hub",
+      name: "Mobile Application Development Lab ",
+      image: "/images/civil/104-inside.jpg",
+      title: "Mobile Application Development Lab ",
       description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
-      icon: "bi-apple",
+      icon: "bi-phone",
       color: "dark",
-      location: "CB 104",
+      location: "CB 104 & CB 105",
       category: "Computing"
     },
     {
-      name: "Java Programming Laboratory",
-      image: "/images/laboratories/309CM.JPG",
-      title: "Enterprise Programming Center",
-      description: "Advanced Java development environment with 70 high-performance i5 and i7 systems for core and advanced programming.",
+      name: "Iot and CC lab",
+      image: "/images/civil/203-inside.jpg",
+      title: "IOT and CC lab",
+      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      icon: "bi-cloud",
+      color: "dark",
+      location: "CB 203",
+      category: "IOT"
+    },
+    {
+      name: "Software engineering laboratory ",
+      image: "/images/civil/c3a-inside.jpg",
+      title: "Software engineering laboratory",
+      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
       icon: "bi-code-slash",
+      color: "dark",
+      location: "CB C3A & CB C3B",
+      category: "Design"
+    },
+    {
+      name: "DB and Algorithms lab ",
+      image: "/images/laboratories/111 CB.JPG",
+      title: "DB and Algorithms lab",
+      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      icon: "bi-code-slash",
+      color: "dark",
+      location: "CB  111 & CB 112",
+      category: "Database"
+    },
+    {
+      name: "Data Visualization lab",
+      image: "/images/laboratories/CBC2 AB.JPG",
+      title: "Data Visualization lab",
+      description: "Advanced Java development environment with 70 high-performance i5 and i7 systems for core and advanced programming.",
+      icon: "bi-bar-chart-line-fill",
       color: "primary",
-      location: "CM 308 & 309",
-      category: "Programming"
+      location: "CBC2A and CBC2B",
+      category: "Data Science"
     },
     {
       name: "Web Engineering Laboratory",
@@ -52,14 +82,24 @@ const Laboratories = () => {
       category: "Data Science"
     },
     {
-      name: "Database Management Systems Laboratory",
-      image: "/images/laboratories/112 CB.JPG",
-      title: "Database Systems Hub",
+      name: "Java laboratory",
+      image: "/images/laboratories/309CM.JPG",
+      title: "Java laboratory",
       description: "Comprehensive backend development lab with 65 Acer computers for advanced database management and implementation.",
-      icon: "bi-database",
+      icon: "bi-code",
       color: "warning",
-      location: "CB 111 and 112",
-      category: "Database"
+      location: "CM 309 & CM 310",
+      category: "Programming"
+    },
+    {
+      name: "Full Stack Development lab",
+      image: "/images/civil/19-inside.jpg",
+      title: "Java laboratory",
+      description: "Comprehensive backend development lab with 65 Acer computers for advanced database management and implementation.",
+      icon: "bi-code",
+      color: "warning",
+      location: "CM 309 & CM 310",
+      category: "Programming"
     },
     {
       name: "IoT Laboratory",
