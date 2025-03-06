@@ -12,154 +12,344 @@ const Laboratories = () => {
 
   const laboratories = [
     {
-      name: "Mobile Application Development Lab ",
+      name: "Mobile Application Development Lab-1 ",
       image: "/images/civil/104-inside.jpg",
       title: "Mobile Application Development Lab ",
-      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      description: "The Lenovo Desktop-VO6ECHF with an Intel Core i5, 8GB RAM, and 500GB SSD is perfect for efficient mobile app development.",
       icon: "bi-phone",
       color: "dark",
-      location: "CB 104 & CB 105",
-      category: "Computing"
+      location: "CB 104",
+      category: "App development"
     },
     {
-      name: "Iot and CC lab",
+      name: "Mobile Application Development Lab-2 ",
+      image: "/images/civil/104-inside.jpg",
+      title: "Mobile Application Development Lab ",
+      description: "The Lenovo Desktop-VO6ECHF with an Intel Core i5, 8GB RAM, and 500GB SSD is perfect for efficient mobile app development.",
+      icon: "bi-phone",
+      color: "dark",
+      location: "CB 105",
+      category: "App development"
+    },
+    {
+      name: "Iot and CC lab-1",
       image: "/images/civil/203-inside.jpg",
       title: "IOT and CC lab",
-      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      description: "The system with an Intel i3, 8GB RAM, and 500GB SSD is perfect for running IoT and Cloud Computing applications, handling tasks and experiments efficiently.",
       icon: "bi-cloud",
       color: "dark",
       location: "CB 203",
       category: "IOT"
     },
     {
-      name: "Software engineering laboratory ",
+      name: "Iot and CC lab-2",
+      image: "/images/civil/203-inside.jpg",
+      title: "IOT and CC lab",
+      description: "The system with an Intel i3, 8GB RAM, and 500GB SSD is perfect for running IoT and Cloud Computing applications, handling tasks and experiments efficiently.",
+      icon: "bi-cloud",
+      color: "dark",
+      location: "CB 204",
+      category: "IOT"
+    },
+    {
+      name: "Software engineering lab-1 ",
       image: "/images/civil/c3a-inside.jpg",
       title: "Software engineering laboratory",
-      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      description: "The Acer Veriton M200 with a Pentium Dual Core 4.01 GHz processor, 8GB RAM, 1TB HDD, and 18.5 LED monitor is ideal for software engineering, offering solid performance",
       icon: "bi-code-slash",
       color: "dark",
-      location: "CB C3A & CB C3B",
+      location: "CB C3A",
       category: "Design"
     },
     {
-      name: "DB and Algorithms lab ",
-      image: "/images/laboratories/111 CB.JPG",
-      title: "DB and Algorithms lab",
-      description: "A state-of-the-art space with 30 Apple Mac Pro systems dedicated to advanced research and iOS development.",
+      name: "Software engineering lab-2 ",
+      image: "/images/civil/c3a-inside.jpg",
+      title: "Software engineering laboratory",
+      description: "The Acer Veriton M200 with a Pentium Dual Core 4.01 GHz processor, 8GB RAM, 1TB HDD, and 18.5 LED monitor is ideal for software engineering, offering solid performance.",
       icon: "bi-code-slash",
       color: "dark",
-      location: "CB  111 & CB 112",
-      category: "Database"
+      location: "CB C3B",
+      category: "Design"
     },
     {
-      name: "Data Visualization lab",
+      name: "DB and Algorithms lab-1 ",
+      image: "/images/laboratories/111 CB.JPG",
+      title: "DB and Algorithms lab",
+      description: "The system with an Intel i3, 8GB RAM, and 500GB SSD is perfect for running algorithms tasks, paired with Dell peripherals and a Samsung monitor.",
+      icon: "bi-code-slash",
+      color: "dark",
+      location: "CB  111",
+      category: "Algorithms"
+    },
+    {
+      name: "DB and Algorithms lab-2 ",
+      image: "/images/laboratories/111 CB.JPG",
+      title: "DB and Algorithms lab",
+      description: "The system with an Intel i3, 8GB RAM, and 500GB SSD is perfect for running algorithms tasks, paired with Dell peripherals and a Samsung monitor.",
+      icon: "bi-code-slash",
+      color: "dark",
+      location: "CB 112",
+      category: "Algorithms"
+    },
+    {
+      name: "Data Visualization lab-I",
       image: "/images/laboratories/CBC2 AB.JPG",
       title: "Data Visualization lab",
-      description: "Advanced Java development environment with 70 high-performance i5 and i7 systems for core and advanced programming.",
+      description: "Advanced Java development envThe system with 8GB RAM, 1TB HDD, and an 18.5 Acer monitor is well-suited for data visualization tasks, paired with Acer keyboard and mouse.",
       icon: "bi-bar-chart-line-fill",
       color: "primary",
-      location: "CBC2A and CBC2B",
+      location: "CBC2A",
       category: "Data Science"
     },
     {
-      name: "Web Engineering Laboratory",
-      image: "/images/laboratories/ProjectsLab1.JPG",
-      title: "Digital Innovation Center",
-      description: "Cutting-edge web technologies lab with 68 i5 systems for full-stack development using Angular, React, and NodeJS.",
-      icon: "bi-display",
-      color: "success",
-      location: "Library II Floor",
+      name: "Data Visualization lab-II",
+      image: "/images/laboratories/CBC2 AB.JPG",
+      title: "Data Visualization lab",
+      description: "The system with 8GB RAM, 1TB HDD, and an 18.5 Acer monitor is well-suited for data visualization tasks, paired with Acer keyboard and mouse.",
+      icon: "bi-bar-chart-line-fill",
+      color: "primary",
+      location: "CBC2B",
+      category: "Data Science"
+    },
+    {
+      name: "Java laboratory-1",
+      image: "/images/laboratories/309CM.JPG",
+      title: "Java laboratory",
+      description: "The 32 systems with Intel Core i5 8th Gen, 16GB RAM, 1TB/2TB HDD, and LED monitors are ideal for Java development, offering powerful performance and connectivity.",
+      icon: "bi-code",
+      color: "warning",
+      location: "CM 309 & CM 310",
+      category: "Programming"
+    },
+    {
+      name: "Java laboratory-2",
+      image: "/images/laboratories/310 CM.JPG",
+      title: "Java laboratory",
+      description: "The 32 systems with Intel Core i5 8th Gen, 16GB RAM, 1TB/2TB HDD, and LED monitors are ideal for Java development, offering powerful performance and connectivity.",
+      icon: "bi-code",
+      color: "warning",
+      location: "CM 309 & CM 310",
+      category: "Programming"
+    },
+    {
+      name: "Full Stack Development lab-1",
+      image: "/images/civil/19-inside.jpg",
+      title: "Full Stack development lab",
+      description: "The system with an Intel i5 12th Gen processor, 8GB RAM, and 512GB SSD is perfect for full-stack development, offering strong performance for coding and testing.",
+      icon: "bi-code",
+      color: "warning",
+      location: "Lib 2FA",
+      category: "Programming"
+    },
+    {
+      name: "Full Stack Development lab-2",
+      image: "/images/civil/19-inside.jpg",
+      title: "Full Stack development lab",
+      description: "The system with an Intel i5 12th Gen processor, 8GB RAM, and 512GB SSD is perfect for full-stack development, offering strong performance for coding and testing.",
+      icon: "bi-code",
+      color: "warning",
+      location: "Lib 2FB",
       category: "Web Development"
     },
     {
-      name: "Data Visualization Laboratory",
-      image: "/images/laboratories/CBC2 AB.JPG",
-      title: "Analytics & Insights Lab",
-      description: "Specialized data science space with 66 Acer computers for advanced visualization, Python, and Android development.",
-      icon: "bi-bar-chart-line",
-      color: "info",
-      location: "CB C2A and C2B Cellar",
-      category: "Data Science"
-    },
-    {
-      name: "Java laboratory",
-      image: "/images/laboratories/309CM.JPG",
-      title: "Java laboratory",
-      description: "Comprehensive backend development lab with 65 Acer computers for advanced database management and implementation.",
+      name: "CAD lab 1",
+      image: "/images/laboratories/315 A FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
       icon: "bi-code",
       color: "warning",
-      location: "CM 309 & CM 310",
-      category: "Programming"
-    },
-    {
-      name: "Full Stack Development lab",
-      image: "/images/civil/19-inside.jpg",
-      title: "Java laboratory",
-      description: "Comprehensive backend development lab with 65 Acer computers for advanced database management and implementation.",
-      icon: "bi-code",
-      color: "warning",
-      location: "CM 309 & CM 310",
-      category: "Programming"
-    },
-    {
-      name: "IoT Laboratory",
-      image: "/images/laboratories/204 CB.JPG",
-      title: "Connected Technologies Studio",
-      description: "Cutting-edge IoT research center with 65 Acer computers, IoT sensors, Raspberry Pi kits, and Linux programming capabilities.",
-      icon: "bi-cpu",
-      color: "danger",
-      location: "CB 203 and 204",
-      category: "IoT"
-    },
-    {
-      name: "Analytics Lab",
-      image: "/images/laboratories/CBC3 B.JPG",
-      title: "Data Science Center",
-      description: "Advanced analytics lab with 65 Acer computers for data mining, machine learning, and advanced statistical analysis.",
-      icon: "bi-graph-up",
-      color: "secondary",
-      location: "CB C3A and C3B Cellar",
-      category: "Data Science"
-    },
-    {
-      name: "Datastructures Labs",
-      image: "/images/laboratories/304 FB.JPG",
-      title: "Programming Fundamentals",
-      description: "Extensive lab with 200 Acer systems dedicated to foundational programming and data structures using C.",
-      icon: "bi-code-square",
-      color: "primary",
-      location: "FB 204, 205, 304, 305, CM 209, and MB 305",
-      category: "Programming"
-    },
-    {
-      name: "English Language Communication Skills Lab",
-      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
-      title: "Communication Skills Center",
-      description: "Specialized lab with 100 Acer systems for enhancing English language communication and professional skills.",
-      icon: "bi-chat-text",
-      color: "success",
-      location: "FB 207, 208, and FB 113",
-      category: "Communication"
-    },
-    {
-      name: "Engineering Drawing and Graphics Lab",
-      image: "/images/laboratories/318 FB.JPG",
-      title: "Design and Visualization Studio",
-      description: "Comprehensive design lab with 200 Acer systems for advanced engineering drawing and graphics using AutoCAD.",
-      icon: "bi-vector-pen",
-      color: "info",
-      location: "FB 315, 316, 318, 319, and CM 216, 217",
+      location: "FB 315A",
       category: "Design"
     },
     {
-      name: "IT Workshop Laboratory",
-      image: "/images/laboratories/IT Workshop FB 116.JPG",
-      title: "Technology Integration Lab",
-      description: "Versatile lab with 170 Acer systems for system interfacing, web technologies, and computer information systems.",
-      icon: "bi-laptop",
+      name: "CAD lab 2",
+      image: "/images/laboratories/315 A FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
+      icon: "bi-code",
       color: "warning",
-      location: "FB 116, 117, 307, 308, and PG 402",
-      category: "IT"
+      location: "FB 315B",
+      category: "Design"
+    },
+    {
+      name: "CAD lab 3",
+      image: "/images/laboratories/318 FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.Comprehensive Full stack  development lab with 34 Acer computers for advanced database management and implementation.",
+      icon: "bi-code",
+      color: "warning",
+      location: "FB 318",
+      category: "Design"
+    },
+    {
+      name: "CAD lab 4",
+      image: "/images/laboratories/315 A FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
+      icon: "bi-code",
+      color: "warning",
+      location: "FB 319",
+      category: "Design"
+    },
+    {
+      name: "CAD lab 5",
+      image: "/images/laboratories/315 A FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
+      icon: "bi-code",
+      color: "warning",
+      location: "CM 204A",
+      category: "Design"
+    },
+    {
+      name: "CAD lab 6",
+      image: "/images/laboratories/315 A FB.JPG",
+      title: "CAD lab",
+      description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
+      icon: "bi-code",
+      color: "warning",
+      location: "CM 204B",
+      category: "Design"
+    },
+    {
+      name: "Data Structures lab-1",
+      image: "/images/laboratories/207 FB.JPG",
+      title: "Data structures lab 1",
+      description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
+      icon: "bi-code-square",
+      color: "danger",
+      location: "FB 204",
+      category: "Programming"
+    },
+    {
+      name: "Data Structures lab-2",
+      image: "/images/laboratories/207 FB.JPG",
+      title: "Data structures lab 1",
+      description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
+      icon: "bi-code-square",
+      color: "danger",
+      location: "FB 205",
+      category: "Programming"
+    },
+    {
+      name: "Data Structures lab-3",
+      image: "/images/laboratories/207 FB.JPG",
+      title: "Data structures lab 1",
+      description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
+      icon: "bi-code-square",
+      color: "danger",
+      location: "FB 304",
+      category: "Programming"
+    },
+    {
+      name: "Data Structures lab-4",
+      image: "/images/laboratories/207 FB.JPG",
+      title: "Data structures lab 1",
+      description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
+      icon: "bi-code-square",
+      color: "danger",
+      location: "FB 305",
+      category: "Programming"
+    },
+    {
+      name: "Data Structures lab-5",
+      image: "/images/laboratories/207 FB.JPG",
+      title: "Data structures lab 1",
+      description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
+      icon: "bi-code-square",
+      color: "danger",
+      location: "CM 109",
+      category: "Programming"
+    },
+    {
+      name: "ELCS lab 1",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Samsung PC with 8GB RAM, 500GB SSD, and a 22 LED monitor is well-suited for English Language and ELCS lab activities.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "FB 113",
+      category: "Communication"
+    },
+    {
+      name: "ELCS lab 2",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Samsung PC with 8GB RAM, 500GB SSD, and a 22 LED monitor is well-suited for English Language and ELCS lab activities.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "CB C3A and C3B Cellar",
+      category: "Communication"
+    },
+    {
+      name: "ELCS lab 3",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Samsung PC with 8GB RAM, 500GB SSD, and a 22 LED monitor is well-suited for English Language and ELCS lab activities.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "FB 114",
+      category: "Communication"
+    },
+    {
+      name: "Python Programming and Interfacing Lab - 1",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "Specialized lab with 100 Acer systems for enhancing English language communication and professional skills.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "FB 207",
+      category: "Communication"
+    },
+    {
+      name: "Python Programming and Interfacing Lab - 2",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Acer Veriton M200 with Pentium Gold G5420, 1TB HDD, and a 20 LED monitor is ideal for Python programming, offering reliable performance for coding tasks.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "FB 308",
+      category: "Programming"
+    },
+    {
+      name: "Python Programming and Interfacing Lab - 3",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Acer Veriton M200 with Pentium Gold G5420, 1TB HDD, and a 20 LED monitor is ideal for Python programming, offering reliable performance for coding tasks.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "FB 208",
+      category: "Programming"
+    },
+    {
+      name: "Python Programming and Interfacing Lab - 4",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Acer Veriton M200 with Pentium Gold G5420, 1TB HDD, and a 20 LED monitor is ideal for Python programming, offering reliable performance for coding tasks.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "CM 209",
+      category: "Programming"
+    },
+    {
+      name: "Python Programming and Interfacing Lab - 5",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "The Acer Veriton M200 with Pentium Gold G5420, 1TB HDD, and a 20 LED monitor is ideal for Python programming, offering reliable performance for coding tasks.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "CB 110",
+      category: "Programming"
+    },
+    {
+      name: "PG Lab (M. Tech. - AI)",
+      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      title: "Data Science Center",
+      description: "Specialized lab with 100 Acer systems for enhancing English language communication and professional skills.",
+      icon: "bi-graph-up",
+      color: "secondary",
+      location: "CB 202",
+      category: "AI"
     },
     {
       name: "Computer Center",
@@ -168,9 +358,49 @@ const Laboratories = () => {
       description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
       icon: "bi-pc-display",
       color: "dark",
-      location: "MB 204",
+      location: "MB 202",
       category: "Research"
-    }
+    },
+    {
+      name: "Research Laboratory - 1 (New Cellar)",
+      image: "/images/laboratories/Computer Centre.JPG",
+      title: "Research Resource Center",
+      description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
+      icon: "bi-pc-display",
+      color: "dark",
+      location: "CB C1",
+      category: "Research"
+    },
+    {
+      name: "Research Laboratory - 2",
+      image: "/images/laboratories/Computer Centre.JPG",
+      title: "Research Resource Center",
+      description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
+      icon: "bi-pc-display",
+      color: "dark",
+      location: "CB 103",
+      category: "Research"
+    },
+    {
+      name: "Projects lab - 1",
+      image: "/images/laboratories/Computer Centre.JPG",
+      title: "Research Resource Center",
+      description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
+      icon: "bi-pc-display",
+      color: "dark",
+      location: "CM 304A",
+      category: "Research"
+    },
+    {
+      name: "Projects lab - 2",
+      image: "/images/laboratories/Computer Centre.JPG",
+      title: "Research Resource Center",
+      description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
+      icon: "bi-pc-display",
+      color: "dark",
+      location: "CM 304B",
+      category: "Research"
+    },
   ];
 
   const categories = ['All', ...new Set(laboratories.map(lab => lab.category))];
