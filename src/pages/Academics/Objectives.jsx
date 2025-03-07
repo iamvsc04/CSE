@@ -192,7 +192,6 @@ const Objectives = () => {
                   <h5 className="card-title mb-0">
                     {item.shortcut} {item.id}
                   </h5>
-                  <span className="badge bg-light text-dark">Details</span>
                 </div>
                 <div className="card-body">
                   <h5 className="card-title mb-3">{item.title}</h5>
