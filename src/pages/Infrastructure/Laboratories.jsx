@@ -63,7 +63,7 @@ const Laboratories = () => {
     },
     {
       name: "Software engineering lab-2 ",
-      image: "/images/civil/c3a-inside.jpg",
+      image: "/images/civil/c3b-inside.jpg",
       title: "Software engineering laboratory",
       description: "The Acer Veriton M200 with a Pentium Dual Core 4.01 GHz processor, 8GB RAM, 1TB HDD, and 18.5 LED monitor is ideal for software engineering, offering solid performance.",
       icon: "bi-code-slash",
@@ -83,7 +83,7 @@ const Laboratories = () => {
     },
     {
       name: "DB and Algorithms lab-2 ",
-      image: "/images/laboratories/111 CB.JPG",
+      image: "/images/laboratories/112 CB.JPG",
       title: "DB and Algorithms lab",
       description: "The system with an Intel i3, 8GB RAM, and 500GB SSD is perfect for running algorithms tasks, paired with Dell peripherals and a Samsung monitor.",
       icon: "bi-code-slash",
@@ -93,7 +93,7 @@ const Laboratories = () => {
     },
     {
       name: "Data Visualization lab-I",
-      image: "/images/laboratories/CBC2 AB.JPG",
+      image: "/images/civil/cbc2a-inside.jpg",
       title: "Data Visualization lab",
       description: "Advanced Java development envThe system with 8GB RAM, 1TB HDD, and an 18.5 Acer monitor is well-suited for data visualization tasks, paired with Acer keyboard and mouse.",
       icon: "bi-bar-chart-line-fill",
@@ -103,7 +103,7 @@ const Laboratories = () => {
     },
     {
       name: "Data Visualization lab-II",
-      image: "/images/laboratories/CBC2 AB.JPG",
+      image: "/images/civil/cbc2b-inside.jpg",
       title: "Data Visualization lab",
       description: "The system with 8GB RAM, 1TB HDD, and an 18.5 Acer monitor is well-suited for data visualization tasks, paired with Acer keyboard and mouse.",
       icon: "bi-bar-chart-line-fill",
@@ -118,7 +118,7 @@ const Laboratories = () => {
       description: "The 32 systems with Intel Core i5 8th Gen, 16GB RAM, 1TB/2TB HDD, and LED monitors are ideal for Java development, offering powerful performance and connectivity.",
       icon: "bi-code",
       color: "warning",
-      location: "CM 309 & CM 310",
+      location: "CM 309",
       category: "Programming"
     },
     {
@@ -128,7 +128,7 @@ const Laboratories = () => {
       description: "The 32 systems with Intel Core i5 8th Gen, 16GB RAM, 1TB/2TB HDD, and LED monitors are ideal for Java development, offering powerful performance and connectivity.",
       icon: "bi-code",
       color: "warning",
-      location: "CM 309 & CM 310",
+      location: "CM 310",
       category: "Programming"
     },
     {
@@ -143,7 +143,7 @@ const Laboratories = () => {
     },
     {
       name: "Full Stack Development lab-2",
-      image: "/images/civil/19-inside.jpg",
+      image: "/images/lib/20-inside.jpg",
       title: "Full Stack development lab",
       description: "The system with an Intel i5 12th Gen processor, 8GB RAM, and 512GB SSD is perfect for full-stack development, offering strong performance for coding and testing.",
       icon: "bi-code",
@@ -183,7 +183,7 @@ const Laboratories = () => {
     },
     {
       name: "CAD lab 4",
-      image: "/images/laboratories/315 A FB.JPG",
+      image: "/images/fb/319-inside.jpg",
       title: "CAD lab",
       description: "The system with an Intel G6405 CPU, 8GB RAM, 250GB SSD, 22 Samsung LED monitor, and Logitech keyboard/mouse is ideal for CAD applications, offering reliable performance and efficient design capabilities.",
       icon: "bi-code",
@@ -233,7 +233,7 @@ const Laboratories = () => {
     },
     {
       name: "Data Structures lab-3",
-      image: "/images/laboratories/207 FB.JPG",
+      image: "/images/laboratories/304 FB.JPG",
       title: "Data structures lab 1",
       description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
       icon: "bi-code-square",
@@ -243,7 +243,7 @@ const Laboratories = () => {
     },
     {
       name: "Data Structures lab-4",
-      image: "/images/laboratories/207 FB.JPG",
+      image: "/images/laboratories/304 FB.JPG",
       title: "Data structures lab 1",
       description: "The Fingers Power Tower C8 with 8GB RAM, 500GB SSD, Intel Pentium Gold G7400, and a 22 Samsung LED monitor is perfect for data structures tasks, offering solid performance and efficiency.",
       icon: "bi-code-square",
@@ -264,7 +264,7 @@ const Laboratories = () => {
     {
       name: "ELCS lab 1",
       image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
-      title: "Data Science Center",
+      title: "ELCS lab",
       description: "The Samsung PC with 8GB RAM, 500GB SSD, and a 22 LED monitor is well-suited for English Language and ELCS lab activities.",
       icon: "bi-graph-up",
       color: "secondary",
@@ -283,7 +283,7 @@ const Laboratories = () => {
     },
     {
       name: "ELCS lab 3",
-      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      image: "/images/fb/114-inside.jpg",
       title: "Data Science Center",
       description: "The Samsung PC with 8GB RAM, 500GB SSD, and a 22 LED monitor is well-suited for English Language and ELCS lab activities.",
       icon: "bi-graph-up",
@@ -303,7 +303,7 @@ const Laboratories = () => {
     },
     {
       name: "Python Programming and Interfacing Lab - 2",
-      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
+      image: "/images/fb/308-inside.jpg",
       title: "Data Science Center",
       description: "The Acer Veriton M200 with Pentium Gold G5420, 1TB HDD, and a 20 LED monitor is ideal for Python programming, offering reliable performance for coding tasks.",
       icon: "bi-graph-up",
@@ -343,8 +343,8 @@ const Laboratories = () => {
     },
     {
       name: "PG Lab (M. Tech. - AI)",
-      image: "/images/laboratories/ELCS Lab 1 113 FB.JPG",
-      title: "Data Science Center",
+      image: "/images/civil/202-inside.jpg",
+      title: "PG lab",
       description: "Specialized lab with 100 Acer systems for enhancing English language communication and professional skills.",
       icon: "bi-graph-up",
       color: "secondary",
@@ -363,7 +363,7 @@ const Laboratories = () => {
     },
     {
       name: "Research Laboratory - 1 (New Cellar)",
-      image: "/images/laboratories/Computer Centre.JPG",
+      image: "/images/laboratories/CBC1.JPG",
       title: "Research Resource Center",
       description: "Dedicated research space with 65 Acer systems for in-depth exploration of academic and technological resources.",
       icon: "bi-pc-display",

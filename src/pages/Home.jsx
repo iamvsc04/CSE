@@ -173,18 +173,18 @@ const Home = () => {
       caption: "CSE Block with well-furnished Laboratories and Classrooms",
     },
     {
-      src: "/images/applelab.jpg",
-      alt: "Apple Laboratory",
-      title: "Apple Laboratory",
+      src: "/images/civil/104-inside.jpg",
+      alt: "Projects lab",
+      title: "projects Laboratory",
       caption:
-        "Apple Laboratory where research and project development happens.",
+        "Projects Laboratory where students do their Mini & Major Projects",
     },
     {
       src: "/images/laboratories/ProjectsLab1.JPG",
-      alt: "Project Lab",
-      title: "Projects Lab",
+      alt: "Full stack development  Lab",
+      title: "Full stack development lab",
       caption:
-        "Projects Laboratory where students do their Mini & Major Projects.",
+        "Full stack development lab helps in providing hands-on experience in building web applications using frontend and backend technologies, databases, and deployment tools.",
     },
   ];
 
@@ -445,7 +445,7 @@ const Home = () => {
                                 data-aos-duration="1500"
                               >
                                 <img
-                                  src={`/images/faculty/${faculty.empId}.jpg`}
+                                  src={`/images/CVR Logo.png`}
                                   width={120}
                                   height={120}
                                   alt={faculty.name}

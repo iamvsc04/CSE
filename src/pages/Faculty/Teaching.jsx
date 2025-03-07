@@ -8,7 +8,6 @@ const Teaching = () => {
   const [filteredFaculty, setFilteredFaculty] = useState([]);
   const [activeDesignation, setActiveDesignation] = useState("All");
 
-  // Normalization function
   const normalizeDesignation = (designation) => {
     return designation.toLowerCase().trim().replace(/\s+/g, ".");
   };
@@ -26,7 +25,6 @@ const Teaching = () => {
       const sheetName = workbook.SheetNames[0];
       const jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
-      // Normalize and classify faculty
       const formattedData = jsonData.map((faculty) => ({
         ...faculty,
         normalizedDesignation: normalizeDesignation(faculty.Designation),
@@ -138,7 +136,7 @@ const Teaching = () => {
                   <div className="faculty-card-inner">
                     <div className="faculty-image-wrapper">
                       <img
-                        src={`/faculty/${member.empId}.jpg`}
+                        src={`/images/CVR Logo.png`}
                         alt={member["Name of the Staff Member "]}
                         className="faculty-image"
                         onError={(e) => {
