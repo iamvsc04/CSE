@@ -6,14 +6,12 @@ const AcademicCalendar = () => {
   }, []);
 
   const academicPrograms = [
-    { title: "B.Tech CSE", year: "I Year - 2023-24" },
-    { title: "B.Tech IT", year: "I Year - 2023-24" },
-    { title: "B.Tech ECE", year: "I Year - 2023-24" },
-    { title: "B.Tech EEE", year: "I Year - 2023-24" },
-    { title: "M.Tech CSE", year: "I Year - 2023-24" },
-    { title: "M.Tech VLSI", year: "I Year - 2023-24" },
-    { title: "M.Tech Power Systems", year: "I Year - 2023-24" },
-    { title: "M.Tech Machine Learning", year: "I Year - 2023-24" },
+    { title: "B.Tech ", year: "I Year - 2023-24",url:"/Data/academic-calender/1-1.pdf" },
+    { title: "B.Tech ", year: "II Year - 2023-24",url:"/Data/academic-calender/2-2.pdf" },
+    { title: "B.Tech", year: "III Year - 2023-24",url:"/Data/academic-calender/3-3.pdf" },
+    { title: "B.Tech ", year: "IV Year - 2023-24",url:"/Data/academic-calender/4-4.pdf" },
+    { title: "M.Tech ", year: "I Year - 2023-24",url:"/Data/academic-calender/m-tech-1-1.pdf" },
+    { title: "M.Tech ", year: "II Year - 2023-24",url:"/Data/academic-calender/mtech-2-2.pdf" },
   ];
 
   return (
@@ -46,7 +44,7 @@ const AcademicCalendar = () => {
                         </h5>
                       </div>
                       <a
-                        href="#"
+                        href={program.url}
                         className="btn btn-primary mt-auto stretched-link"
                       >
                         {program.year}
