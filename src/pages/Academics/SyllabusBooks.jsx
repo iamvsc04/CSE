@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 const SyllabusBooks = () => {
   useEffect(() => {
@@ -12,27 +10,17 @@ const SyllabusBooks = () => {
     {
       title: "B.Tech Programs",
       programs: [
-        {
-          name: "CSE",
-          years: [
-            "I Year - 2023-24",
-            "II Year - 2023-24",
-            "III Year - 2023-24",
-            "IV Year - 2023-24",
-          ],
-        },
-        { name: "IT", years: ["I Year - 2023-24", "II Year - 2023-24"] },
-        { name: "ECE", years: ["I Year - 2023-24", "II Year - 2023-24"] },
-        { name: "EEE", years: ["I Year - 2023-24", "II Year - 2023-24"] },
+        { name: "I Year - 2023-24", button: ["Click here"] },
+        { name: "II Year - 2023-24", button: ["Click here"] },
+        { name: "III Year - 2023-24", button: ["Click here"] },
+        { name: "IV Year - 2023-24", button: ["Click here"] },
       ],
     },
     {
       title: "M.Tech Programs",
       programs: [
-        { name: "AI", years: ["I Year - 2023-24", "II Year - 2023-24"] },
-        { name: "CSE", years: ["I Year - 2023-24"] },
-        { name: "VLSI", years: ["I Year - 2023-24"] },
-        { name: "Power Systems", years: ["I Year - 2023-24"] },
+        { name: "I Year - 2023-24", button: ["Click here"] },
+        { name: "II Year - 2023-24", button: ["Click here"] },
       ],
     },
   ];
@@ -43,7 +31,7 @@ const SyllabusBooks = () => {
         <div className="row">
           <div className="col-12">
             <h1 className="display-4 text-center text-primary mb-5">
-              Syllabus & Study Materials
+              Syllabus
             </h1>
           </div>
         </div>
@@ -74,7 +62,7 @@ const SyllabusBooks = () => {
                       </div>
 
                       <div className="d-grid gap-2">
-                        {program.years.map((year, yearIndex) => (
+                        {program.button.map((year, yearIndex) => (
                           <a
                             key={yearIndex}
                             href="#"
@@ -90,7 +78,7 @@ const SyllabusBooks = () => {
                   </div>
 
                   {/* Modal for Syllabus Details */}
-                  {program.years.map((year, yearIndex) => (
+                  {program.button.map((year, yearIndex) => (
                     <div
                       key={yearIndex}
                       className="modal fade"

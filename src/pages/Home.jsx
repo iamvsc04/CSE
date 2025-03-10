@@ -3,7 +3,6 @@ import * as XLSX from "xlsx";
 import NumberLoader from "../components/NumberLoader";
 import "../styles.css";
 
-
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -64,8 +63,8 @@ const Home = () => {
             let designation = normalizeDesignation(faculty.designation);
             let name = faculty.name;
             if (
-              designation.includes("professor") &&
-              !designation.includes("assoc")
+              designation.includes("professor") ||
+              designation.includes("Emeritus")
             ) {
               acc.ProfCount += 1;
             } else if (designation.includes("assoc.prof")) {
@@ -394,13 +393,13 @@ const Home = () => {
               </div>
               <div className="deptStrengthItem">
                 <span>
-                  <NumberLoader number={10} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader number={23} shouldLoad={shouldLoadNumbers} />
                   <p>Programmers and Admins</p>
                 </span>
               </div>
               <div className="deptStrengthItem">
                 <span className="Dtps">
-                  <NumberLoader number={3} shouldLoad={shouldLoadNumbers} />
+                  <NumberLoader number={5} shouldLoad={shouldLoadNumbers} />
                   <p>DTP's</p>
                 </span>
               </div>

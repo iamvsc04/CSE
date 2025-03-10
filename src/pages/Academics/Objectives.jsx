@@ -30,14 +30,6 @@ const Objectives = () => {
       description:
         "Understand software engineering practices and hardware integration for developing solutions to real world problems over multi-disciplinary domains.",
     },
-    {
-      id: 4,
-      shortcut: "PSO",
-
-      title: "Industry Readiness",
-      description:
-        "Use theoretical and practical concepts of various domains to realize new ideas and innovations for pursuing research, entrepreneurship, employment and higher studies.",
-    },
   ];
 
   const peoData = [
@@ -247,9 +239,10 @@ const Objectives = () => {
   return (
     <div className="bg-light">
       <main>
-        {renderSection("Program Specific Outcomes", psoData, "bg-info")}
         {renderSection("Program Educational Objectives", peoData, "bg-success")}
         {renderSection("Program Outcomes", programOutcomes, "bg-warning")}
+
+        {renderSection("Program Specific Outcomes", psoData, "bg-info")}
       </main>
     </div>
   );

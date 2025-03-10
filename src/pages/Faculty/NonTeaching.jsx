@@ -60,10 +60,7 @@ const NonTeaching = () => {
     setFilteredStaff(filtered);
   };
 
-  const designationOptions = [
-    "All",
-    "DTP Operator"
-  ];
+  const designationOptions = ["All", "DTP Operator"];
 
   return (
     <div className="teaching-faculty-wrapper">
@@ -85,8 +82,6 @@ const NonTeaching = () => {
 
       {/* Staff Filter and Grid */}
       <div className="faculty-content container py-5">
-      
-
         {/* Staff Grid */}
         <div className="row g-4">
           {filteredStaff.length > 0 ? (
@@ -111,8 +106,9 @@ const NonTeaching = () => {
                       <p className="faculty-designation">
                         {member["Designation"]}
                       </p>
-                      <p className="faculty-join-date">Joined: {member["DOJ"]}</p>
-                      <p className="faculty-id">ID: {member["College ID No."]}</p>
+                      <p className="faculty-join-date">
+                        Joined: {member["DOJ"]}
+                      </p>
                     </div>
                   </div>
                 </div>
