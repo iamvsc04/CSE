@@ -22,15 +22,15 @@ const Publications = () => {
     "Name of the Journal/Publisher": "Name of the Journal/Publisher",
     "ISSN/ISBN": "ISSN/ISBN",
     "Vol. No./ISS. No./Page Nos": "Vol. No./ISS. No./Page Nos",
-    "link to the paper": "link to the paper"
+    "link to the paper": "link to the paper",
   };
 
   // Function to normalize data - ensure all rows have all expected columns
   const normalizeData = (jsonData) => {
-    return jsonData.map(row => {
-      const normalizedRow = {...row};
+    return jsonData.map((row) => {
+      const normalizedRow = { ...row };
       // Ensure all expected columns exist
-      Object.keys(expectedColumns).forEach(col => {
+      Object.keys(expectedColumns).forEach((col) => {
         if (!normalizedRow.hasOwnProperty(col)) {
           normalizedRow[col] = ""; // Set empty string for missing columns
         }
@@ -48,22 +48,22 @@ const Publications = () => {
       if (!response.ok) {
         throw new Error(`Failed to fetch data for ${year}`);
       }
-      
+
       const arrayBuffer = await response.arrayBuffer();
       const workbook = XLSX.read(arrayBuffer, { type: "array" });
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
       const jsonData = XLSX.utils.sheet_to_json(sheet);
-      
+
       // Log column headers for debugging
       if (jsonData.length > 0) {
         console.log(`Columns in ${year} data:`, Object.keys(jsonData[0]));
       } else {
         console.warn(`No data found for ${year}`);
       }
-      
+
       // Normalize the data to ensure all expected columns exist
       const normalizedData = normalizeData(jsonData);
-      
+
       setData(normalizedData);
       setFilteredData(normalizedData);
     } catch (error) {
@@ -85,15 +85,15 @@ const Publications = () => {
   const displayCellValue = (value, columnName) => {
     // Special handling for citations to ensure 0 is displayed
     if (columnName === "Number of citations") {
-      return value === 0 || value === "0" ? "0" : (value || "");
+      return value === 0 || value === "0" ? "0" : value || "";
     }
-    
+
     // For link column, display as button
     if (columnName === "link to the paper" && value) {
       return (
-        <a 
-          href={value} 
-          target="_blank" 
+        <a
+          href={value}
+          target="_blank"
           rel="noopener noreferrer"
           className="btn btn-sm btn-outline-primary"
         >
@@ -101,7 +101,7 @@ const Publications = () => {
         </a>
       );
     }
-    
+
     // Default handling for other columns
     return value || "";
   };
@@ -125,21 +125,36 @@ const Publications = () => {
           </div>
         </div>
 
-        {loading && <div className="text-center my-4">Loading publications data...</div>}
-        
+        {loading && (
+          <div className="text-center my-4">Loading publications data...</div>
+        )}
+
         {error && <div className="alert alert-danger">{error}</div>}
 
         {!loading && !error && filteredData.length === 0 && (
-          <div className="alert alert-info">No publications found for the selected year.</div>
+          <div className="alert alert-info">
+            No publications found for the selected year.
+          </div>
         )}
 
         {!loading && filteredData.length > 0 && (
-          <div className="table-responsive" style={{ overflowX: 'auto', width: '100%' }}>
-            <table className="table table-hover mt-3 table-striped-columns" style={{ minWidth: '1200px' }}>
+          <div
+            className="table-responsive px-3"
+            style={{ overflowX: "auto", width: "100%" }}
+          >
+            <table
+              className="table table-hover mt-3 table-striped-columns"
+              style={{ minWidth: "1200px" }}
+            >
               <thead>
                 <tr>
                   {Object.values(expectedColumns).map((col, index) => (
-                    <th key={index} style={getColumnStyle(Object.keys(expectedColumns)[index])}>
+                    <th
+                      key={index}
+                      style={getColumnStyle(
+                        Object.keys(expectedColumns)[index]
+                      )}
+                    >
                       {col}
                     </th>
                   ))}
@@ -168,25 +183,25 @@ const Publications = () => {
 const getColumnStyle = (columnName) => {
   switch (columnName) {
     case "S.No":
-      return { width: '5%' };
+      return { width: "5%" };
     case "Name of the faculty":
-      return { width: '12%' };
+      return { width: "12%" };
     case "Title of the publication":
-      return { width: '20%' };
+      return { width: "20%" };
     case "Position of the author":
-      return { width: '7%' };
+      return { width: "7%" };
     case "Indexed by Scopus/SCI/any":
-      return { width: '10%' };
+      return { width: "10%" };
     case "Number of citations":
-      return { width: '7%' };
+      return { width: "7%" };
     case "Name of the Journal/Publisher":
-      return { width: '15%' };
+      return { width: "15%" };
     case "ISSN/ISBN":
-      return { width: '8%' };
+      return { width: "8%" };
     case "Vol. No./ISS. No./Page Nos":
-      return { width: '8%' };
+      return { width: "8%" };
     case "link to the paper":
-      return { width: '8%' };
+      return { width: "8%" };
     default:
       return {};
   }
