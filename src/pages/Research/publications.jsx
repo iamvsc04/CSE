@@ -81,6 +81,31 @@ const Publications = () => {
     fetchExcelData(selectedYear);
   }, [selectedYear]);
 
+  // Function to safely display cell values, ensuring 0 is shown as "0"
+  const displayCellValue = (value, columnName) => {
+    // Special handling for citations to ensure 0 is displayed
+    if (columnName === "Number of citations") {
+      return value === 0 || value === "0" ? "0" : (value || "");
+    }
+    
+    // For link column, display as button
+    if (columnName === "link to the paper" && value) {
+      return (
+        <a 
+          href={value} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-outline-primary"
+        >
+          View Paper
+        </a>
+      );
+    }
+    
+    // Default handling for other columns
+    return value || "";
+  };
+
   return (
     <div>
       <h1 className="text-center mt-4">List of Publications</h1>
@@ -125,18 +150,7 @@ const Publications = () => {
                   <tr key={index}>
                     {Object.keys(expectedColumns).map((col, colIndex) => (
                       <td key={colIndex} style={getColumnStyle(col)}>
-                        {col === "link to the paper" && publication[col] ? (
-                          <a 
-                            href={publication[col]} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-primary"
-                          >
-                            View Paper
-                          </a>
-                        ) : (
-                          publication[col] || ""
-                        )}
+                        {displayCellValue(publication[col], col)}
                       </td>
                     ))}
                   </tr>
