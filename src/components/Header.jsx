@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles.css";
 
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 const Navbar = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({});
@@ -195,6 +193,19 @@ const Navbar = () => {
               alt="CVR LOGO"
               style={{ maxWidth: "100%", height: "60px" }}
             />
+            <span
+              className="navbar-text text-white mb-1 "
+              style={{
+                fontSize: "1.45rem",
+                fontWeight: "bold",
+                textAlign: "center",
+                lineHeight: "1.0",
+                marginRight: "3rem",
+                paddingTop: "1rem",
+              }}
+            >
+              Computer Science and Engineering
+            </span>
           </Link>
           <button
             className="navbar-toggler"
