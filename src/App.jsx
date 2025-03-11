@@ -26,6 +26,7 @@ import {
   ConsultancyProjects,
   ResearchProjects,
   Workshops,
+  Publications,
 } from "./pages/Research";
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="/studentcorner/gallery" element={<Gallery />} />
         <Route path="/studentcorner/student-work" element={<StudentWork />} />
         <Route path="/research/conferences" element={<Conferences />} />
+        <Route path="/research/publications" element={<Publications />} />
         <Route
           path="/research/consultancy-projects"
           element={<ConsultancyProjects />}

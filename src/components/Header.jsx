@@ -91,6 +91,7 @@ const Navbar = () => {
         { label: "Workshops", path: "/research/workshops" },
         { label: "FDP's", path: "/research/researchprojects" },
         { label: "Patents", path: "/research/consultancy-projects" },
+        { label: "Publications", path: "/research/publications" },
       ],
     },
     { label: "About", path: "/about", type: "link" },
@@ -107,16 +108,14 @@ const Navbar = () => {
         <Link className="navbar-brand" to="/">
           <img
             src="../images/logo.png"
-            className="img-fluid"
+            className="img-fluid px-3 mb-3"
             alt="CVR LOGO"
             style={{ maxWidth: "100%", height: "70px" }}
           />
-        </Link>
-        <div className="d-flex flex-column align-items-end">
           <span
             className="navbar-text text-white mb-1 "
             style={{
-              fontSize: "2rem",
+              fontSize: "1.7rem",
               fontWeight: "bold",
               textAlign: "center",
               lineHeight: "1.0",
@@ -124,8 +123,11 @@ const Navbar = () => {
               paddingTop: "1rem",
             }}
           >
-            Department of Computer Science and Engineering
+            Computer Science and Engineering
           </span>
+        </Link>
+
+        <div className="d-flex flex-column align-items-end">
           <div className="collapse navbar-collapse">
             <ul
               className="navbar-nav"
