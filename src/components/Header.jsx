@@ -106,27 +106,28 @@ const Navbar = () => {
         <Link className="navbar-brand" to="/">
           <img
             src="../images/logo.png"
-            className="img-fluid px-3 mb-3"
+            className="img-fluid"
             alt="CVR LOGO"
             style={{ maxWidth: "100%", height: "70px" }}
           />
-          <span
+          
+        </Link>
+
+        <div className="d-flex flex-column align-items-end">
+        <span
             className="navbar-text text-white mb-1 "
             style={{
               fontSize: "1.7rem",
               fontWeight: "bold",
               textAlign: "center",
               lineHeight: "1.0",
-              marginRight: "3rem",
+              marginRight: "15%",
               paddingTop: "1rem",
             }}
           >
-            Computer Science and Engineering
+            Department of Computer Science and Engineering
           </span>
-        </Link>
-
-        <div className="d-flex flex-column align-items-end">
-          <div className="collapse navbar-collapse">
+          <div className="collapse navbar-collapse mx-2">
             <ul
               className="navbar-nav"
               style={{
