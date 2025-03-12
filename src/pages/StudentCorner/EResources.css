@@ -166,7 +166,7 @@ body {
 .resource-links a {
   display: block;
   margin-bottom: 10px;
-  color: #6a11cb;
+  color: #050505;
   text-decoration: none;
   transition: color 0.3s ease;
   word-break: break-all; /* Break long URLs */
