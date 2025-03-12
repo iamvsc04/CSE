@@ -16,12 +16,12 @@ const Publications = () => {
     "S.No": "S.No",
     "Name of the faculty": "Name of the faculty",
     "Title of the publication": "Title of the publication",
-    "Position of the author": "Position of the author",
+    // "Position of the author": "Position of the author",
     "Indexed by Scopus/SCI/any": "Indexed by Scopus/SCI/any",
-    "Number of citations": "Number of citations",
+    // "Number of citations": "Number of citations",
     "Name of the Journal/Publisher": "Name of the Journal/Publisher",
-    "ISSN/ISBN": "ISSN/ISBN",
-    "Vol. No./ISS. No./Page Nos": "Vol. No./ISS. No./Page Nos",
+    // "ISSN/ISBN": "ISSN/ISBN",
+    // "Vol. No./ISS. No./Page Nos": "Vol. No./ISS. No./Page Nos",
     "link to the paper": "link to the paper",
   };
 
